@@ -1,0 +1,6 @@
+<div class="form ajax">
+    <div><strong>列表页显示字段:</strong> </div>
+    <?php foreach($fields as $k=>$v) : ?>
+    <label title="<?= $v; ?>"><input type="checkbox" name="showFields[<?= $k; ?>]" checked="checked" value="<?= $v; ?>"/> <?= $k; ?> </label>
+    <?php endForeach; ?>
+</div>

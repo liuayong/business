@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>后台管理 - 新闻表列表</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/blue.css" />
+    <script src="__PUBLIC__/Admin/js/Common.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //指定当前组模块URL地址
+        var URL     = '__URL__';
+        var App	    = '__APP__';
+        var PUBLIC  = '__PUBLIC__';
+
+    </script>
+</head>
+<body>
+<!-- 菜单区域 -->
+<!-- 主页面开始 -->
+<div id="main" class="main">
+    <!-- 主体内容 -->
+    <div class="content">
+        <div class="title">新闻表列表</div>
+        <!-- 功能操作区域 -->
+        <div class="operate">
+            <div class="impBtn hMargin fLeft shadow">
+                <input type="button" id="" name="add" value="新增" onclick="add()" class="add imgButton">
+            </div>
+            <div class="impBtn hMargin fLeft shadow">
+                <input type="button" id="" name="edit" value="编辑" onclick="edit()" class="edit imgButton">
+            </div>
+            <div class="impBtn hMargin fLeft shadow">
+                <input type="button" id="" name="delete" value="删除" onclick="del()" class="delete imgButton">
+            </div>
+            <!-- 查询区域 -->
+            <div class="impBtn hMargin fLeft shadow">
+                <form method='get' action="__SELF__">
+                    <div class="fRig">
+                        <div class="fLeft">
+                            <span id="key"><input type="text" name="uname" title="帐号查询" class="medium"></span>
+			    <input type="hidden" name="searchField" value="" />
+                        </div>
+                        <div class="impBtn hMargin fLeft shadow">
+                            <input type="submit" id=""  value="查询"  class="search imgButton" />
+                        </div>
+                    </div>
+                    <!-- 高级查询区域 -->
+                    <div id="searchM" class=" none search cBoth"></div>
+                </form>
+            </div>
+        </div>
+        <!-- 功能操作区域结束 -->
+        <!-- 列表显示区域 -->
+        <div class="list">
+            <!-- Think 系统列表组件开始 -->
+            <table id="checkList" class="list" cellpadding=0 cellspacing=0>
+                <tr>
+                    <td height="5" colspan="26" class="topTd"></td>
+                </tr>
+                <tr class="row"  align="center" >
+                    <th width="20">
+                        <input type="checkbox" id="check" onclick="CheckAll('checkList')">
+                    </th>
+                    <th width="8%" align="center" >
+                        <a href="javascript:sortBy('news_id','1')" title="按照编号升序排列 "> 编号 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('title','1')" title="按照新闻标题升序排列 "> 新闻标题 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('title_id','1')" title="按照标题唯一标识符升序排列 "> 标题唯一标识符 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('source','1')" title="按照来源升序排列 "> 来源 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('source_url','1')" title="按照来源地址升序排列 "> 来源地址 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('cate_id','1')" title="按照所属栏目升序排列 "> 所属栏目 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('show_img','1')" title="按照封面图片升序排列 "> 封面图片 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('view_count','1')" title="按照浏览次数升序排列 "> 浏览次数 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('abstract','1')" title="按照新闻摘要升序排列 "> 新闻摘要 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('content','1')" title="按照新闻内容升序排列 "> 新闻内容 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('template','1')" title="按照模板升序排列 "> 模板 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('is_deleted','1')" title="按照是否删除,只有超级管理员才能继续硬删除升序排列 "> 是否删除,只有超级管理员才能继续硬删除 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('is_show','1')" title="按照是否显示升序排列 "> 是否显示 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('sort_order','1')" title="按照排序升序排列 "> 排序 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('tag','1')" title="按照内容标签升序排列 "> 内容标签 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('seo_title','1')" title="按照seo标题升序排列 "> seo标题 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('seo_keywords','1')" title="按照seo关键字升序排列 "> seo关键字 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('seo_description','1')" title="按照seo描述升序排列 "> seo描述 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('pub_time','1')" title="按照发布时间升序排列 "> 发布时间 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('pub_uid','1')" title="按照发布用户id升序排列 "> 发布用户id </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('pub_uname','1')" title="按照发布用户名升序排列 "> 发布用户名 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('auth','1')" title="按照访问权限升序排列 "> 访问权限 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('recommend','1')" title="按照推荐升序排列 "> 推荐 </a>
+                    </th>
+                    <th  align="center" >
+                        <a href="javascript:sortBy('create_time','1')" title="按照录入时间升序排列 "> 录入时间 </a>
+                    </th>
+                    <th align="center" > 操作 </th>
+                </tr>
+                <?php
+                foreach($data['list'] as $k => $v) : ?>
+                <tr class="row" onmouseover="over(event)" onmouseout="out(event)" onclick="change(event)" align="center">
+                    <td><input type="checkbox" name="key" value="<?php echo $v['news_id']; ?>"></td>
+                    <td><?php  echo $v['news_id']; ?></td>
+                    <td><?php  echo $v['title']; ?></td>
+                    <td><?php  echo $v['title_id']; ?></td>
+                    <td><?php  echo $v['source']; ?></td>
+                    <td><?php  echo $v['source_url']; ?></td>
+                    <td><?php  echo $v['cate_id']; ?></td>
+                    <td><?php  echo $v['show_img']; ?></td>
+                    <td><?php  echo $v['view_count']; ?></td>
+                    <td><?php  echo $v['abstract']; ?></td>
+                    <td><?php  echo $v['content']; ?></td>
+                    <td><?php  echo $v['template']; ?></td>
+                    <td><?php  echo $v['is_deleted']; ?></td>
+                    <td><?php  echo $v['is_show']; ?></td>
+                    <td><?php  echo $v['sort_order']; ?></td>
+                    <td><?php  echo $v['tag']; ?></td>
+                    <td><?php  echo $v['seo_title']; ?></td>
+                    <td><?php  echo $v['seo_keywords']; ?></td>
+                    <td><?php  echo $v['seo_description']; ?></td>
+                    <td><?php  echo $v['pub_time']; ?></td>
+                    <td><?php  echo $v['pub_uid']; ?></td>
+                    <td><?php  echo $v['pub_uname']; ?></td>
+                    <td><?php  echo $v['auth']; ?></td>
+                    <td><?php  echo $v['recommend']; ?></td>
+                    <td><?php  echo $v['create_time']; ?></td>
+                    <td>
+                        <a href="javascript:edit('<?php echo $v['news_id']?>')">编辑</a>&nbsp;
+                        <a href="javascript:del('<?php echo $v['news_id']?>')">删除</a>&nbsp;
+                    </td>
+                </tr>
+                <?php endForeach; ?>                    
+		    <!--
+                    <th>
+                        <a href="javascript:sortBy('login_count','1','index')" title="按照登录次数升序排列 ">登录次数
+                            <img src="/hlzb/Admin/Tpl/Public/images/desc.gif" width="12" height="17" border="0" align="absmiddle" />
+                        </a>
+                    </th>
+                    -->
+                <tr>
+                    <td height="5" colspan="26" class="bottomTd"></td>
+                </tr>
+            </table>
+            <!-- Think 系统列表组件结束 -->
+        </div>
+        <!-- 分页显示区域 -->
+        <div class="page">
+            <?php echo $data['page']->show(); ?>	    
+            <!-- 5 条记录 1/1 页 -->
+        </div>
+        <!-- 列表显示区域结束 -->
+    </div>
+    <!-- 主体内容结束 -->
+</div>
+<!-- 主页面结束 -->
+</body>
+</html>

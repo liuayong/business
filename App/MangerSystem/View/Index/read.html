@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>发送消息</title>
+        <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+        <link href="__PUBLIC__/css/site.css" rel="stylesheet">
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+        <script src="__PUBLIC__/js/bootstrap.js"></script>
+        <script>
+            $(function () {
+                updatemsg();
+                //更新信息栏信息数
+                function updatemsg() {
+                    var msgnum = $("#msgnum", parent.document).text();
+                    if (parseInt(msgnum) > 0) {
+                        msgnum = parseInt(msgnum) - 1;
+                        $("#msgnum", parent.document).text(msgnum);
+                    }
+                }
+            })
+        </script>
+    </head>
+    <style>
+        #reply {
+            clear: both; }
+
+        .reply_form {
+            display: none;
+            clear: both;
+            margin-top: 2em;
+        }
+
+        .control-label {
+            display: none
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="main">
+                        <h1>查看信息</h1>
+                        <div class="info"></div>
+                        <p>From: {$message.from}</p>
+                        <p>To：{$message.to}</p>
+                        <p>主题：{$message.title}</p>
+                        <p>信息体：</p>
+                        <p class="content">
+                            {$message.content} 
+                            <span class="pull-right pull"> created at {$message.send_time|date="Y-m-d H:i:s",###}</span>
+                        </p>
+                        <p><a class="btn btn-info" id="reply" href="javascript:void(0);">回复对方</a></p>
+                        <div class="reply_form">
+                            <form id="w0" name="form" action="{:U('reply')}" method="post">
+                                <div class="form-group field-msg-fid">
+                                    <label class="control-label" for="msg-fid">Fid</label>
+                                    <input type="hidden" id="msg-fid" class="form-control" name="Msg[fid]" value="{$message.tid}">
+                                    <p class="help-block help-block-error"></p>
+                                </div>
+                                <div class="form-group field-msg-tid required">
+                                    <label class="control-label" for="msg-tid">发送给：</label>
+                                    <input type="hidden" id="msg-tid" class="form-control" name="Msg[tid]" value="{$message.fid}">
+                                    <p class="help-block help-block-error"></p>
+                                </div>
+                                <div class="form-group field-msg-title required">
+                                    <label class="control-label" for="msg-title">信息标题：</label>
+                                    <input type="hidden" id="msg-title" class="form-control" name="Msg[title]" value="{$message.title}">
+                                    <p class="help-block help-block-error"></p>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group field-msg-content required">
+                                        <label class="control-label" for="msg-content">信息内容：</label>
+                                        <textarea id="msg-content" class="form-control" name="Msg[content]"></textarea>
+                                        <p class="help-block help-block-error"></p>
+                                    </div>
+                                </div>
+                                <div class="form-group field-msg-reply">
+                                    <label class="control-label" for="msg-reply">Reply</label>
+                                    <input type="hidden" id="msg-reply" class="form-control" name="Msg[reply]" value="1">
+                                    <p class="help-block help-block-error"></p>
+                                </div> <a class="btn btn-success" id="replytohim" cansend="1" href="javascript:void(0);">回复</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            //点击回复，展开收起回复框
+            $("#reply").click(function () {
+                $(".reply_form").show();
+            });
+            //点击异步回复对方
+            $("#replytohim").click(function () {
+                if ($(this).attr('cansend') == 1) {
+                    //发送消息
+                    if ($("form textarea").val().length <= 0) {
+                        $(".info").html("<div class='alert alert-danger'>回复内容不得为空！</div>");
+                        return false;
+                    }
+                    $.post('{:U('reply')}', $("form").serialize(), function (data) {
+                        if (data.status == 1) {
+                            $(".info").html("<div class='alert alert-success'>回复成功！</div>");
+                            $("#replytohim").attr("cansend", '0').attr('disabled', true);
+                        } else {
+                            $(".info").html("<div class='alert alert-danger'>回复失败！</div>");
+                        }
+                    }, 'json')
+                }
+            })
+        </script>
+    </body>
+</html>

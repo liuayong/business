@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        div input[type=text] { width: 300px; }
+        div.form { margin: 15px 0; width: 620px;}
+        div label {padding-right: 20px;}
+    </style>
+    <link href="__PUBLIC__/plugins/autocomplete/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <script type='text/javascript' src='__PUBLIC__/js/jquery-1.8.1.min.js'></script>
+    <script type='text/javascript' src='__PUBLIC__/plugins/autocomplete/jquery.autocomplete.js'></script>
+    <script type="text/javascript">
+        $(function() {
+            $auotComplete = $("[name=tName]").autocomplete('__CONTROLLER__/tables', {
+                minChars: 0,
+                mustMatch: true,
+                matchContains: false,
+                matchSubset : true,
+                //cacheLength : 3,
+                formatItem: function(row, i, max) {
+                    return '<strong>'+ row[0] +'<strong>';
+                },
+                formatResult: function(row) {
+                    return row[0];
+                }
+            }).result(function(event, data, formatted) {
+                var _this = this ;
+                $.ajax({
+                    type : "POST",
+                    url: '__CONTROLLER__/fields',
+                    data : {tName : formatted },
+                    success : function(retData) {
+                        if(retData == '') {
+                            console.log($("div.ac_results"))
+                            $("div.ac_results").show();
+                        }
+                        
+                       if( $(_this).closest('form').find('div.ajax').length == 0 ) {
+                           $(_this).closest('div.form').after(retData);
+                       } else {
+                           $(_this).closest('form').find('div.ajax').remove();
+                           $(_this).closest('div.form').after(retData);
+                       }
+                    },
+                    error: function(retData) {
+                        alert('出错了');
+                    }
+                });
+            });
+            if($auotComplete.val() != '') {
+                $auotComplete.search();
+            }
+
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="__SELF__">
+            <div class="form">表　名: <input type="text" name="tName"   /></div>
+            <div class="form">模块名: <input type="text" name="mName"  /></div>
+            <div class="form">
+                生成表单验证规则: 
+                <select name="rulesType">
+                    <option value="">不生成验证规则</option>
+                    <option value="fileType">根据数据库字段类型生成验证规则</option>
+                    <option value="fileComment">根据字段注释生成验证规则</option>
+                </select>
+                <br /><span  style="font-size:12px; color:#aaa;">数据表字段注释为 <strong>[表单类型/验证规则]注释内容</strong></span>
+            </div>
+            <div class="form">
+                <div><strong>生成选项: </strong> </div>
+                <label title="控制器"><input type="checkbox"    value="controller"  checked="checked" name="createOptions[controller]"> 控制器 </label>
+                <label title="模 型 "><input type="checkbox"    value="model"  checked="checked" name="createOptions[model]"> 模 型 </label>
+                <label title="index首页"><input type="checkbox" value="index"  checked="checked" name="createOptions[index]"> index首页 </label>
+                <label title="add添加页"><input type="checkbox" value="add"  checked="checked" name="createOptions[add]"> add添加页 </label>
+                <label title="upd编辑页"><input type="checkbox" value="upd"  checked="checked" name="createOptions[upd]"> upd编辑页 </label>
+            </div>
+            <div class="form">
+                <input type="submit" value="生成" />　　　
+                <input type="reset" value="重置" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

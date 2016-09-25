@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>添加自定义属性</title>
+        <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+        <script type="text/javascript">
+            
+        </script>
+    </head>
+    <body>
+        <div id="append_parent"></div>
+        <div class="container" id="cpcontainer">
+            <div id="contentHeader">
+                <h3>自定义属性</h3>
+                <div class="searchArea">
+                    <ul class="action left">
+                        <li><a href="{:U('index')}" class="actionBtn"><span>返回</span></a></li>
+                        <li class="current"><a href="javascript:;" class="disabled actionBtn"><span>录入</span></a></li>
+                    </ul>
+                    <div class="search right"> </div>
+                </div>
+            </div>
+            <?php if ( true):?>
+            <table id="tips">
+                <tr>
+                    <td><div class="erro_div"><span class="error_message"> <?php echo '这里是错误的提示' ;?> </span></div></td>
+                </tr>
+            </table>
+            <?php endif?>
+            <form method="post" action="" id="xform" enctype="multipart/form-data" name="xform">
+                <table class="form_table">
+                    <tbody>
+                        <tr>
+                            <td class="tb_title">属性名称：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" value="" id="Attr_attr_name" name="Attr[attr_name]" class="validate[required]" maxlength="128" size="40">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">属性别名(字母或数字组合)：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" value="" id="Attr_attr_name_alias" name="Attr[attr_name_alias]" class="validate[required]" maxlength="128" size="40">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">属性名称说明</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" value="" id="Attr_tips" name="Attr[tips]" maxlength="128" size="40">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">
+                                <!-- 
+                                适用范围：
+                                <select id="Attr_scope" name="Attr[scope]" onchange="changeScope(this)">
+                                    <option selected="selected" value="post">内容</option>
+                                    <option value="config">系统配置</option>
+                                    <option value="page">单页</option>
+                                </select>
+                                -->
+                                <span id="catalogSpan"> 栏目归属：
+                                    {$cateSelect}
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">属性类型</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                {$typeSelectHtml}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">属性默认数据</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="Attr_data_default" name="Attr[data_default]" placeholder="默认值" cols="70" rows="5"></textarea>
+                            </td>
+                        </tr>
+                        <tr class="submit">
+                            <td>
+                                <input type="submit" tabindex="3" class="button" value="提交" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

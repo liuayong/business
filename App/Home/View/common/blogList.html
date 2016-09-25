@@ -1,0 +1,58 @@
+
+<!-- 顶部分页 -->
+<div class="article-top">
+    <div class="view-mode">浏览模式: <a href="{:U(CONTROLLER_NAME.'/'.ACTION_NAME , array_merge($_GET, array('mode'=>'normal')))}">普通</a> | <a href="{:U(CONTROLLER_NAME.'/'.ACTION_NAME,  array_merge($_GET, array('mode'=>'intro')))}">简介</a></div>
+    <div class="pages">
+        {$pagelist}
+    </div>
+</div>
+
+<!-- 文章列表 [ 普通的列表:normal  简介的列表：intro ] -->
+<switch name="mode">
+    <case value="normal">
+        <foreach name="_blog_list" item="v">
+        <div class="textbox-list">
+            <div class="textbox-list-title">
+                <img src="__PUBLIC__/blog/images/icon_point2.gif" width="13" height="13" border="0" alt="" align="absmiddle" /> 
+                [ <a href="{:U('Cate/index', ['id' => $v['cate_id']])}">{$v.cate_name}</a> ] 
+                <a href="{:U('Post/view', ['id' => $v['post_id']])}">{$v.title}</a> 
+                <span class="pubtime">{$v.create_time|date="Y-m-d",###}</span>
+            </div>
+            <div class="textbox-author"> 
+                [<a href="{:U('Post/view#reply', ['id' => $v['post_id']])}"><span title="回复数">{$v.reply_count} </span></a> | <span title="浏览量"> {$v.view_count} </span>]
+            </div>
+        </div>
+        </foreach>
+    </case>
+    <case value="intro">
+        <foreach name="_blog_list" item="v">
+        <div id="blog_{$v.post_id}">
+            <div class="textbox-title">
+                <h4>
+                    <img width="13" border="0" align="absmiddle" height="13" alt="" src="__PUBLIC__/blog/images/icon_point2.gif" />
+                    <a href="{:U('Post/view', ['id' => $v['post_id']])}">{$v.title}</a> 
+                </h4>
+                <div class="textbox-label">
+                    [ {$v.create_time|date="Y-m-d H:i:s",###} | <a href="{:U('Cate/index', ['id' => $v['cate_id']])}">{$v.cate_name}</a> ]
+                </div>
+            </div>
+            <div class="textbox-content">
+                {$v.content|getIntro}
+            </div>
+            <div class="textbox-bottom">
+                <a class="left more" href="{:U('Post/view', ['id' => $v['post_id']])}">查看更多</a> 
+                <!--[ 管理：<a href="javscript:;">编辑</a> <a href="javascript:delBlog(22)">删除</a> ]--> 
+                关键词: {$v.tags}| <a href="{:U('Post/view#reply', ['id' => $v['post_id']])}"><span title="评论:">评论: {$v.reply_count} </span></a> | <span title="浏览量">浏览: {$v.view_count} </span> 
+            </div>
+        </div>
+        </foreach>    
+    </case>
+    <default/>
+</switch>
+
+<!-- 尾部分页 -->
+<div class="article-bottom">
+    <div class="pages"> 
+        {$pagelist}
+    </div>
+</div>

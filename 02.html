@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>test</title>
+   <script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.js"></script>
+	<script type="text/javascript">
+	$(function() {
+	
+	});
+	</script>
+    <script src="./DataValidate.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSubmit").bind("click", function () {//提交事件
+                return validate();
+            });
+        });
+
+        //验证函数
+        function validate() {
+            var vName = new validateInfo("txtName", "sp_txtName",
+             [ IsEmpty("不能为空")
+             , IsLength(2, 5, "长度有误")
+             , IsRegular(/^\d*$/, "只能为整型")
+             , IsCustomFn(IsExist, "已存在")
+             , IsLongRange("Handler1.ashx", "失望")
+             ]);
+
+            var vItem = new validateInfo("ddlList", "sp_ddlList", [IsEmpty("请选择")]);
+
+            //把验证对象 以数组形式添加到验证容器中
+            var validateTest = new UserForm([vName, vItem]);
+
+            return validateTest.validate();//返回验证结果 true|false
+        }
+
+        //名称是否存在
+        function IsExist() {
+            if ($("#hiddName").val() == $("#txtName").val())
+                return false;
+            else
+                return true;
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" method="get">
+    <div>
+		名称: <input type="text" size="5"  id="txtName" name="sort_order">
+        <span style="color:Red;" id="sp_txtName">*</span>&nbsp;&nbsp; <br >
+
+		<select name="command" id="ddlList">
+			<option value="">选择操作</option>
+			<option value="sortOrder">排序</option>
+			<option value="delete">删除</option>
+			<option value="verify">显示</option>
+			<option value="unVerify">隐藏</option>
+		</select>
+        <span style="color:Red;" id="sp_ddlList">*</span>&nbsp;&nbsp; <br />
+		
+
+		<input type="submit" id="btnSubmit" value="提交"/>
+		<input type="hidden" id="hiddName" name="f1" value="123"  />
+    </div>
+    </form>
+</body>
+</html>

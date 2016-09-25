@@ -1,0 +1,35 @@
+<textarea name="[form_name]" id="[form_id]"    class="form-control hide-data" > [form_value] </textarea>
+<!-- 实例化编辑器 -->
+<script type="text/javascript" src="__PUBLIC__/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__PUBLIC__/ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<!-- Your site ends -->
+<!--
+
+      toolbars: [
+            [
+                'source','bold', 'underline', 'strikethrough', '|',
+                'justifyleft', 'justifycenter', 'justifyright', '|',
+                'insertorderedlist', 'insertunorderedlist','blockquote', '|',
+                'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+                'simpleupload', 'insertimage','link', 'unlink', '|',
+                'pagebreak', 'source', 'insertcode','|',
+                'help','fullscreen'
+            ],
+           
+        ],
+-->
+<script type="text/javascript">
+var ue_[form_id] = UE.getEditor('[form_id]',{
+        serverUrl :'{:U('Upload/ueditor')}',
+        'initialFrameHeight' : '[height]',
+        "initialFrameWidth" :  '[width]',
+        lang : "zh-cn",
+        elementPathEnabled : false,
+        initialFrameHeight: [width],
+        initialFrameHeight: [height],
+        minFrameHeight: [height],
+        autoHeightEnabled: false
+});
+</script>

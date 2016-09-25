@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>ThinkPHP示例: ajax分页操作</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://php.my/pjaxpage/Public/jquery.js"></script>
+	<style type="text/css">
+	*{ padding: 0; margin: 0;font-size:16px; font-family: "微软雅黑"}
+	div{ padding: 3px 20px;}
+	body{ background: #fff; color: #333;}
+	h2{font-size:36px}
+	div.result{border:1px solid #d4d4d4; background:#FFC;color:#393939; padding:8px 10px;float:auto; width:450px;margin:2px}
+	a{text-decoration:none; color:gray;}
+	a:hover{color:#F60;}
+	div.page{border:1px solid #d4d4d4; background:#333;color:white; padding:5px 15px;float:auto; width:450px;margin:2px;text-align:right}
+	</style>
+</head>
+<body>
+	<h2>ThinkPHP示例：pjax分页操作</h2>
+	<div class="result">
+		可以更改IndexAction文件中param数组的<b>target</b>和<b>pagesId</b>参数查看和普通分页的区别。
+	</div>
+	<div id="content">
+		<include file="ajaxlist" />
+	</div>
+	<script type="text/javascript" src="http://php.my/pjaxpage/Public/jquery.pjax.js"></script>
+	 <script>
+		jQuery(function($) {
+			$('#{$page_target}').pjax('{$page_pages}',{timeout:1000});
+		});
+	 </script>
+</body>
+</html>

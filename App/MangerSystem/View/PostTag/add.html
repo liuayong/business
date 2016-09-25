@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>后台管理 - 添加tbl_post_tag</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/blue.css" />
+    <script>window.jQuery || document.write('<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.1.7.2.min.js"><\/script>');</script>
+    <script src="__PUBLIC__/Admin/js/Common.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/Admin/js/jquery.validate.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/Admin/js/jquery.form.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+    //指定当前组模块URL地址
+    var URL     = '__URL__';
+    var App	    = '__APP__';
+    var PUBLIC  = '__PUBLIC__';
+    $(function(){
+        /*
+	$('form').validate([
+    
+]);
+	*/
+    });
+    </script>
+</head>
+<body>
+<div id="main" class="main" >
+    <div class="content">
+        <div class="title">新增tbl_post_tag [ <a href="__CONTROLLER__/index">返回列表</a> ]</div>
+        <form method='post' id="form" action="__CONTROLLER__/add" >
+        <table cellpadding=3 cellspacing=3>
+            <tr>
+                <td class="tRight" >cate_id：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="cate_id_id"  name="cate_id" />
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >post_id：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="post_id_id"  name="post_id" />
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >user_id：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="user_id_id"  name="user_id" />
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >tag：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="tag_name_id"  name="tag_name" />
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >¼：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="create_time_id"  name="create_time" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="center">
+                    <input type="submit" value="保 存" class="small submit">
+                    <input type="reset" class="submit  small" value="重 置" >
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</div>
+
+<!-- 加载所需要的资源文件 -->
+<script type="text/javascript" >
+$(function(){
+
+});
+</script>    
+</body>
+</html>

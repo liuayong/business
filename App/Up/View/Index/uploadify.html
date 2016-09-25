@@ -1,0 +1,75 @@
+<!--- 通过uploadify进行多文件上传 --->
+<style>
+    body { background: #E7EDEF; }
+    ul {
+        list-style: none;
+        padding-left:0px;
+    }
+    #fileListWarp li {
+        float: left;
+        padding: 3px 5px;
+    }
+    #fileListWarp li a {
+        font-size: 12px;
+        padding-top: 2px;
+        text-decoration: none;
+    }
+    #fileListWarp li a:hover {
+        text-decoration: underline;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/plugins/uploadify/uploadify.css" />
+<script>// window.jQuery || document.write('<script src="http://apps.bdimg.com/libs/jquery/1.8.2/jquery.js"><\/script>');</script>
+<script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugins/uploadify/jquery.uploadify.min.js"></script>
+<form name="upform">
+    <input id="uploadify" name="uploadify" type="file" multiple="true" />
+    <ul id="fileListWarp"></ul>
+    <div id="fileQueue" style="clear:both"></div>
+</form>
+<script type="text/javascript">
+    var uploadify_url = '__PUBLIC__/plugins/uploadify/';
+    var uploadify_remove = "{:U('remove')}";
+    $(function () {
+        $('#uploadify').uploadify({
+            'buttonText': '选择文件..',
+            'fileObjName': 'imgFile',
+            'method': 'post',
+            'multi': true,
+            'queueID': 'fileQueue',
+            /*'uploadLimit': 2,*/
+            'fileTypeExts': '*.gif;*.png;*.jpg;*.bmp;',
+            'buttonImage': uploadify_url + 'select.png',
+            'formData': {
+                'sessionId': "<?php echo session_id(); ?>",
+                'timestamp': "<?php echo time();?>",
+                'token': "<?php echo md5('unique_salt'.time()); ?>"
+            },
+            'swf': uploadify_url + 'uploadify.swf',
+            'uploader': "{:U('basicExecute')}",
+            'onUploadStart': function (file) {
+                $('#uploadify').uploadify('settings', 'formData', {
+                    'iswatermark': $("#iswatermark").attr("checked")
+                });
+            },
+            'onUploadSuccess': function (file, data, response) {
+                var json = $.parseJSON(data);
+                if (json.state == 'success') {
+                    // 设置个模板
+                    var html = '<li id="image_' + json.fileId + '"><a href="{$Think.IMG_URL}' + json.file + '" target="_blank"><img src="{$Think.IMG_URL}' + json.file + '" width="40" height="40"  align="absmiddle"/></a>&nbsp;<br /><a href="javascript:uploadifyRemove(&quot;' + json.fileId + '&quot;, &quot;image_&quot;)">删除</a></a><input name="imageList[fileId][]" type="hidden" value="' + json.fileId + '" /><input name="imageList[file][]" type="hidden" value="' + json.file + '"/></li>';
+                    $("#fileListWarp").append(html);
+                } else {
+                    alert(json.message);
+                }
+            }
+        });
+    });
+    function uploadifyRemove(fileId, attrName) {
+        console.warn(uploadify_remove);
+        if (confirm('本操作不可恢复，确定继续？')) {
+            $.post(uploadify_remove, {imageId: fileId}, function (res) {
+                $("#" + attrName + fileId).remove();
+            }, 'json');
+        }
+    }
+</script>

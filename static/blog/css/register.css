@@ -1,0 +1,1396 @@
+@charset "utf-8";
+
+/*****************************  begin reset.css *********************************/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body{font:12px/2em arial, simsun, Helvetica, sans-serif;background:#fff;}
+
+table{border-collapse:collapse;border-spacing:0}
+table td {
+margin:0px;
+padding:0px;
+}
+dl,dt,dd,ul,li,ol {
+	list-style-type:none;
+}
+textarea,input {outline: medium none;}
+fieldset,input,img {
+    border: 0 none;
+}
+img{border:0px; vertical-align: top;}
+a img{vertical-align:middle;}
+
+sup,sub{font-size:100%;vertical-align:baseline;}
+input[type=button],
+input[type=submit],
+button{
+	/*border: 0 none;*/
+	cursor: pointer;
+}
+a{text-decoration:none;color:#1686cc;cursor:pointer;}
+/*a:hover{text-decoration:underline;color:#297bc7;}*/
+a:hover,a.cur{text-decoration:none;color:#ff7518;}
+em{font-style: normal;}
+
+.clearFix:after {visibility:hidden;display:block;font-size:0;content:"";clear:both;height:0px;}
+.clearFix{*zoom:1;}
+.clear{*zoom:1;}
+.clear:after{display:block;content:'clear';clear:both;height:0;font-size:0;visibility:hidden;}
+.clearfix{clear:both;height:0;line-height:0;font-size:0;}
+
+.left,.leftF{float:left;}
+.right,.rightF{float:right;}
+i{font-style:normal;}
+.radius2{-webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
+.radius5{-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
+/*****************************  end reset.css *********************************/
+
+
+
+
+/* CSS Document */
+/*****************************  begin common.css *********************************/
+.pdtp10 {
+    padding-top: 10px;
+}
+.pdl36 {
+    padding-left: 36px;
+}
+.pdtb40 {
+    padding: 40px 0;
+}
+.mrgL10 {
+    margin-left: 10px;
+}
+.mrgR10 {
+    margin-right: 10px;
+}
+.mgbt10 {
+    margin-bottom: 10px;
+}
+.pdbt70 {
+    padding-bottom: 70px;
+}
+.pdrgt12 {
+    padding-right: 12px;
+}
+.col168 {
+    color: #1686cc;
+}
+.ff7 {
+    color: #ff7518;
+}
+.ff9 {
+    color: #ff9231;
+}
+.size12 {
+    font-size: 12px;
+}
+.flleft {
+    float: left;
+}
+.top33 {
+    top: 33px;
+}
+.wth700 {
+    width: 700px;
+}
+.hgt36 {
+    height: 36px;
+}
+.ovflwhdn {
+    overflow: hidden;
+}
+.inpt {
+    border: 1px solid #e9eaea;
+    width: 260px;
+    height: 32px;
+    font: 12px/32px "simsun";
+    padding-left: 10px;
+    color: #4a4a4a;
+    border-radius: 3px;
+}
+.txtarea {
+    border: 1px solid #e9eaea;
+    width: 580px;
+    padding: 10px;
+    color: #4a4a4a;
+    border-radius: 3px;
+    resize: none;
+}
+.btnGlobal {
+    width: 260px;
+    height: 32px;
+    font: 16px/32px "simHei";
+    color: #fff;
+    background-color: #ff7518;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative; 
+    behavior:url(../js/PIE.htc);
+}
+.colorRed {
+    color: #ff0000;
+}
+.colorOrange {
+    color: #ff7518;
+}
+.placeholder {
+    color: #767676;
+}
+.placeholder:focus {
+    color: #5B5B5B;
+}
+.clockIcon{
+    background: url(../images/clockIcon.png) 0px 0px no-repeat;
+    width: 16px;
+    height: 13px;
+    margin-right: 3px;
+    *display: inline;
+    *zoom:1;
+    display: inline-block;
+}
+select{padding: 8px 0;}
+/* common class end */
+/* layout */
+
+.mainBox {
+    background-color: #f3f2f2;
+    overflow: hidden;
+}
+.main {
+    width: 980px;
+    margin: 0 auto;
+}
+a:hover, a:hover span {
+    color: #ff7518;
+}
+/*mainttWrap*/
+
+.mainttWrap {
+    width: 980px;
+    margin: 0 auto;
+}
+.mainttbar {
+    font: 14px/35px "Microsoft YaHei";
+    height: 35px;
+    padding-left: 30px;
+    background-color: #1686cc;
+    color: #fff;
+    position: relative;
+}
+.mainttbar i {
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    background: url(../images/mainbarIcon.png) 0px 0px no-repeat;
+    width: 6px;
+    height: 16px;
+    line-height: 35px;
+    display: inline-block;
+    margin-right: 25px;
+}
+.mainttbar .athr {
+    color: #fff;
+    float: right;
+    font-size: 12px;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+/*mainttWrap end*/
+/*footer prandIsland*/
+
+.footTit {
+    padding: 35px 0 0 12px;
+    border-bottom: #dadada solid 2px;
+    font: 26px/45px "Microsoft YaHei";
+}
+.prandIsland {
+    width: 980px;
+    margin: 0 auto;
+}
+.prandULl {
+    padding: 20px 0 0 5px;
+}
+.prandULl li {
+    float: left;
+    width: 290px;
+    margin: 0 0 18px 20px;
+    padding: 9px;
+    border: #e9e9e9 solid 1px;
+    background-color: #f7f7f7;
+}
+.prandULl .marg0 {
+    margin-left: 0;
+}
+.prandULl .bname {
+    padding: 10px 0 2px;
+    height: 20px;
+    line-height: 20px;
+}
+/*newprandul*/
+.newprandulWrap{
+    width:980px;
+    overflow: hidden;
+}
+.newprandul {
+    padding: 20px 0 0;
+    width:110%;
+}
+.newprandul li {
+    float: left;
+    width: 185px;
+    height:150px;
+    margin: 0 0 18px 10px;
+    border: #d8e3f1 solid 1px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.newprandul li:hover{box-shadow: #ccc 0 1px 10px; }
+.newprandul .marg0 {
+    margin-left: 0;
+}
+.newprandul .bname {
+    padding: 10px 0 2px;
+    height: 20px;
+    line-height: 20px;
+}
+/*newprandul end*/
+.size20 {
+    font: 20px/20px "Microsoft YaHei";
+}
+/*footer prandIsland end*/
+/*rightNav*/
+
+.rightNav {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 49px;
+    margin-top: -218px;
+    background-color: #fff;
+    box-shadow: #ccc 0 0 10px;
+    z-index: 100;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.rightNav .navBox {
+    margin: 20px 0 0 0;
+}
+.rightNav .navBox li {
+    text-align: center;
+    padding: 0 10px 10px 14px;
+}
+.rightNav .navBox li b {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 14px;
+    background: url(../images/navRightIcon.png) 0 0 no-repeat;
+}
+.rightNav .navBox li b.nav1 {
+    height: 20px;
+}
+.rightNav .navBox li b.nav2 {
+    background-position: 0 -47px;
+}
+.rightNav .navBox li b.nav3 {
+    background-position: 0 -103px;
+}
+.rightNav .navBox li b.nav4 {
+    background-position: 0 -154px;
+}
+.rightNav .navBox li b.nav5 {
+    background-position: 0 -207px;
+}
+.rightNav .navBox li b.nav6 {
+    background-position: 0 -261px;
+}
+.rightNav .navBox li b.nav7 {
+    background-position: 0 -309px;
+}
+.rightNav .navBox li b.nav8 {
+    background-position: 0 -362px;
+}
+
+.rightNav .navBox li em {
+    display: block;
+    width: 15px;
+    height: 1px;
+    margin-left: 7px;
+    background-color: #f3f2f2;
+}
+.rightNav .navBox a {
+    font: 12px/23px "Microsoft YaHei";
+    color: #b3b3b3;
+}
+.rightNav .navBox .toTop a {
+    color: #5e5e5e;
+}
+.rightNav .navBox a:hover {
+    color: #76c3f3;
+}
+.rightNav .navBox a:hover b {
+    background-image: url(../images/navRightIcon_h.png);
+}
+/*floatPopLi*/
+
+.rightNav .floatPopLi {
+    position: relative;
+}
+.rightNav .floatPopLi .floatPopBox {
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: -7px;
+    background-color: #ff7518;
+    border: 0px solid #c5c5c5;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #c5c5c5;
+    z-index: 999;
+}
+.rightNav .floatPopLi .floatPopBox p {
+    width: 83px;
+    height: 33px;
+    line-height: 33px;
+    color: #fff;
+}
+.rightNav .floatPopLi:hover .floatPopBox {
+    display: block;
+}
+.rightNav .floatBoxMain {
+    position: relative;
+    border-radius: 6px;
+}
+.rightNav .arrowRt {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: -7px;
+    width: 7px;
+    height: 14px;
+    background: url(../images/rightNavArrow.png) no-repeat 0px -29px;
+}
+.rightNav .floatBoxMain .floatBoxtt, .rightNav .floatBoxMain .floatBoxbt {
+    width: 219px;
+    color: #fff;
+    font: bold 14px/29px 'Microsoft YaHei';
+    text-align: center;
+    vertical-align: middle;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.rightNav .floatBoxMain .floatBoxtt {
+    background-color: #ff7518;
+    height: 29px;
+    line-height: 29px;
+}
+.rightNav .floatBoxMain .floatBoxbt {
+    background-color: #ff7518;
+    height: 20px;
+    line-height: 20px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.rightNav .floatBoxMain .floatBoxcon {
+    padding: 10px 8px;
+    width: 203px;
+}
+.rightNav .floatBoxMain .floatBoxcon .floatBoxTxt {
+    font: 12px/16px 'simsun';
+    color: #343434;
+}
+.rightNav .floatBoxMain .floatBoxcon img {
+    border-radius: 3px;
+    width: 173px;
+    height: 160px;
+}
+.rightNav .manmadeArea {
+    width: 180px;
+    height: 95px;
+    padding: 10px;
+    resize: none;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+}
+.rightNav .manmadeBtn {
+    width: 100%;
+    height: 29px;
+    font: bold 14px/29px 'Microsoft YaHei';
+    color: #fff;
+    background-color: #ff9b58;
+    border: #f0c3a4 solid 1px;
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.rightNav .manmadeWrap .floatPopBox {
+    right: 50px;
+    top: -10px;
+}
+.rightNav .manmadeWrap .floatBoxtt {
+    background-color: #ff7518;
+}
+.rightNav .manmadeWrap .floatBoxbt {
+    height: 29px;
+    line-height: 29px;
+}
+.rightNav .weixinWrap .floatPopBox {
+    right: 50px;
+    top: -10px;
+}
+.rightNav .weixinWrap .floatBoxbt, .rightNav .mobiappWrap .floatBoxbt {
+    height: 10px;
+    line-height: 10px;
+}
+.rightNav .mobiappWrap .floatBoxcon .floatBoxTxt, .rightNav .weixinWrap .floatBoxcon .floatBoxTxt {
+    padding-top: 15px;
+    color: #fff;
+}
+.rightNav .mobiappWrap .floatPopBox {
+    right: 50px;
+    top: -115px;
+}
+.rightNav .mobiappWrap .arrowRt {
+    top: 125px;
+    right: -7px;
+}
+/*floatPopLi end*/
+/*rightNav end*/
+/*floors*/
+
+.floorsCon {
+    padding-bottom: 20px;
+}
+.floors {
+    position: relative;
+    padding-top: 20px;
+}
+.conTitle {
+    border-bottom: #fff solid 1px;
+    background-color: #fafafa;
+}
+.conTitle h2 {
+    width: 233px;
+    height: 50px;
+    font: 20px/50px "Microsoft YaHei";
+    color: #fff;
+    background: url(../images/slashBg.png) right 0 no-repeat #ffb931;
+}
+.conTitle h2 b {
+    padding: 0 16px;
+    font: 26px/50px "arial";
+}
+.floorsTable {
+    background-color: #fff;
+    font-size: 12px;
+    font-family: "simsun";
+}
+.floorsTable th {
+    height: 30px;
+    background-color: #ffb931;
+    font: 12px/30px "Microsoft YaHei";
+    color: #fff;
+}
+.floorsTable td {
+    padding: 12px 0 8px;
+    border-bottom: #e9e9e9 solid 1px;
+    color: #3e3d3d;
+    text-align: center;
+}
+.floorsTable td a {
+    color: #1686cc;
+}
+.starsEval {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    padding-top: 2px;
+    vertical-align: top;
+}
+.starsEval li {
+    float: left;
+    line-height: 18px;
+    padding: 0 1px 0 0;
+    border: none;
+}
+.starsEval li b {
+    display: block;
+    width: 11px;
+    height: 12px;
+    background: url(../images/stars.png) 0 0 no-repeat;
+}
+.starsEval li .on {
+    background-position: 0 -14px;
+}
+.floorsTable .phoneImg {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    margin-left: 5px;
+    width: 10px;
+    height: 17px;
+    background: url(../images/iphoneIcon.png) 0 0 no-repeat;
+}
+.floorsTable .parityA {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    margin-left: 2px;
+    width: 38px;
+    height: 19px;
+    line-height: 19px;
+    background-color: #1686cc;
+    color: #fff;
+}
+.floorsTable .ff7 {
+    color: #ff7518;
+}
+.floorsTable .col168 {
+    color: #1686cc;
+}
+.floorsTable .order {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    width: 68px;
+    height: 24px;
+    line-height: 24px;
+    background-color: #ff7518;
+    color: #fff;
+}
+.pageBox {
+    height: 35px;
+    line-height: 35px;
+    color: #515151;
+    text-align: right;
+    font-size: 12px;
+    font-family: "simsun";
+}
+.pageBox .ff7 {
+    color: #ff7518;
+}
+.pageBox .pageSkip .bp {
+    padding: 0 12px;
+}
+.pageBox .pageNum {
+    padding-left: 15px;
+}
+.pageBox .pageNum a {
+    padding: 0 4px;
+    color: #515151;
+}
+.pageBox .pageNum a:hover {
+    color: #ff7518;
+}
+.pageBox .pageNum .current {
+    padding: 0 4px;
+    color: #ff7518;
+}
+.pageBox .pageNum .prevPage, .pageBox .pageNum .nextPage, .pageBox .pageNum .frontPage, .pageBox .pageNum .lastPage {
+    padding: 0 0 0 10px;
+}
+.quickBtn {
+    position: absolute;
+    top: 20px;
+    left: -32px;
+}
+.quickBtn a {
+    display: block;
+    width: 16px;
+    margin-bottom: 5px;
+    padding: 7px 4px 5px 8px;
+    box-shadow: #ccc 0 1px 2px;
+    font: 13px/13px "simsun";
+    color: #76c3f3;
+    background-color: #fff;
+}
+.quickBtn a:hover {
+    color: #ff7518;
+}
+.quickBtn a b {
+    display: block;
+    width: 9px;
+    height: 5px;
+    margin: 5px 0 0 2px;
+    background: url(../images/arrowIcon.png) no-repeat;
+}
+.quickBtn a b.down {
+    background-position: 0 -65px;
+}
+.quickBtn a b.doubleD {
+    height: 11px;
+    background-position: 0 -77px;
+}
+.quickBtn a b.up {
+    margin: 0 0 5px 2px;
+    background-position: 0 -71px;
+}
+.quickBtn a b.doubleU {
+    height: 12px;
+    margin: 0 0 5px 2px;
+    background-position: 0 -89px;
+}
+.floor2 .conTitle h2 {
+    background-position: right -56px;
+    background-color: #cf95f8;
+}
+.floor2 .floorsTable th {
+    background-color: #cf95f8;
+}
+.floor3 .conTitle h2 {
+    background-position: right -112px;
+    background-color: #ff9231;
+}
+.floor3 .floorsTable th {
+    background-color: #ff9231;
+}
+/*Scroll*/
+
+.firmScroll {
+    margin-top: 15px;
+}
+.firmScroll .prev, .firmScroll .next {
+    width: 30px;
+    height: 228px;
+    line-height: 228px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+.firmScroll .prev b, .firmScroll .next b {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    width: 11px;
+    height: 22px;
+    background: url(../images/arrowIcon.png) no-repeat;
+}
+.firmScroll .prev b {
+    background-position: 0 -196px;
+}
+.firmScroll .next b {
+    background-position: 0 -228px;
+}
+.firmScroll .scrollBox {
+    margin: 0 10px;
+    padding: 14px 19px;
+    background-color: #fafafa;
+}
+.firmScroll .scrollCon {
+    position: relative;
+    width: 862px;
+    height: 200px;
+    overflow: hidden;
+}
+.firmScroll .scrollCon .scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 102%;
+}
+.firmScroll .scrollCon .scroll li {
+    float: left;
+    width: 289px;
+}
+.firmScroll .scrollCon .scroll li img {
+    width: 276px;
+    height: 192px;
+    border: #eff0f0 solid 4px;
+}
+.firmScroll .scrollCon .scroll li:last-child {
+    padding: 0;
+}
+/*instaSearch*/
+
+.instaSearch {
+    border: #e9e9e9 solid 1px;
+}
+.instaSearch .deSearch {
+    width: 270px;
+    height: 20px;
+    padding: 5px 0 5px 8px;
+    background-color: #fff;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    font: 13px/20px "Microsoft YaHei";
+}
+.instaSearch .deSub {
+    width: 71px;
+    height: 30px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background: url(../images/desearchBg.png) 26px 6px no-repeat #ff7518;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+.h3Tit {
+    padding: 0 10px 0 17px;
+    height: 33px;
+    font: 14px/33px "simhei";
+    color: #fff;
+    border-bottom: #e9e9e9 solid 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #ff7518;
+}
+.h3Tit a {
+    float: right;
+    font: 12px/36px "simsun";
+    color: #fff;
+}
+.fourB {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/insideIcon.png) 0 0 no-repeat;
+}
+.titLabel {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    padding: 0 5px;
+    height: 18px;
+    line-height: 19px;
+    border: #1686cc solid 1px;
+    border-radius: 2px;
+    font-size: 13px;
+    color: #1686cc;
+    text-align: center;
+}
+/*cuccess*/
+
+.staticWrap {
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    min-height: 600px;
+    *height: 600px;
+}
+.statlist {
+    padding: 45px 148px;
+    background-color: #e6fce5;
+    border: 1px solid #e9e9e9;
+}
+.statlist li {
+    float: left;
+    font: 14px/16px "Microsoft YaHei";
+}
+.statlist .rightLi {
+    padding-left: 30px;
+}
+/*.statlist .rightIcon img {
+    background: url(../images/rightIcon.png) 0 0 no-repeat;
+}
+.statlist .failIcon img {
+    background: url(../images/failIcon.png) 0 0 no-repeat;
+}*/
+.statlist .stip, .statlist .stxt {
+    padding-top: 15px;
+}
+.statlist .cmpt {
+    color: #ff7518;
+    font-size: 14px;
+    font-weight: bold;
+}
+.statlist .stip {
+    color: #2c2c2c;
+    font-size: 14px;
+}
+.statlist .stxt {
+    color: #2c2c2c;
+    font: 12px/16px "simsun";
+}
+/*addImg*/
+
+.addImg li {
+    float: left;
+    width: 152px;
+    height: 78px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: #e9e9e9 dashed 1px;
+    position: relative;
+}
+.addImg li a {
+    display: block;
+    width: 100%;
+    height: 78px;
+    background: url(../images/addIcon.png) center no-repeat;
+}
+.addImg li .addInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 78px;
+    cursor: pointer;
+}
+/* payProcess */
+
+.payProcess {
+    height: 50px;
+    margin: 30px 10px 40px;
+    padding: 30px 80px;
+    border-top: 1px dashed #e9e9e9;
+}
+.payProcess .steps li {
+    position: relative;
+    width: 32px;
+    height: 33px;
+    line-height: 33px;
+    margin-right: 200px;
+    text-align: center;
+    background: url("../images/ordersaleStepbar.png") no-repeat -475px -15px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.payProcess .steps li.first, .payProcess .steps li.ok, .payProcess .steps li.cur {
+    background-position: -6px -15px;
+}
+.payProcess .steps li.last {
+    margin-right: 0;
+}
+.payProcess .steps li b {
+    font: bold 20px "arial";
+    font-style: normal;
+    color: #fff;
+    display: inline-block;
+}
+.payProcess .steps .first b, .payProcess .steps .ok b {
+    /*background-position:-86px -110px;*/
+    
+    z-index: 2;
+}
+.payProcess .steps li.cur {
+    z-index: 2;
+}
+.payProcess .steps span, .payProcess .steps .notok {
+    background-color: #cdcdcd;
+    display: block;
+    height: 4px;
+    left: 32px;
+    overflow: hidden;
+    position: absolute;
+    top: 14px;
+    width: 203px;
+    z-index: 1;
+}
+.payProcess .steps .ok .going {
+    background-color: #1fcc75;
+}
+.payProcess .steps li .going, .payProcess .steps li.cur .going {
+    background-color: #1fcc75;
+    display: block;
+    height: 4px;
+    left: 32px;
+    overflow: hidden;
+    position: absolute;
+    top: 14px;
+    width: 203px;
+    z-index: 1;
+}
+.payProcess .steps .stxt {
+    display: block;
+    left: -60px;
+    position: absolute;
+    text-align: center;
+    top: 35px;
+    width: 152px;
+    white-space: nowrap;
+    font: bold 14px "Microsoft YaHei";
+    color: #cdcdcd;
+}
+.payProcess .steps .ok .stxt {
+    color: #5c5c5c;
+}
+.payProcess .steps li.cur .stxt {
+    font: bold 14px "Microsoft YaHei";
+    margin-top: 18px;
+    margin-left: 10px;
+    color: #5c5c5c;
+}
+.payProcess .steps li.cur b.big {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    z-index: 10;
+    width: 62px;
+    height: 62px;
+    background: url("../images/ordersaleStepbar.png") no-repeat -225px 0px;
+}
+
+.payCash .steps li{
+    margin-right:320px;
+}
+.payCash .steps span, .payCash .steps .notok,.payCash .steps li .going, .payCash .steps li.cur .going {
+    width: 323px;
+}
+
+
+/* payProcess end */
+/*searchLine*/
+
+.filtersTit {
+    position: relative;
+}
+.searchLine {
+    position: absolute;
+    left: 95px;
+    top: 3px;
+}
+.searchLine li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-size: 13px;
+    font-family: 'simsun';
+    float: left;
+    height: 20px;
+    line-height: 20px;
+}
+/* searchLine */
+
+.searchLine li {
+    margin-right: 5px;
+    position: relative;
+}
+.searchLine li b, .searchLine li .rbd {
+    float: left;
+}
+.searchLine .rbd {
+    padding: 0px 22px 0px 10px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    height: 20px;
+    color: #6e6e6e;
+    font: bold 12px/20px 'simsun';
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+.searchLine li b {
+    background: #fafafa url('../images/searchline-1.png') no-repeat 0px 0px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 10px;
+    height: 22px;
+}
+.searchLine li .ltb {
+    background-position: 0px 0px;
+}
+.searchLine li .rtb {
+    background-position: 0px -30px;
+}
+.searchLine li .closeb {
+    background-position: 0px -123px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 8px;
+    top: 5px;
+}
+/*.searchLine a:hover .ltb,*/
+
+.searchLine a.cur .ltb {
+    background-position: 0px -60px;
+}
+/*.searchLine a:hover .rtb,*/
+
+.searchLine a.cur .rtb {
+    background-position: 0px -90px;
+}
+/*.searchLine a:hover .rbd,*/
+
+.searchLine a.cur .rbd {
+    border-top: 1px solid #ff1c1c;
+    border-bottom: 1px solid #ff1c1c;
+}
+/*.searchLine a:hover .closeb,*/
+
+.searchLine a.cur .closeb {
+    background-position: 0px -148px;
+    width: 12px;
+    height: 12px;
+}
+/* searchLine end */
+/*2014-11-18 registerEmail*/
+
+.emaillist {
+    padding: 45px 148px;
+    background-color: #e6fce5;
+    border: 1px solid #e9e9e9;
+}
+.emaillist li {
+    font: 14px/16px "Microsoft YaHei";
+}
+.emaillist .stip, .emaillist .stxt {
+    padding-top: 15px;
+}
+.emaillist .cmpt {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+.emaillist .stip {
+    color: #2c2c2c;
+    font-size: 14px;
+}
+.liright {
+    text-align: right;
+}
+/*2014-11-18 registerEmail end*/
+/*contractCon*/
+
+.contractCon {
+    border: #e9e9e9 solid 1px;
+    display: none;
+}
+.contractImg {
+    border-top: #e9e9e9 solid 1px;
+}
+.contractht {
+    padding: 50px 80px;
+}
+#JYD-ui-modal .contractht h2,
+.contractht h2 {
+    text-align: center;
+    font: bold 26px "Microsoft YaHei";
+    color: #2c2f30;
+}
+.contractht p {
+    font: 14px "Microsoft YaHei";
+    color: #2c2f30;
+}
+.contractht .bianhao {
+    float: right;
+    font-weight: bold;
+}
+.contractht .cont {
+    font-weight: bold;
+}
+.ptop15 {
+    padding-top: 15px;
+}
+.ptop5 {
+    padding-top: 5px;
+}
+.ptop30 {
+    padding-top: 30px;
+}
+.productpri {
+    color: #2b3235;
+    font: 14px "Microsoft YaHei";
+}
+.pricetit {
+    background: #f2f2f2;
+    text-align: center;
+    color: #2f2c36;
+}
+.agreementdate {
+    float: left;
+    padding-right: 70px;
+    font: 14px "Microsoft YaHei";
+}
+.agreementsignWrap .last {
+    padding-right: 0;
+}
+.remarkruleTexta {
+    border: 1px solid #cccccc;
+    height: 72px;
+    padding: 10px;
+    margin-top: 30px;
+    resize: none;
+    width: 720px;
+}
+/*contractCon end*/
+/*confirmContract*/
+/*confirmContract end*/
+
+.confirmContractWrap {} .releaseWrap .formBox.confirmContract .formCon {
+    padding: 0;
+    border: 0;
+}
+.releaseWrap .formBox.confirmContract .contractCon {
+    margin-top: 20px;
+    border: 1px solid #e9e9e9;
+}
+.releaseWrap .confirmContract .contractImg {
+    border-top: 0px;
+}
+.confirmContractWrap .agreeDiv {
+    border-top: 0px;
+}
+.backmdfy {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+/*errorTip*/
+
+.errorTip, .errorTip b {
+    display: inline-block;
+}
+.errorTip {
+    font-size: 12px;
+    color: #ff3e18;
+}
+.errorTip b {
+    width: 15px;
+    height: 15px;
+    margin: 0 6px 0 10px;
+    background: url(../images/errorIcon.png) no-repeat;
+    vertical-align: middle;
+}
+.errorTip b.ok {
+    width: 15px;
+    height: 15px;
+    margin: 0 6px 0 10px;
+    background: url(../images/validrightIcon.png) no-repeat;
+    vertical-align: middle;
+}
+/*errorTip end*/
+
+/*rightTip*/
+
+.rightTip, .rightTip b {
+    display: inline-block;
+}
+.rightTip {
+    font-size: 12px;
+    color: #000;
+}
+.rightTip b {
+    width: 15px;
+    height: 15px;
+    margin: 0 6px 0 10px;
+    background: url(../images/validrightIcon.png) no-repeat;
+    vertical-align: middle;
+}
+/*rightTip end*/
+
+/*pop tip*/
+.tip {
+    background-color: #e1f4ff;
+    color: #454545;
+    font: 12px/30px "simsun";
+    height: 30px;
+    padding-left: 30px;
+}
+.tipwarn,.tipright{
+    margin-bottom:20px;
+    background-color:#fff1e7; 
+    border:#ff3e18 solid 1px; 
+    color:#ff7518;
+}
+.tipwarn b{
+    display:inline-block;
+    width: 15px;
+    height: 15px; 
+    margin: 0 6px 0 10px; 
+    background: url(../images/valid.png) 0 -54px no-repeat;
+    vertical-align: middle;
+}
+.tipright b{
+    display:inline-block;
+    width: 18px;
+    height: 18px; 
+    margin: 0 6px 0 10px; 
+    background: url(../images/valid.png) 0 -25px no-repeat;
+    vertical-align: middle;
+}
+/*pop tip end*/
+
+
+
+
+
+/*  offer list  order's css */
+.floorsTable .isDisabled1 {
+    background-color:#ccc;
+    cursor:text;  
+}
+.floorsTable .isDisabled2 {
+    color:#bbb;
+    cursor:text
+}
+.placeholders {
+    color: #a9a9a9;
+}
+/*****************************  end common.css *********************************/
+
+
+
+/*************** CSS Document    begin register.css *************/
+/* CSS Document */
+.registerWrap {
+    padding: 20px;
+    background-color: #fff;
+}
+.registTab {
+    position: relative;
+    top: 1px;
+    border-top: #e9e9e9 solid 1px;
+    border-left: #e9e9e9 solid 1px;
+}
+.registTab li {
+    float: left;
+    width: 238px;
+    height: 44px;
+    border-right: #e9e9e9 solid 1px;
+    border-bottom: #e9e9e9 solid 1px;
+    background-color: #f7f9fa;
+    text-align: center;
+}
+.registTab li a {
+    font: 14px/44px "Microsoft YaHei";
+    color: #4a4a4a;
+}
+.registTab li.active a, .registTab li a:hover {
+    font-size: 16px;
+    color: #1686cc;
+}
+.registTab li.active {
+    background-color: #fff;
+    border-bottom-color: #fff;
+}
+.registCon {
+    padding: 45px 0 30px;
+    border: #e9e9e9 solid 1px;
+    font-size: 14px;
+    color: #4a4a4a;
+    display: none;
+}
+.registCon .itemli {
+    padding-bottom: 20px;
+    line-height: 34px;
+}
+.registCon .codeli {
+    padding-bottom: 15px;
+}
+.registCon .agreeli {
+    line-height: 20px;
+    font-size: 12px;
+}
+.registCon .itemli label, .registCon .itemli label b, .registCon .itemli .inputWrap, .registCon .errorTip, .registCon .errorTip b, .pwdStatus .pswarp .s_box, .registCon .codeImg, .agreementIpt {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+}
+.registCon .itemli label {
+    width: 235px;
+    text-align: right;
+}
+.registCon .itemli label b {
+    margin-right: 5px;
+    font: 20px/30px "simhei";
+    color: #ff7518;
+    vertical-align: middle;
+}
+.registCon .itemli .acctInpt {
+    width: 250px;
+    height: 18px;
+    padding: 7px 0 7px 10px;
+    border: #e9e9e9 solid 1px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+.registCon .codeli .codeInpt {
+    width: 130px;
+}
+.registCon .codeli .codeImg {
+    margin-left: 5px;
+    width: 115px;
+    height: 34px;
+    background-color: #dcdcdc;
+}
+.errorTip {
+    font-size: 12px;
+    color: #ff3e18;
+}
+.errorTip b {
+    width: 15px;
+    height: 15px;
+    margin: 0 6px 0 10px;
+    background: url(../images/errorIcon.png);
+    vertical-align: middle;
+}
+.errorTip b.ok {
+    width: 15px;
+    height: 15px;
+    margin: 0 6px 0 10px;
+    background: url(../images/validrightIcon.png) no-repeat;
+    vertical-align: middle;
+}
+/*rightTip*/
+
+.rightTip, .rightTip b {
+    display: inline-block;
+}
+.rightTip {
+    font-size: 12px;
+    color: #000;
+}
+.rightTip b {
+    width: 15px;
+    height: 15px;
+    margin: 0 6px 0 10px;
+    background: url(../images/validrightIcon.png) no-repeat;
+    vertical-align: middle;
+}
+/*rightTip end*/
+.pwdStatus {
+    padding: 10px 0 0 350px;
+}
+.pwdStatus .pswarp {
+    width: 150px;
+    height: 22px;
+    padding: 1px;
+    padding-right: 0;
+    background-color: #e9e9e9;
+}
+.pwdStatus .pswarp .s_box {
+    width: 49px;
+    height: 22px;
+    margin-right: 1px;
+    line-height: 22px;
+    background-color: #cecece;
+    color: #fff;
+    text-align: center;
+    vertical-align: top;
+}
+.pwdStatus .pswarp .s_box1 {
+    background-color: #ff6c4f;
+}
+.pwdStatus .pswarp .s_box2 {
+    background-color: #ffd322;
+}
+.pwdStatus .pswarp .s_box3 {
+    background-color: #7ceb5a;
+}
+.agreementIpt {
+    vertical-align: middle;
+}
+.registCon .btnli .registBtn {
+    width: 260px;
+    height: 34px;
+    background-color: #ff7518;
+    font: 16px/34px "Microsoft YaHei";
+    color: #fff;
+    cursor: pointer;
+}
+.registCon .btnli .skip {
+    padding-left: 140px;
+    font-size: 12px;
+}

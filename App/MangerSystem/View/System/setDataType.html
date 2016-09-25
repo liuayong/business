@@ -1,0 +1,53 @@
+<!-- 设置数据类型 setDataType -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>设置数据类型</title>
+        <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+        <script type="text/javascript">
+        $(function() {
+        });
+        </script>
+    </head>
+    <body>
+        <div id="append_parent"></div>
+        <div class="container" id="cpcontainer">
+            <div id="contentHeader">
+                <h3>设置数据类型</h3>
+                <div class="searchArea">
+                    <ul class="action left">
+                        <li><a href="{:U('config', array('id'=>$tableName))}" class="actionBtn"><span>返回</span></a></li>
+                    </ul>
+                    <div class="search right"> </div>
+                </div>
+            </div>
+            <form name="xform" enctype="multipart/form-data" id="xform" action="{:U('add')}" method="post">
+                <table class="form_table">
+                    <tbody>
+                        
+                        <tr>
+                            <td class="tb_title">所属菜单：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="Menu[parent_id]" id="Menu_parent_id">
+                                    <option value="0"> == 请选择一个数据类型 == </option>
+                                    <foreach name="data" item="v">
+                                    <option value="{$key}">{$v}</option>
+                                    </foreach>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="submit">
+                            <td>
+                                <input type="submit" name="editsubmit" value="提交" class="button" tabindex="3">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

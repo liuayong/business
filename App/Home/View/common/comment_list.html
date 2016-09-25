@@ -1,0 +1,16 @@
+<if condition="!$_comments_list">
+    <div class="no-comment-box">这篇日志还没有评论</div>
+    <else />
+    <div class="comment-pages">{$pagelist}</div>
+    <foreach name="_comments_list" item="comment">
+        <div id="comment_{$comment.comment_id}" class="commentbox">
+            <a name="{$comment.comment_id}"></a> 
+            <div class="commentbox-title" > 
+                <a href="mailto:{$comment.email}">{$comment.nickname}</a> 发表的评论 <span style="color:gray">[ {$comment.create_time|friendlyShowTime} ]</span>
+                <!--<a href="javascript:delComment({$comment.comment_id})">删除评论</a>-->
+            </div>
+            <div class="commentbox-content">{$comment.content|nl2br}</div>
+        </div>
+    </foreach>
+    <div class="comment-pages">{$pagelist}</div>
+</if>

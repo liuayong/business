@@ -1,0 +1,33 @@
+
+/** TP like yii 分页样式风格  **/
+div.pagination {
+    border: 0 none;
+    display: inline;
+    font-size: 11px;
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+div.pagination a, div.pagination span {
+	display: inline; 
+}
+div.pagination a:link, div.pagination a:visited, div.pagination .current {
+    border: 1px solid #9aafe5;
+    color: #0e509e;
+    font-weight: bold;
+    padding: 1px 6px;
+    text-decoration: none;
+}
+
+div.pagination a:hover, div.pagination .current:hover {
+	border:solid 1px #0e509e;
+}
+div.pagination .current{
+    background: #2e6ab1;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+div.pagination a.hidden {
+    border: 1px solid #dedede;
+    color: #888888;
+}

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加专题分类</title>
+    <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">-->
+    <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+    <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+    <script type="text/javascript">
+    $(function() {});
+    </script>
+</head>
+<body>
+    <div id="append_parent"></div>
+    <div class="container" id="cpcontainer">
+        <div id="contentHeader">
+            <h3>专题管理</h3>
+            <div class="searchArea">
+                <ul class="action left">
+                    <li><a href="{:U('index')}" class="actionBtn"><span>返回</span></a></li>
+                    <li class="current"><a href="javascript:;" class="disabled actionBtn"><span>录入</span></a></li>
+                </ul>
+                <div class="search right"> </div>
+            </div>
+        </div>
+        <?php if ( true):?>
+        <table id="tips">
+          <tr>
+            <td><div class="erro_div"><span class="error_message"> <?php echo '这里是错误的提示' ;?> </span></div></td>
+          </tr>
+        </table>
+        <?php endif?>
+        <form name="xform" enctype="multipart/form-data" id="xform" action="{:U('add')}" method="post">
+            <table class="form_table">
+                <tbody>
+                    <tr>
+                        <td class="tb_title">专题名称：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="40" maxlength="128" class="validate[required]" name="Special[special_name]" id="Special_name" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">唯一标识(英文字母或数字组合)：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="40" maxlength="128" name="Special[name_alias]" class="validate[required]" id="Special_name_alias" type="text" value="">
+                            <button class="btn btn-primary check" type="button">验证唯一</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">封面图片：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="img_original" type="file" id="img_original" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">专题详细内容：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <include file="Public/editor" form_name="Special[content]" form_id="content" form_value="" height="300" width="1000" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">摘要描述：</td>
+                    </tr>
+                    <tr>
+                        <td><textarea rows="5" cols="80" name="Special[intro]" id="Special_intro"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">模板(默认为空)：</td>
+                    </tr>
+                    <tr>
+                        <td class=" rowform">
+                            <input size="30" maxlength="128" name="Special[template]" id="Special_template" type="text" value="">
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="tb_title">状态选择：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="Special[status_is]" id="Special_status_is">
+                                <option value="Y" selected="selected">显示</option>
+                                <option value="N">隐藏</option>
+                            </select>
+                            <span class="field"> 排序: </span>
+                            <input size="6" maxlength="128" name="Special[sort_order]" id="Special_sort_order" type="text" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">SEO标题：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="50" maxlength="128" name="Special[seo_title]" id="Special_seo_title" type="text"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">SEO关键字：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="50" maxlength="128" name="Special[seo_keywords]" id="Special_seo_keywords" type="text" value="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">SEO描述：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea rows="5" cols="80" name="Special[seo_description]" id="Special_seo_description"></textarea>
+                        </td>
+                    </tr>
+                    <tr class="submit">
+                        <td>
+                            <input type="submit" name="editsubmit" value="提交" class="button" tabindex="3">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

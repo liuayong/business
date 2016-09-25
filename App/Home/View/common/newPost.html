@@ -1,0 +1,15 @@
+<!----- 最新日志 ----->
+<div id="panelSearch" class="panel">
+    <h5>最新日志</h5>
+    <div class="panel-content">
+        <ul>
+            <foreach name="_new_post_data" item="v">
+            <li>
+                <img src="__PUBLIC__/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="{:U('Post/view', ['id'=>$v['post_id']])}" title="{$v.title}">{$v.title|getShortContent=15}</a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > {$v.reply_count} </span> | <span  title="浏览量" style="color:#FF6600"> {$v.view_count} </span>]</sup>
+            </li>
+            </foreach>
+        </ul>
+    </div>
+</div>

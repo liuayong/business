@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8" /> 
+        <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet" /> 
+        <link href="__PUBLIC__/css/site.css" rel="stylesheet" /> 
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script> 
+        <script src="__PUBLIC__/js/bootstrap.js"></script> 
+        <title>用户管理</title> 
+        <script>
+            $(function () {
+                ckinfo();
+                //检查信息框
+                function ckinfo() {
+                    var len = $(".text").length;
+                    if (len) {
+                        fadeInfo();
+                    }
+                }
+
+                //消息消失动画
+                function fadeInfo() {
+                    setTimeout(function () {
+                        //alert('消息框即将消失！');
+                        $(".text").fadeOut(1000);
+                    }, 2500)
+                }
+
+            })
+        </script> 
+    </head> 
+    <body> 
+        <div class="main"> 
+            <?php if(session('?followOk')): ?>
+              <div class="alert alert-success text">
+                  <b><?php echo session('followOk'); session('followOk', null); ?></b>
+              </div>
+            <?php endif; ?>
+            <?php if(session('?followError')):?>
+              <div class="alert alert-danger text">
+                  <b><?php echo session('followError'); session('followError', null); ?></b>
+              </div>
+            <?php endif; ?>
+            <h1>推荐朋友</h1> 
+            <div class="container"> 
+                <div class="row"> 
+                    <foreach name="recommend" item="v" >
+                    <div class="col-md-2 col-sm-1 col-xs-3"> 
+                        <img title="{$v.username}" class="img-circle tx" src="{$Think.const.FACE_URL}/{$v.thumb}" alt="" /> 
+                        <p class="text-info nickname">{$v.nickname}</p> 
+                        <p><a href="{:U('index/follow', array('id'=>$v['admin_id']))}" class="btn btn-primary btn-sm btn-success">添加关注</a></p> 
+                    </div> 
+                    </foreach>
+                </div> 
+            </div> 
+            <p></p>
+            <h2>我的粉丝</h2>
+            <p></p> 
+            <div class="container"> 
+                <div class="row">
+                    <foreach name="fen" item="v" >
+                    <div class="col-md-2 col-sm-1 col-xs-3"> 
+                        <img title="{$v.username}" class="img-circle tx" src="{$Think.const.FACE_URL}/{$v.thumb}" alt="" /> 
+                        <if condition='in_array($v["admin_id"], $cids)' >
+                        <p class="text-success nickname" href="javascript:void(0)"><span title=" 我们互相关注了！" class="glyphicon glyphicon-ok-circle"></span> {$v.nickname} </p> 
+                        <else/>
+                        <p class="text-danger nickname" href="javascript:void(0)"><span title="还未关注他哦！" class="glyphicon glyphicon-remove-circle"></span> {$v.nickname} </p> 
+                        </if>
+                    </div>
+                    </foreach>
+                </div> 
+            </div> 
+            <p></p>
+            <h2>我关注的</h2>
+            <p></p> 
+            <div class="container"> 
+                <div class="row">
+                    <foreach name="myAttention" item="v" >
+                    <div class="col-md-2 col-sm-1 col-xs-3"> 
+                        <img title="{$v.username}" class="img-circle tx" src="{$Think.const.FACE_URL}/{$v.thumb}" alt="" /> 
+                        <p class="text-info nickname">{$v.nickname}</p> 
+                        <p><a href="{:U('index/nofollow', array('id'=>$v['admin_id']))}" class="btn btn-primary btn-sm btn-danger">取消关注</a></p> 
+                    </div>
+                    </foreach>
+                </div> 
+            </div> 
+        </div>   
+    </body>
+</html>

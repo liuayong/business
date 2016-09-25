@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改桌面分类</title>
+    <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+    <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+    <script type="text/javascript">
+    var upload = "{:U('ajaxUploadFile')}" ;
+    </script>
+</head>
+<body>
+    <div id="append_parent"></div>
+    <div class="container" id="cpcontainer">
+        <div id="contentHeader">
+            <h3>桌面管理</h3>
+            <div class="searchArea">
+                <ul class="action left">
+                    <li><a href="{:U('index')}" class="actionBtn"><span>返回</span></a></li>
+                    <li class="current"><a href="{:U('add')}" class="disabled actionBtn"><span>录入</span></a></li>
+                </ul>
+                <div class="search right"> </div>
+            </div>
+        </div>
+        <?php if ( true):?>
+        <table id="tips">
+          <tr>
+            <td><div class="erro_div"><span class="error_message"> <?php echo '这里是错误的提示' ;?> </span></div></td>
+          </tr>
+        </table>
+        <?php endif?>
+        <form name="xform" enctype="multipart/form-data" id="xform" action="" method="post">
+            <table class="form_table">
+                <tbody>
+                    <tr>
+                        <td class="tb_title">桌面名称：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="40" maxlength="128" value="{$data.name}" class="validate[required]" name="Desktop[name]" id="Desktop_name" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">唯一标识(英文字母或数字组合)：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="40" maxlength="128" value="{$data.name_pinyin}" name="Desktop[name_pinyin]" class="validate[required]" id="Desktop_name_pinyin" type="text" value="">
+                            <button class="btn btn-primary check" type="button">验证唯一</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">URL地址：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="60" maxlength="128"  value="{$data.url}" name="Desktop[url]" id="Desktop_url" type="text" />
+                            <span class="tips" style="display: block;"> 提示信息 </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">封面图片：</td>
+                    </tr>
+                    <tr class="preview" style="display: block;">
+                        <td>
+                            <input class="ajaxUpload" name="logo" type="file" id="original_icon"  />
+                             &nbsp;&nbsp;&nbsp;
+                            <img id="loading" src="__PUBLIC__/images/loading.gif" style="display:none;" />
+                            <a href="{$Think.IMG_URL}{$data.original_icon}">
+                                <img height="50" align="absmiddle" src="{$Think.IMG_URL}{$data.original_icon}"  />
+                               <input type="hidden" value="{$data.original_icon}" name="Bank[original_icon]">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="preview2" style="display: none;">
+                        <td>
+                            <div> 预览效果：</div>
+                            <img width="250" height="180" src="">
+                            <input type="hidden" value="" name="img_url">
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="tb_title">宽高尺寸：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="field"> 宽度： </span>
+                            <input size="6" maxlength="128" value="{$data.width}" readonly="readonly"  name="Desktop[width]" id="Desktop_width" type="text" />
+                            <span class="field"> 高度: </span>
+                            <input size="6" maxlength="128" value="{$data.height}" readonly="readonly" name="Desktop[height]" id="Desktop_height" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">内容介绍：</td>
+                    </tr>
+                    <tr>
+                        <td><textarea rows="5" cols="80" name="Desktop[intro]" id="Desktop_intro">{$data.intro}</textarea></td>
+                    </tr>
+                     <tr>
+                        <td class="tb_title">是否在桌面显示：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="Desktop[status_is]" id="Desktop_status_is">
+                                <option value="Y" <eq name="data.status_is" value="Y">selected="selected"</eq> >显示</option>
+                                <option value="N" <eq name="data['status_is']" value="N">selected="selected"</eq> >隐藏</option>
+                            </select>
+                            <span class="field"> 排序: </span>
+                            <input size="6" maxlength="128"  value="{$data.sort_order}" name="Desktop[sort_order]" id="Desktop_width" type="text" />
+                        </td>
+                    </tr>
+                    <tr class="submit">
+                        <td>
+                            <input type="submit" name="editsubmit" value="提交" class="button" tabindex="3" />
+                            <input type="hidden" name="Desktop[id]" value="{$data.id}" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <script src="__PUBLIC__/js/ajaxfileupload.js"></script>
+        <script src="__PUBLIC__/js/form.js"></script>
+    </div>
+</body>
+</html>

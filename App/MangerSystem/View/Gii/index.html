@@ -1,0 +1,313 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>内容列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="/business/public/css/common.css" rel="stylesheet">
+    <link href="/business/public/css/tppager-yii.css" rel="stylesheet">
+    <script src="/business/public/js/jquery.2.1.4.js"></script>
+    <script src="/business/public/js/base.js"></script>
+    <script type="text/javascript">
+    var batchUrl  = "/business/index.php/MangerSystem/Post/batch.html" ;
+    $(function() {
+        $("#title").val("");
+        $("#catalogId").val("0");
+        $("#titleAlias").val("");
+    });
+    </script>
+</head>
+<body>
+    <div id="append_parent"></div>
+    <div class="container" id="cpcontainer">
+        <div id="contentHeader">
+            <h3>内容管理</h3>
+            <div class="searchArea">
+                <ul class="action left">
+                    <li><a href="/business/index.php/MangerSystem/Post/add.html" class="actionBtn"><span>录入</span></a></li>
+                </ul>
+                <div class="search right">
+                    <form name="xform" class="right " id="searchForm" action="/business/index.php/MangerSystem/Post/index.html" method="get">
+                        <div style="display:none">
+                            <input value="" name="" type="hidden">
+                        </div>
+                        <select name="catalogId" id="catalogId">
+                            <option value="0"> ===全部内容=== </option>
+                             <option value="8">陶明PHP学习之路</option><option value="9">　　环境搭建</option><option value="14">　　　　mac下的环境</option><option value="13">　　　　Linux下的环境</option><option value="12">　　　　Windows下的环境</option><option value="15">　　　　　　啊啊啊</option><option value="16">　　　　　　　　不不不不吧</option><option value="11">　　PHP变量</option><option value="10">　　快速人们</option><option value="7">PHP课程</option>                        </select>
+                        标题
+                        <input id="title" name="title" value="" class="txt" size="15" type="text"> 别名
+                        <input id="titleAlias" name="titleAlias" value="" class="txt" size="15" type="text">
+                        <input  value="查询" class="button " type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <form name="cpform" action="" method="post">
+            <table cellspacing="0" cellpadding="0" border="0" class="content_list">
+                <thead>
+                    <tr class="tb_header">
+                        <th width="8%">ID</th>
+                        <th width="10%">排序</th>
+                        <th>标题</th>
+                        <th width="16%">分类</th>
+                        <th width="5%">浏览</th>
+                        <th width="5%">状态</th>
+                        <th width="15%">录入时间</th>
+                        <th width="8%">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tb_list">
+                        <td>
+                            <input type="checkbox" value="27" name="post_id[]"> 27                        </td>
+                        <td> <input name="sort_order[27]" type="text" id="sort_order" value="23" size="5" /> </td>
+                        <td>
+                            <a style="" target="_blank" href="/business/index.php/MangerSystem/Post/view/id/27.html"> tp文档</a>
+                            &nbsp;<span class="alias"> [ lax ] </span>
+                        </td>
+                        <td>环境搭建</td>
+                        <td><span>5</span></td>
+                        <td>
+                            <img src="/business/public/images/icon_right.gif" alt="显示"  align="absmiddle" />
+                                                        </td>
+                        <td>2016-09-10 17:13:02</td>
+                       <td>
+                            <a href="/business/index.php/MangerSystem/Post/upd/id/27.html"  title="修改" alt="删除" >
+                                <img src="/business/public/images/update.png" align="absmiddle" />
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/business/index.php/MangerSystem/Post/toTrash/id/27.html" title="删除" alt="删除"  class="confirmSubmit">
+                                <img src="/business/public/images/delete.png" align="absmiddle" />
+                            </a>
+                        </td>
+                    </tr><tr class="tb_list">
+                        <td>
+                            <input type="checkbox" value="40" name="post_id[]"> 40                        </td>
+                        <td> <input name="sort_order[40]" type="text" id="sort_order" value="5" size="5" /> </td>
+                        <td>
+                            <a style="" target="_blank" href="/business/index.php/MangerSystem/Post/view/id/40.html"> 中国是一个人，老师， 我我是刘阿勇</a>
+                            &nbsp;<span class="alias"> [ wslayhyldbjnhm ] </span>
+                        </td>
+                        <td>环境搭建</td>
+                        <td><span>3</span></td>
+                        <td>
+                            <img src="/business/public/images/icon_right.gif" alt="显示"  align="absmiddle" />
+                                                        </td>
+                        <td>2016-09-10 17:29:10</td>
+                       <td>
+                            <a href="/business/index.php/MangerSystem/Post/upd/id/40.html"  title="修改" alt="删除" >
+                                <img src="/business/public/images/update.png" align="absmiddle" />
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/business/index.php/MangerSystem/Post/toTrash/id/40.html" title="删除" alt="删除"  class="confirmSubmit">
+                                <img src="/business/public/images/delete.png" align="absmiddle" />
+                            </a>
+                        </td>
+                    </tr><tr class="tb_list">
+                        <td>
+                            <input type="checkbox" value="42" name="post_id[]"> 42                        </td>
+                        <td> <input name="sort_order[42]" type="text" id="sort_order" value="5" size="5" /> </td>
+                        <td>
+                            <a style="" target="_blank" href="/business/index.php/MangerSystem/Post/view/id/42.html"> 左足</a>
+                            &nbsp;<span class="alias"> [ zz ] </span>
+                        </td>
+                        <td>环境搭建</td>
+                        <td><span>3</span></td>
+                        <td>
+                            <img src="/business/public/images/icon_right.gif" alt="显示"  align="absmiddle" />
+                                                        </td>
+                        <td>2016-09-11 08:31:25</td>
+                       <td>
+                            <a href="/business/index.php/MangerSystem/Post/upd/id/42.html"  title="修改" alt="删除" >
+                                <img src="/business/public/images/update.png" align="absmiddle" />
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/business/index.php/MangerSystem/Post/toTrash/id/42.html" title="删除" alt="删除"  class="confirmSubmit">
+                                <img src="/business/public/images/delete.png" align="absmiddle" />
+                            </a>
+                        </td>
+                    </tr><tr class="tb_list">
+                        <td>
+                            <input type="checkbox" value="28" name="post_id[]"> 28                        </td>
+                        <td> <input name="sort_order[28]" type="text" id="sort_order" value="1" size="5" /> </td>
+                        <td>
+                            <a style="" target="_blank" href="/business/index.php/MangerSystem/Post/view/id/28.html"> mdsf </a>
+                            &nbsp;<span class="alias"> [ 2 ] </span>
+                        </td>
+                        <td>环境搭建</td>
+                        <td><span>1</span></td>
+                        <td>
+                            <img src="/business/public/images/icon_right.gif" alt="显示"  align="absmiddle" />
+                                                        </td>
+                        <td>2016-09-10 17:13:18</td>
+                       <td>
+                            <a href="/business/index.php/MangerSystem/Post/upd/id/28.html"  title="修改" alt="删除" >
+                                <img src="/business/public/images/update.png" align="absmiddle" />
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/business/index.php/MangerSystem/Post/toTrash/id/28.html" title="删除" alt="删除"  class="confirmSubmit">
+                                <img src="/business/public/images/delete.png" align="absmiddle" />
+                            </a>
+                        </td>
+                    </tr><tr class="tb_list">
+                        <td>
+                            <input type="checkbox" value="21" name="post_id[]"> 21                        </td>
+                        <td> <input name="sort_order[21]" type="text" id="sort_order" value="0" size="5" /> </td>
+                        <td>
+                            <a style="" target="_blank" href="/business/index.php/MangerSystem/Post/view/id/21.html"> 士大夫似的</a>
+                            &nbsp;<span class="alias"> [ 4 ] </span>
+                        </td>
+                        <td></td>
+                        <td><span>1</span></td>
+                        <td>
+                            <img src="/business/public/images/icon_right.gif" alt="显示"  align="absmiddle" />
+                                                        </td>
+                        <td>2016-09-05 07:33:00</td>
+                       <td>
+                            <a href="/business/index.php/MangerSystem/Post/upd/id/21.html"  title="修改" alt="删除" >
+                                <img src="/business/public/images/update.png" align="absmiddle" />
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/business/index.php/MangerSystem/Post/toTrash/id/21.html" title="删除" alt="删除"  class="confirmSubmit">
+                                <img src="/business/public/images/delete.png" align="absmiddle" />
+                            </a>
+                        </td>
+                    </tr><tr class="tb_list">
+                        <td>
+                            <input type="checkbox" value="22" name="post_id[]"> 22                        </td>
+                        <td> <input name="sort_order[22]" type="text" id="sort_order" value="0" size="5" /> </td>
+                        <td>
+                            <a style="" target="_blank" href="/business/index.php/MangerSystem/Post/view/id/22.html"> 的士大夫</a>
+                            &nbsp;<span class="alias"> [ bt ] </span>
+                        </td>
+                        <td>环境搭建</td>
+                        <td><span>1</span></td>
+                        <td>
+                            <img src="/business/public/images/icon_right.gif" alt="显示"  align="absmiddle" />
+                                                        </td>
+                        <td>2016-09-10 17:09:56</td>
+                       <td>
+                            <a href="/business/index.php/MangerSystem/Post/upd/id/22.html"  title="修改" alt="删除" >
+                                <img src="/business/public/images/update.png" align="absmiddle" />
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/business/index.php/MangerSystem/Post/toTrash/id/22.html" title="删除" alt="删除"  class="confirmSubmit">
+                                <img src="/business/public/images/delete.png" align="absmiddle" />
+                            </a>
+                        </td>
+                    </tr><tr class="tb_list">
+                        <td>
+                            <input type="checkbox" value="23" name="post_id[]"> 23                        </td>
+                        <td> <input name="sort_order[23]" type="text" id="sort_order" value="0" size="5" /> </td>
+                        <td>
+                            <a style="" target="_blank" href="/business/index.php/MangerSystem/Post/view/id/23.html"> 士大夫</a>
+                            &nbsp;<span class="alias"> [ 1 ] </span>
+                        </td>
+                        <td>环境搭建</td>
+                        <td><span>1</span></td>
+                        <td>
+                            <img src="/business/public/images/icon_right.gif" alt="显示"  align="absmiddle" />
+                                                        </td>
+                        <td>2016-09-10 17:11:36</td>
+                       <td>
+                            <a href="/business/index.php/MangerSystem/Post/upd/id/23.html"  title="修改" alt="删除" >
+                                <img src="/business/public/images/update.png" align="absmiddle" />
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/business/index.php/MangerSystem/Post/toTrash/id/23.html" title="删除" alt="删除"  class="confirmSubmit">
+                                <img src="/business/public/images/delete.png" align="absmiddle" />
+                            </a>
+                        </td>
+                    </tr><tr class="tb_list">
+                        <td>
+                            <input type="checkbox" value="24" name="post_id[]"> 24                        </td>
+                        <td> <input name="sort_order[24]" type="text" id="sort_order" value="0" size="5" /> </td>
+                        <td>
+                            <a style="" target="_blank" href="/business/index.php/MangerSystem/Post/view/id/24.html"> sdfdfsdf</a>
+                            &nbsp;<span class="alias"> [ 41 ] </span>
+                        </td>
+                        <td>环境搭建</td>
+                        <td><span>1</span></td>
+                        <td>
+                            <img src="/business/public/images/icon_right.gif" alt="显示"  align="absmiddle" />
+                                                        </td>
+                        <td>2016-09-10 17:11:50</td>
+                       <td>
+                            <a href="/business/index.php/MangerSystem/Post/upd/id/24.html"  title="修改" alt="删除" >
+                                <img src="/business/public/images/update.png" align="absmiddle" />
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/business/index.php/MangerSystem/Post/toTrash/id/24.html" title="删除" alt="删除"  class="confirmSubmit">
+                                <img src="/business/public/images/delete.png" align="absmiddle" />
+                            </a>
+                        </td>
+                    </tr><tr class="tb_list">
+                        <td>
+                            <input type="checkbox" value="25" name="post_id[]"> 25                        </td>
+                        <td> <input name="sort_order[25]" type="text" id="sort_order" value="0" size="5" /> </td>
+                        <td>
+                            <a style="" target="_blank" href="/business/index.php/MangerSystem/Post/view/id/25.html"> 士大夫似的</a>
+                            &nbsp;<span class="alias"> [ 333 ] </span>
+                        </td>
+                        <td>环境搭建</td>
+                        <td><span>1</span></td>
+                        <td>
+                            <img src="/business/public/images/icon_right.gif" alt="显示"  align="absmiddle" />
+                                                        </td>
+                        <td>2016-09-10 17:12:12</td>
+                       <td>
+                            <a href="/business/index.php/MangerSystem/Post/upd/id/25.html"  title="修改" alt="删除" >
+                                <img src="/business/public/images/update.png" align="absmiddle" />
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/business/index.php/MangerSystem/Post/toTrash/id/25.html" title="删除" alt="删除"  class="confirmSubmit">
+                                <img src="/business/public/images/delete.png" align="absmiddle" />
+                            </a>
+                        </td>
+                    </tr><tr class="tb_list">
+                        <td>
+                            <input type="checkbox" value="26" name="post_id[]"> 26                        </td>
+                        <td> <input name="sort_order[26]" type="text" id="sort_order" value="0" size="5" /> </td>
+                        <td>
+                            <a style="" target="_blank" href="/business/index.php/MangerSystem/Post/view/id/26.html"> 士大夫似的</a>
+                            &nbsp;<span class="alias"> [ 12 ] </span>
+                        </td>
+                        <td>环境搭建</td>
+                        <td><span>1</span></td>
+                        <td>
+                            <img src="/business/public/images/icon_right.gif" alt="显示"  align="absmiddle" />
+                                                        </td>
+                        <td>2016-09-10 17:12:43</td>
+                       <td>
+                            <a href="/business/index.php/MangerSystem/Post/upd/id/26.html"  title="修改" alt="删除" >
+                                <img src="/business/public/images/update.png" align="absmiddle" />
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/business/index.php/MangerSystem/Post/toTrash/id/26.html" title="删除" alt="删除"  class="confirmSubmit">
+                                <img src="/business/public/images/delete.png" align="absmiddle" />
+                            </a>
+                        </td>
+                    </tr>                    <tr class="submit">
+    <td colspan="10">
+        <div class="cuspages right">
+            <div class='pagination'>  <span class="current">1</span><a class="num" href="/business/index.php/MangerSystem/Post/index/p/2.html">2</a><a class="num" href="/business/index.php/MangerSystem/Post/index/p/3.html">3</a> <a class="next" href="/business/index.php/MangerSystem/Post/index/p/2.html">»</a> </div>        </div>
+        <div class="fixsel">
+            <input type="checkbox" name="chkall" id="chkall" onclick="checkAll(this, 'post_id[]')" />
+            <label for="chkall">全选</label>
+            <select name="command">
+                <option value="">选择操作</option>
+                <option value="sortOrder">排序</option>
+                <option value="totrash">删除</option>
+                <option value="toshow">显示</option>
+                <option value="unshow">隐藏</option>
+            </select>
+            <input id="submit_maskall" onclick="return batchAction(this, 'post_id[]');"  class="button confirmSubmit" type="submit" value="提交" name="maskall" />
+        </div>
+    </td>
+</tr> 
+                    <input type="hidden" name="batchfield" value="post_id" />
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

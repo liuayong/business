@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>文件 添加 删除的效果</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<meta name="keywords" content="关键字列表" />
+	<meta name="description" content="网页描述" />
+	<link rel="stylesheet" type="text/css" href="" />
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.js"></script>
+	<script type="text/javascript">
+	</script>
+</head>
+<body>
+<div class="body">
+            <form id="xform" method="post" action="" enctype="multipart/form-data" name="xform">
+		<div class="item" style="padding-top:5px; height:40px;">
+			文件名称： <input  placeholder="请输入一个文件名" name="title" class="easyui-validatebox validatebox-text validatebox-invalid" data-options="required:true," >
+			 <input type="file" name="myfile[]" value="" style="display:inline-block; border:1px solid black;"/>  
+			 <a href="javascript:;" class="btn btn-primary btn-sm glyphicon glyphicon-plus add" title="添加" style="display:inline-block;"></a>
+		</div>
+                <input class="button" type="submit" tabindex="3" value="提交" name="editsubmit">
+	</form>
+</div>
+<script type="text/javascript">
+$(function() {
+	$("form").on('click', '.item .add', function() {
+		var item = $(this).closest('.item').clone() ;
+		item.find('.add').addClass('del glyphicon-minus').removeClass('add glyphicon-plus').attr("title","删除");
+		$("form").append(item);
+	});
+
+	$("form").on('click', '.item .del', function() {
+		$(this).closest('.item').remove();
+	});
+});
+</script>
+</body>
+</html>

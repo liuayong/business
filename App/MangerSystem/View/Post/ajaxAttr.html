@@ -1,0 +1,45 @@
+<table class="content_list">
+    <?php foreach($attrData as $k=> $v) : ?>
+    <tr>
+        <td>
+            <div class="custom_title">{$v.attr_name}：</div>
+            <div class="custom_content">
+                <input type="hidden" name="attr[<?php echo $k; ?>][attr_id]"   value="<?php echo $v['attr_id']; ?>">
+                <input type="hidden" name="attr[<?php echo $k; ?>][attr_name]" value="<?php echo $v['attr_name_alias']; ?>">
+                <?php 
+                    if($v['attr_type'] == 'input') : 
+                    $val = isset($attrVal[$v['attr_id']]) ? $attrVal[$v['attr_id']] : '';
+                ?>
+                <!--<input type="text" value="{$val}"  name="attr[<?php echo $k; ?>][attr_val]"  class="txt"> -->
+                <?php echo showInput($val, array('name'=>"attr[$k][attr_val]", 'class'=>'txt')); ?>
+                <?php 
+                    elseif($v['attr_type'] == 'select') : 
+                    $items = parseFormItems($v['data_default']);
+                    $val = isset($attrVal[$v['attr_id']]) ? $attrVal[$v['attr_id']] : '';
+                ?>
+                <?php echo showSelect($items, $val, array('class' => 'medium', 'name' => "attr[$k][attr_val]") ); ?>
+                <?php 
+                    elseif($v['attr_type'] == 'checkbox') : 
+                    $items = parseFormItems($v['data_default']); 
+                    $val = isset($attrVal[$v['attr_id']]) ? $attrVal[$v['attr_id']] : '';
+                ?>
+                <?php echo showCheckBox($items, explode(',' , $val), array('class' => 'medium', 'name' => "attr[$k][attr_val][]") ); ?>
+                <?php 
+                    elseif($v['attr_type'] == 'radio') : 
+                    $items = parseFormItems($v['data_default']); 
+                    $val = isset($attrVal[$v['attr_id']]) ? $attrVal[$v['attr_id']] : '';
+                ?>
+                <?php echo showRadio($items, $val, array('class' => 'medium', 'name' => "attr[$k][attr_val]") ); ?>
+                <?php 
+                   elseif($v['attr_type'] == 'textarea') : 
+                   $val = isset($attrVal[$v['attr_id']]) ? $attrVal[$v['attr_id']] : '';
+                ?>
+                <?php echo showTextArea($val, array('name'=>"attr[$k][attr_val]", 'rows'=>5, 'cols'=>50)); ?>
+                <!--<textarea   name="attr[<?php echo $k; ?>][attr_val]">{$val}</textarea>-->
+                <?php endif; ?>
+                <p> 标识：{$v.attr_name_alias} <?php if($v['tips']): ?>说明: {$v.tips} <?php endif;?></p>
+            </div>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>

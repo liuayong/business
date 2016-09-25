@@ -1,0 +1,73 @@
+<div class="panel-content">
+    <h5>日志分类 </h5>
+    <ul id="category" class="ztree">
+        <li>
+            <div class="fLeft">
+                <input TYPE="text" id="categoryName" class="text" NAME="name">
+            </div>
+            <input TYPE="button" value="增 加" class="submit hMargin small" onclick="addCategory()">
+            <br style="clear:both;float:auto" />
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+var setting = {
+    async: {
+        enable: true,
+        url: "{:U('Post/ztree')}",
+        autoParam: ["id=pid", "level=lv"],
+        otherParam: {
+            "otherParam": "zTreeAsyncTest"
+        },
+        dataFilter: filter
+    }
+};
+
+function filter(treeId, parentNode, childNodes) {
+    if (!childNodes)
+        return null;
+    //for (var i=0, l=childNodes.length; i<l; i++) {
+    //childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
+    //}
+    return childNodes;
+}
+
+
+// 交还$控制权
+jQuery.noConflict();
+// Put all your code in your document ready area  
+jQuery(document).ready(function($) {
+    // 这样你可以在这个范围内随意使用$而不用担心冲突  
+    $.fn.zTree.init($("#category"), setting);
+});
+
+/*
+ // $ 符号 prototype 和 jquery 冲突
+ $(document).ready(function() {
+    $.fn.zTree.init($("#category"), setting);
+ });
+ */
+//-->
+function addCategory() {
+    ThinkAjax.send('/tpdemo/ThinkPHP_3.0/Examples/Blog/index.php/Category/insert', 'ajax=1&title=' + $F('categoryName'), addComplete);
+}
+
+function addComplete(data, status) {
+    if (status == 1) {
+        $('category').innerHTML += '<li id="category_' + data.id + '">' +
+            '<img src="__PUBLIC__/blog/images/folder.gif" width="18" height="18" border="0" alt="" align="absmiddle">' +
+            '<a href="/tpdemo/ThinkPHP_3.0/Examples/Blog/index.php/Category/' + data.id + '">' + data.title + '</a> <span >(0)</span>' +
+            +'<img src="__PUBLIC__/blog/images/del.gif" width="20" height="20" border="0" style="cursor:pointer" alt="" onclick="delCategory(' + data.id + ')" align="absmiddle" />';
+    }
+}
+
+function delCategory(id) {
+    ThinkAjax.send('/tpdemo/ThinkPHP_3.0/Examples/Blog/index.php/Category/delete/', 'ajax=1&id=' + id, delComplete);
+}
+
+function delComplete(data, status) {
+    if (status == 1) {
+        $('category_' + data).style.display = 'none';
+    }
+}
+</script>

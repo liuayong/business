@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="__PUBLIC__/Plugins/zebra_dialog/css/zebra_dialog.css" type="text/css">
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/Plugins/zebra_dialog/zebra_dialog.js"></script>
+    </head>
+    <body>
+        <div><a id="dialogBtn" href="javascript: alert('3');"> 点击 </a></div>
+        <div><a id="dialogBtn2" href="javascript: alert('3');"> 点击2 </a></div>
+        <script type="text/javascript">
+            $("#dialogBtn").bind('click', function(e) {
+                // 当点击某个链接时显示对话框
+                $.Zebra_Dialog('The link was clicked!');
+                // 下面两种方法阻止默认情况的发生
+                e.preventDefault();
+                //return false ;
+            });
+            $(function() {
+                $("#dialogBtn2").click(function(e) {
+                    e.preventDefault();
+                    $.Zebra_Dialog('', {
+                        source: {
+                            'iframe': {
+                                'src': '',
+                                'height': 300,
+                                'name': 'bagecms_com',
+                                'id': 'bagecms_com'
+                            }
+                        },
+                        width: 600,
+                        'buttons': [{
+                                caption: '确认',
+                                callback: function() {
+                                    console.log($(window.frames['bagecms_com']));
+                                    console.log($(window.frames['bagecms_com'].document));
+                                    var htmls = $(window.frames['bagecms_com'].document).find("#fileListWarp").html().trim();
+                                    if (htmls) {
+                                        $("#" + fileField).append(htmls);
+                                    } else {
+                                        alert('没有文件被选择');
+                                    }
+                                }
+                            }, {
+                                caption: '取消',
+                                callback: function() {
+                                    return;
+                                }
+                            }],
+                        'type': false,
+                        'title': '附件上传',
+                        'modal': false
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

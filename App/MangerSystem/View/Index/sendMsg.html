@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发送消息</title>
+    <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/site.css" rel="stylesheet">
+    <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.js"></script>
+    <script>
+    $(function() {
+        ckinfo();
+        //检查信息框
+        function ckinfo() {
+            if($(".alert span.msg").text() !== ''){
+                fadeInfo();
+            }
+        }
+        //消息消失动画
+        function fadeInfo() {
+            setTimeout(function() {
+                //alert('消息框即将消失！');
+                $(".info").fadeOut(800);
+            }, 1000)
+        }
+    });
+    </script>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="main">
+                    <div class="info" style="display: none;">
+                        <div class="alert">
+                           <a href="#" class="close" data-dismiss="alert">&times;</a>
+                           <strong>出错啦！</strong><span class="msg"></span>
+                       </div>
+                   </div>
+                    <h1>发送信息</h1>
+                    <form id="sendmsg" action="{:U('sendMsg')}" method="post" role="form" callback="" >
+                        <div class="form-group field-msg-title required">
+                            <label class="control-label" for="msg-title">信息标题：</label>
+                            <input type="text" id="msg-title" class="form-control" name="Msg[title]">
+                            <p class="help-block help-block-error"></p>
+                        </div>
+                        <div class="form-group field-msg-tid required">
+                            <label class="control-label" for="msg-tid">发送给：</label>
+                            <select id="msg-tid" class="form-control" name="Msg[tid]">
+                                <option value=""> 请选择 </option>
+                                <foreach name="select" key="k" item="v">
+                                <option value="{$k}">{$v}</option>
+                                </foreach>
+                            </select>
+                            <p class="help-block help-block-error"></p>
+                        </div>
+                        <div class="form-group field-msg-content required">
+                            <label class="control-label" for="msg-content">信息内容：</label>
+                            <textarea id="msg-content" class="form-control" name="Msg[content]" rows="4"></textarea>
+                            <p class="help-block help-block-error"></p>
+                        </div>
+                        <button type="submit" class="btn btn-primary">发送</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function(){
+        // 需要防止表单重复提交
+        $("form").submit(function() {
+            var that = this ;
+            var type = this.method.toUpperCase() ;
+            var url = this.action ;
+            $.ajax({
+                type : type,
+                url : url,
+                data : $(that).serialize(),
+                dataType : 'json',
+                success : function (retData) {
+                    console.log(retData);
+                    if(retData.code == 0) { // 成功
+                        $(".info").show();
+                        $(".alert").removeClass('alert-danger').addClass('alert-success');
+                        $(".alert span.msg").text(retData.msg);
+                        setTimeout("window.location.href='" + retData.return_url+"'", 100);
+                    } else {
+                        $(".info").show();
+                        $(".alert").removeClass('alert-success').addClass('alert-danger');
+                        $(".alert span.msg").text(retData.msg);
+                    }
+                },
+                error : function(response) {
+                    alert('失败了');
+                }
+            });
+            return false ;
+        });
+    });
+   </script>
+</body>
+</html>

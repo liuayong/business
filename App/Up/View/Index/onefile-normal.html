@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>普通单文件上传</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+        <style>
+            form .input input, form .input select {
+                width:auto;
+            }
+        </style>
+        <script type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="form" style=" width:50%;margin:100px auto;">
+            <form name="form" action="{:U('post')}" method="post" enctype="multipart/form-data" >
+                <div><input type="file" name="upload" value="" /></div>
+                <p>是否生成缩略图 <input type="checkbox" name="thumb" value="thumb" /></p>
+                <div class="row item" style="display:none;">
+                    <span>宽度</span> <input type="text" name="width[]" placeholder="宽度" value="" /> px 
+                    <span>高度</span> <input type="text" name="height[]" placeholder="高度" value="" /> px
+                    <a href="javascript:;" class="btn btn-primary btn-sm glyphicon glyphicon-plus add" title="添加" style="display:inline-block;"></a>
+                </div>
+                <div class="row">
+                    <label class="tr"></label>
+                    <div class="input">
+                        <button id="generate" type="submit">生 成</button>
+                        <button id="kill" type="reset">重 置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $("form").on('click', '.item .add', function () {
+                    var item = $(this).closest('.item').clone();
+                    item.find('.add').addClass('del glyphicon-minus').removeClass('add glyphicon-plus').attr("title", "删除");
+                    $(".item:first").after(item);
+                });
+
+                $("form").on('click', '.item .del', function () {
+                    $(this).closest('.item').remove();
+                });
+
+                $('[type=checkbox]').click(function () {
+                    if(this.checked) {
+                        $('div.item').show();
+                    } else {
+                        $('div.item').hide();
+                    }
+                });
+
+            });
+        </script>
+    </body>
+</html>
+

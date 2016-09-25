@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>消息中心</title>
+        <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+        <link href="__PUBLIC__/css/site.css" rel="stylesheet">
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+        <script src="__PUBLIC__/js/bootstrap.js"></script>
+        <script>
+            $(function () {
+                //查看信息
+                $(".msgshow").click(function () {
+                    var from = $(this).attr('from');
+                    var to = $(this).attr('to');
+                    var title = $(this).attr('title');
+                    var content = $(this).attr('content');
+                    var send_time = $(this).attr('send_time');
+                    $(".from").html("<p>From：" + from + "</p>");
+                    $(".to").html("<p>To：" + to + "</p><p>信息体：</p>");
+                    $(".title").html("<p>主题：" + title + "</p>");
+                    $(".content").html("<p>" + content + " <span class='pull-right'>created at " + send_time + "</span></p>");
+                    $('#myModal').modal('show');
+                });
+                //确定按钮
+                $(".sure").click(function () {
+                    $('#myModal').modal('hide');
+                })
+
+            })
+        </script>
+    </head>
+    <body>
+        <div class="contianer">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main">
+                        <div class="tool">
+                            <a class="btn btn-primary btn-sm" href="{:U('add')}">添加用户</a>
+                        </div>
+                        <table class="table table-hover">
+                            <tr>
+                                <th>编号</th>
+                                <th>用户名</th>
+                                <th>昵称</th>
+                                <th>添加时间</th>
+                                <th>上次登录时间</th>
+                                <th>上次登录IP</th>
+                                <th>登录次数</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                            <foreach name="list" item="v">
+                                <tr>
+                                    <td>{$v.admin_id}</td>
+                                    <td>{$v.username}</td>
+                                    <td>{$v.nickname}</td>
+                                    <td>{$v.reg_time|date="Y-m-d H:i:s",###}</td>
+                                    <td>{$v.last_login_time|date="Y-m-d H:i:s",###}</td>
+                                    <td>{$v.last_login_ip}</td>
+                                    <td>{$v.login_count}</td>
+                                    <td>{$v.status|showBooleanStatus}</td>
+                                <td>
+                                    <a href="{:U('upd', ['id'=>$v['admin_id']])}">
+                                        <img src="__PUBLIC__/images/update.png" align="absmiddle">
+                                    </a>
+                                    &nbsp;&nbsp;
+                                    <a href="{:U('del', ['id'=>$v['admin_id']])}" onclick="return confirm('您确定要删除 ?'); " class="confirmSubmit">
+                                        <img src="__PUBLIC__/images/delete.png" align="absmiddle">
+                                    </a>
+                                </td>
+                                </tr>
+                            </foreach>
+                        </table>
+                        <div class="page">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" url='' tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">消息提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class='text-info'>
+                        <div class="from"></div>
+                        <div class="to"></div>
+                        <div class="content"></div>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary sure">确定</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+    </body>
+</html>

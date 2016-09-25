@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>我要充值-柜台汇款</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+        <link href="__STATIC__/css/reset.css" type="text/css" rel="stylesheet" />
+        <link href="__STATIC__/css/headerfooter2.css" type="text/css" rel="stylesheet" />
+        <link href="__STATIC__/css/sidebar.css" type="text/css" rel="stylesheet" />
+        <link href="__STATIC__/css/commonuser.css" type="text/css" rel="stylesheet" />
+        <link href="__STATIC__/css/myrecharge.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="__STATIC__/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="__STATIC__/js/common.js"></script>
+        <script type="text/javascript" src="__STATIC__/js/commonuser.js"></script>
+        <script type="text/javascript" src="__STATIC__/js/myrecharge.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $(".chosePaybank li input").each(function (i) {
+                    var _this = this;
+                    $(this).click(function () {
+                        var theid = $(_this).attr("id");
+                        $(".bankTip").hide();
+                        $("#banktip-" + theid).show();
+                    })
+                });
+
+            })
+        </script>
+    </head>
+    <body>
+        <!--通栏 -->
+        <div class="globalTop">
+            <div class="topInner clear">	
+                <div class="loginInfo left">
+                    <!-- <em>欢迎来到金银岛！</em>请<a href="#" class="loginItem">登录</a><a href="#" class="regItem">注册</a> -->
+                    <em><i>yanyanking</i>，欢迎来到金银岛.煤炭交易中心！</em>
+                </div>
+                <ul class="quickMenu right clear">
+                    <li><a href="#">手机APP</a></li>
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">交易规则</a></li>
+                    <li><span class="telItem">客服：4000-315-100</span></li>
+                </ul>
+            </div>
+        </div>
+        <!--通栏end -->
+        <!--头部 -->
+        <div class="header">
+            <div class="headerInner clear">
+                <h1 class="logo left"><a href=""><img src="__STATIC__/images/logo.png" alt="金银岛网交所"></a></h1>
+                <div class="sepb left"></div>
+                <div class="switchCate2 left">
+                    <span class="name">煤炭</span>[<a href="#" class="swa1">切换</a><a href="#" class="swa2">钢材</a><a href="#" class="swa2">大米</a>]
+                </div>
+                <div class="search left">
+                    <p class="tips">
+                        <span class="time">交易时间：<em>9:00-16:15</em></span>
+                        <span class="state">市场状态：<em>交易进行中</em></span>
+                    </p>
+                </div>
+                <div class="account">
+                    <a href="#" class="myAccount radius2">我的账户</a>
+                    <a href="#" class="myCart radius2"></a>
+                </div>
+            </div>
+        </div>
+        <!--头部end -->
+        <!--导航 -->
+        <div class="navigation2">
+            <div class="navInner clear">
+                <div class="smallBreadNav">
+                    <a href="#" class="">煤炭交易中心</a>&nbsp;>
+                    <a href="#" class="">资金管理</a>&nbsp;>
+                    <span href="#" class="">我要充值</span>
+                </div>
+                <div class="smallNav">
+                    <div class="snavLeft left"></div>
+                    <ul class="snavCon left clear">
+                        <li class="firstLi"><a href="">交易小助手(0)</a></li>
+                        <li><a href="">我的关注</a></li>
+                        <li><a href="">发布报盘</a></li>
+                        <li><a href="">我的报盘</a></li>
+                        <li><a href="">销售订单</a></li>
+                        <li><a href="">采购订单</a></li>
+                        <li><a href="">资金管理</a></li>
+                    </ul>
+                    <div class="snavRight left"></div>
+                </div>
+            </div>
+        </div>
+        <!--导航end -->
+        <!--主体 -->
+        <!-- mainBox -->
+        <div class="mainBox">
+            <div class="main pdtp10"><!-- main -->
+                <!-- left sidebar -->
+                <div class="sidebar">
+                    <dl>
+                        <dt class="sidebarTitle">交易中心管理</dt>
+                        <dd><a href="#">资料信息<b class="aleft"></b><b class="aright"></b></a></dd>
+                        <dd><a href="#">我的e商号<b class="aleft"></b><b class="aright"></b></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><em></em>资金管理</dt>
+                        <dd><a href="#">账户管理<b class="aleft"></b><b class="aright"></b></a></dd>
+                        <dd><a href="#">我要充值<b class="aleft"></b><b class="aright"></b></a></dd>
+                        <dd><a href="#">我要提款<b class="aleft"></b><b class="aright"></b></a></dd>
+                        <dd><a href="#">资金明细<b class="aleft"></b><b class="aright"></b></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><em></em>报盘管理</dt>
+                        <dd><a href="#">我的报盘<b class="aleft"></b><b class="aright"></b></a></dd>
+                        <dd><a href="#">代理报盘<b class="aleft"></b><b class="aright"></b></a></dd>
+
+                    </dl>
+                    <dl>
+                        <dt><em></em>订单管理</dt>
+                        <dd><a href="#">销售订单<b class="aleft"></b><b class="aright"></b></a></dd>
+                        <dd><a href="#">采购订单<b class="aleft"></b><b class="aright"></b></a></dd>
+                    </dl>
+                    <dl>
+                        <dt><em></em>商品管理</dt>
+                        <dd><a href="#">品种维护<b class="aleft"></b><b class="aright"></b></a></dd>
+                        <dd class="last"></dd>
+
+                    </dl>
+                </div>
+                <!-- left sidebar end -->
+                <div class="mainSideCon">
+                    <div class="mainSidett"><i></i>我要充值</div>
+                    <div class="mainSidebdy">
+                        <div class="paywaytt"><b></b>付款方式</div>
+                        <div class="paywayCon clearFix">
+                            <ul class="paywayTab clearFix" id="paywayTab">
+                                <li class="firstLi on">柜台汇款</li>
+                                <li>企业网银汇款</li>
+                                <li>个人卡网上充值</li>
+                            </ul>
+                            <!-- 柜台汇款 -->
+                            <div class="paywayTabCon">
+                                <p class="tip tip1">提醒：1.汇款到下面指定的任一金银岛银行账户后再发申请；2.申请充值金额应与实际汇款金额一致！</p>
+                                <form class="rechargeForm" id="counterRechargeForm" name="counterRechargeForm" action="">
+                                    <ul class="rechargeul">
+                                        <li class="rechargeli">
+                                            <span class="tt">充值金额(元)：</span>
+                                            <span>
+                                                <input type="text" class="inpt toChinese checkplaceholder placeholder" placeholder="输入充值金额" name="password" value="">
+                                            </span>
+                                            <div class="txtChinese">  </div>
+                                        </li>
+                                        <li class="rechargeli">
+                                            <span class="tt">备注：</span>
+                                            <span>
+                                                <input type="text" class="beiz inpt  checkplaceholder placeholder" placeholder="如汇款单单号" name="beiz" value="">
+                                            </span>
+                                        </li>
+                                        <li class="rechargeli btnWrap">
+                                            <span class="tt"></span>
+                                            <button class="btnGlobal" type="submit"> 下一步 </button>
+                                        </li>
+                                    </ul>
+                                </form>
+                                <p class="tip tip2">结算银行及付款方式 :</p>
+                                <ul class="bankul clearFix">
+                                    <li>
+                                        <div class="bankimg">
+                                            <img src="__STATIC__/images/bank/bank36h/gongshang.jpg" alt="" />
+                                        </div>
+                                        <p>账户名：金银岛（北京）网络科技股份有限公司</p>
+                                        <p>账  号：1100 1028 8000 5300 0877</p>
+                                        <p>开户行：中国工商银行北京分行</p>
+                                    </li>
+                                    <li>
+                                        <div class="bankimg">
+                                            <img src="__STATIC__/images/bank/bank36h/nongye.jpg" alt="" />
+                                        </div>
+                                        <p>账户名：金银岛（北京）网络科技股份有限公司</p>
+                                        <p>账  号：1100 1028 8000 5300 0877</p>
+                                        <p>开户行：中国农业银行北京分行</p>
+                                    </li>
+                                    <li>
+                                        <div class="bankimg">
+                                            <img src="__STATIC__/images/bank/bank36h/jianshe.jpg" alt="" />
+                                        </div>
+                                        <p>账户名：金银岛（北京）网络科技股份有限公司</p>
+                                        <p>账  号：1100 1028 8000 5300 0877</p>
+                                        <p>开户行：中国建设银行北京分行</p>
+                                    </li>
+                                </ul>
+                            </div><!-- 柜台汇款 end -->
+                            <!-- 企业网银汇款 -->
+                            <div class="paywayTabCon">
+                                <p class="tip tip1">提醒：1.汇款到下面指定的任一金银岛银行账户后再发申请；2.申请充值金额应与实际汇款金额一致！</p>
+                                <form class="rechargeForm" id="ebankRechargeForm" name="ebankRechargeForm" action="">
+                                    <ul class="rechargeul">
+                                        <li class="rechargeli">
+                                            <span class="tt">充值金额(元)：</span>
+                                            <span>
+                                                <input type="text" class="inpt toChinese  checkplaceholder placeholder" placeholder="输入充值金额" name="password" value="">
+                                            </span>
+                                            <div class="txtChinese">  </div>
+                                        </li>
+                                        <li class="rechargeli">
+                                            <span class="tt">备注：</span>
+                                            <span>
+                                                <input type="text" class="beiz inpt  checkplaceholder placeholder" placeholder="如汇款单单号" name="beiz" value="">
+                                            </span>
+                                        </li>
+                                        <li class="rechargeli btnWrap">
+                                            <span class="tt"></span>
+                                            <button class="btnGlobal" type="submit"> 下一步 </button>
+                                        </li>
+                                    </ul>
+                                </form>
+                                <p class="tip tip2">结算银行及付款方式 :</p>
+                                <ul class="bankul clearFix">
+                                    <li>
+                                        <div class="bankimg">
+                                            <img src="__STATIC__/images/bank/bank36h/gongshang.jpg" alt="" />
+                                        </div>
+                                        <p>账户名：金银岛（北京）网络科技股份有限公司</p>
+                                        <p>账  号：1100 1028 8000 5300 0877</p>
+                                        <p>开户行：中国工商银行北京分行</p>
+                                    </li>
+                                    <li>
+                                        <div class="bankimg">
+                                            <img src="__STATIC__/images/bank/bank36h/nongye.jpg" alt="" />
+                                        </div>
+                                        <p>账户名：金银岛（北京）网络科技股份有限公司</p>
+                                        <p>账  号：1100 1028 8000 5300 0877</p>
+                                        <p>开户行：中国农业银行北京分行</p>
+                                    </li>
+                                    <li>
+                                        <div class="bankimg">
+                                            <img src="__STATIC__/images/bank/bank36h/jianshe.jpg" alt="" />
+                                        </div>
+                                        <p>账户名：金银岛（北京）网络科技股份有限公司</p>
+                                        <p>账  号：1100 1028 8000 5300 0877</p>
+                                        <p>开户行：中国建设银行北京分行</p>
+                                    </li>
+                                </ul>
+                            </div><!-- 企业网银汇款 end -->
+                            <!-- 个人卡网上充值 -->
+                            <form method="post" name="form">
+                            <div class="paywayTabCon">
+                                <ul class="rechargeul rchgnum">
+                                    <li class="rechargeli">
+                                        <span class="tt"><!-- <em class="colorRed">*</em> --> 充值金额(元)：</span>
+                                        <span>
+                                            <input type="text" class="inpt toChinese  checkplaceholder placeholder" placeholder="输入充值金额" name="rchgnumInpt" value="">
+                                        </span>
+                                        <div class="txtChinese">  </div>
+                                    </li>
+                                </ul>
+                                <dl class="chosePayway">
+                                    <dt>请选择支付渠道 :</dt>
+                                    <dd class="chosePaybankWrap">
+                                        <ul class="chosePaybank">
+                                            <!-- oneLiFirst -->
+                                            <li class="oneLiFirst">
+                                                <input type="radio" name="bankList" id="gongshang">
+                                                <label for="gongshang"><img src="__STATIC__/images/bank/bank36h/gongshang.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="jianshe">
+                                                <label for="jianshe"><img src="__STATIC__/images/bank/bank36h/jianshe.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="nongye">
+                                                <label for="nongye"><img src="__STATIC__/images/bank/bank36h/nongye.jpg"></label>
+                                            </li>
+                                            <!-- oneLiFirst -->
+                                            <li class="oneLiFirst">
+                                                <input type="radio" name="bankList" id="zhaoshang">
+                                                <label for="zhaoshang"><img src="__STATIC__/images/bank/bank36h/zhaoshang.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="zhongguo">
+                                                <label for="zhongguo"><img src="__STATIC__/images/bank/bank36h/zhongguo.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="jiaotong">
+                                                <label for="jiaotong"><img src="__STATIC__/images/bank/bank36h/jiaotong.jpg"></label>
+                                            </li>
+                                            <!-- oneLiFirst -->
+                                            <li class="oneLiFirst">
+                                                <input type="radio" name="bankList" id="pufa">
+                                                <label for="pufa"><img src="__STATIC__/images/bank/bank36h/pufa.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="minsheng">
+                                                <label for="minsheng"><img src="__STATIC__/images/bank/bank36h/minsheng.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="xingye">
+                                                <label for="xingye"><img src="__STATIC__/images/bank/bank36h/xingye.jpg"></label>
+                                            </li>
+                                            <!-- oneLiFirst -->
+                                            <li class="oneLiFirst">
+                                                <input type="radio" name="bankList" id="guangda">
+                                                <label for="guangda"><img src="__STATIC__/images/bank/bank36h/guangda.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="shanghai">
+                                                <label for="shanghai"><img src="__STATIC__/images/bank/bank36h/shanghai.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="beijing">
+                                                <label for="beijing"><img src="__STATIC__/images/bank/bank36h/beijing.jpg"></label>
+                                            </li>
+                                            <!-- oneLiFirst -->
+                                            <li class="oneLiFirst">
+                                                <input type="radio" name="bankList" id="pingan">
+                                                <label for="pingan"><img src="__STATIC__/images/bank/bank36h/pingan.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="huaxia">
+                                                <label for="huaxia"><img src="__STATIC__/images/bank/bank36h/huaxia.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="guangfa">
+                                                <label for="guangfa"><img src="__STATIC__/images/bank/bank36h/guangfa.jpg"></label>
+                                            </li>
+                                            <!-- oneLiFirst -->
+                                            <li class="oneLiFirst">
+                                                <input type="radio" name="bankList" id="youzheng">
+                                                <label for="youzheng"><img src="__STATIC__/images/bank/bank36h/youzheng.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="nanjing">
+                                                <label for="nanjing"><img src="__STATIC__/images/bank/bank36h/nanjing.png"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="ningbo">
+                                                <label for="ningbo"><img src="__STATIC__/images/bank/bank36h/ningbo.jpg"></label>
+                                            </li>
+                                            <!-- oneLiFirst -->
+                                            <li class="oneLiFirst">
+                                                <input type="radio" name="bankList" id="dongya">
+                                                <label for="dongya"><img src="__STATIC__/images/bank/bank36h/dongya.png"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="zhongxin">
+                                                <label for="zhongxin"><img src="__STATIC__/images/bank/bank36h/zhongxin.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="bankList" id="bohai">
+                                                <label for="bohai"><img src="__STATIC__/images/bank/bank36h/bohai.png"></label>
+                                            </li>
+                                            <!-- oneLiFirst -->
+                                            <li class="oneLiFirst">
+                                                <input type="radio" name="bankList" id="chengdu">
+                                                <label for="chengdu"><img src="__STATIC__/images/bank/bank36h/chengdu.jpg"></label>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="bankTipdd">
+                                        <div class="bankTipWrap">
+                                            <div class="bankTip" id="banktip-gongshang">
+                                                <h3><i></i>关于充值额度的说明<span>工商银行电话：95588</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="6">借记卡</td>
+                                                        <td>工银E支付</td>
+                                                        <td>500元</td>
+                                                        <td>2000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>U盾</td>
+                                                        <td>100万元</td>
+                                                        <td>100万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>工银密码器</td>
+                                                        <td>50万元</td>
+                                                        <td>100万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>电子银行口令卡<br>（未开通手机短信认证）</td>
+                                                        <td>500元</td>
+                                                        <td>1000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>电子银行口令卡<br>（已开通手机短信认证）</td>
+                                                        <td>2000元</td>
+                                                        <td>5000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>柜面注册存量静态密码客户</td>
+                                                        <td colspan="2">总累计限额300元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-zhongguo">
+                                                <h3><i></i>关于充值额度的说明<span>中国银行电话：95566</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>借记卡</td>
+                                                        <td>动态口令牌</td>
+                                                        <td>50000元</td>
+                                                        <td>无限额</td>
+                                                    </tr>
+                                                </table>
+                                            </div>         
+                                            <div class="bankTip" id="banktip-jianshe">
+                                                <h3><i></i>关于充值额度的说明<span>建设银行电话：95533</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3">借记卡</td>
+                                                        <td>动态口令卡</td>
+                                                        <td>5000元</td>
+                                                        <td>5000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>网银盾</td>
+                                                        <td>50万元</td>
+                                                        <td>50万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>帐号支付</td>
+                                                        <td>1000元</td>
+                                                        <td>1000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-jiaotong">
+                                                <h3><i></i>关于充值额度的说明<span>交通银行电话：95559</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">借记卡</td>
+                                                        <td>USB证书</td>
+                                                        <td>100万元</td>
+                                                        <td>100万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>短信密码</td>
+                                                        <td>50000元</td>
+                                                        <td>50000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-nongye">
+                                                <h3><i></i>关于充值额度的说明<span>农行银行电话：95599</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3">借记卡</td>
+                                                        <td>一代K宝</td>
+                                                        <td>50万元</td>
+                                                        <td>100万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>二代K宝</td>
+                                                        <td>100万元</td>
+                                                        <td>500万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>动态口令卡和IE证书绑定使用</td>
+                                                        <td>1000元</td>
+                                                        <td>3000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-pufa">
+                                                <h3><i></i>关于充值额度的说明<span>浦发银行电话：95528</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">借记卡</td>
+                                                        <td>数字证书版</td>
+                                                        <td>无限额</td>
+                                                        <td>无限额</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>动态密码版</td>
+                                                        <td>20万</td>
+                                                        <td>20万</td>
+                                                    </tr>
+                                                </table>
+                                            </div> 
+                                            <div class="bankTip" id="banktip-zhaoshang">
+                                                <h3><i></i>关于充值额度的说明<span>招商银行电话：95555</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">借记卡</td>
+                                                        <td>专业版</td>
+                                                        <td>无限额</td>
+                                                        <td>无限额</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>大众版</td>
+                                                        <td>500万元</td>
+                                                        <td>500万元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-minsheng">
+                                                <h3><i></i>关于充值额度的说明<span>民生银行电话：95568</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="5">借记卡</td>
+                                                        <td>登录密码</td>
+                                                        <td>无限额</td>
+                                                        <td>无限额</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>短信验证码</td>
+                                                        <td>5000元</td>
+                                                        <td>5000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>浏览器证书</td>
+                                                        <td>5000元</td>
+                                                        <td>5000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>动态令牌（OTP）</td>
+                                                        <td>500000元</td>
+                                                        <td>500000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>U宝</td>
+                                                        <td>500000元</td>
+                                                        <td>500000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-xingye">
+                                                <h3><i></i>关于充值额度的说明<span>兴业银行电话：95561</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3">借记卡</td>
+                                                        <td>证书版</td>
+                                                        <td>无限额</td>
+                                                        <td>无限额</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>电子支付卡</td>
+                                                        <td>5000元</td>
+                                                        <td>5000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>普通版</td>
+                                                        <td>1000元或者5000元</td>
+                                                        <td>1000元或者5000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-pingan">
+                                                <h3><i></i>关于充值额度的说明<span>平安银行电话：400-6699-999</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>借记卡</td>
+                                                        <td>手机动态密码</td>
+                                                        <td>50000元</td>
+                                                        <td>50000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-guangda">
+                                                <h3><i></i>关于充值额度的说明<span>光大银行电话：95595</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3">借记卡</td>
+                                                        <td>阳光网盾</td>
+                                                        <td>50万元</td>
+                                                        <td>50万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>令牌动态密码</td>
+                                                        <td>50万元</td>
+                                                        <td>500万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>手机动态密码</td>
+                                                        <td>10000元</td>
+                                                        <td>10000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-huaxia">
+                                                <h3><i></i>关于充值额度的说明<span>华夏银行电话：95577</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3">借记卡</td>
+                                                        <td>密码支付</td>
+                                                        <td>300元</td>
+                                                        <td>1000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>动态短信</td>
+                                                        <td>1000元</td>
+                                                        <td>5000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>U盾</td>
+                                                        <td>50000元</td>
+                                                        <td>100000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-shanghai">
+                                                <h3><i></i>关于充值额度的说明<span>上海银行电话：962888</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">借记卡</td>
+                                                        <td>易签宝（USBKey证书）</td>
+                                                        <td>5万元</td>
+                                                        <td>5万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>文件证书</td>
+                                                        <td>5000元</td>
+                                                        <td>5000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-guangfa">
+                                                <h3><i></i>关于充值额度的说明<span>广发银行电话：95508</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">借记卡</td>
+                                                        <td>通用版</td>
+                                                        <td>1000元</td>
+                                                        <td>1000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>证书版</td>
+                                                        <td>1000元</td>
+                                                        <td>1000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-beijing">
+                                                <h3><i></i>关于充值额度的说明<span><!-- 北京银行电话： --></span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3">借记卡</td>
+                                                        <td>普通版</td>
+                                                        <td colspan="2">总累计限额300元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>动态密码版</td>
+                                                        <td>1000元</td>
+                                                        <td>5000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>证书版</td>
+                                                        <td>100万元</td>
+                                                        <td>100万元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-youzheng">
+                                                <h3><i></i>关于充值额度的说明<span><!-- 中国邮政储蓄银行电话： --></span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3">借记卡</td>
+                                                        <td>UK+短信用户</td>
+                                                        <td>200万元</td>
+                                                        <td>200万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>电子令牌+短信用户</td>
+                                                        <td>20万元</td>
+                                                        <td>20万元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>个人网银短信客户</td>
+                                                        <td>1万元</td>
+                                                        <td>1万元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-nanjing">
+                                                <h3><i></i>关于充值额度的说明<span>南京银行电话：96400</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3">借记卡</td>
+                                                        <td>专业版</td>
+                                                        <td>50000元</td>
+                                                        <td>50000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>手机版</td>
+                                                        <td>10000元</td>
+                                                        <td>10000元</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>普通版</td>
+                                                        <td>300元</td>
+                                                        <td>300元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>    
+                                            <div class="bankTip" id="banktip-zhongxin">
+                                                <h3><i></i>关于充值额度的说明<span>中信银行电话：95558</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>借记卡</td>
+                                                        <td>USB证书</td>
+                                                        <td>100万</td>
+                                                        <td>100万</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-ningbo">
+                                                <h3><i></i>关于充值额度的说明<span>宁波银行电话：96528，962528（上海地区）</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">借记卡</td>
+                                                        <td>USBKEY移动证书</td>
+                                                        <td>无限额</td>
+                                                        <td>无限额</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>短信动态密码</td>
+                                                        <td>50000元</td>
+                                                        <td>50000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-bohai">
+                                                <h3><i></i>关于充值额度的说明<span>渤海银行电话：4008888811</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>借记卡</td>
+                                                        <td>个人网银大众版</td>
+                                                        <td>无限额</td>
+                                                        <td>5000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-dongya">
+                                                <h3><i></i>关于充值额度的说明<span>东亚银行电话：8008303811</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3">借记卡</td>
+                                                        <td>U盾+手机动态密码</td>
+                                                        <td>100万</td>
+                                                        <td>100万</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>U盾</td>
+                                                        <td>100万</td>
+                                                        <td>100万</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>手机动态密码</td>
+                                                        <td>5000元</td>
+                                                        <td>20000元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="bankTip" id="banktip-chengdu">
+                                                <h3><i></i>关于充值额度的说明<span>成都银行电话：96511、4006896511</span></h3>
+                                                <table width="100%">
+                                                    <tr>
+                                                        <th width="15%">支付卡种</th>
+                                                        <th width="35%">支付方式</th>
+                                                        <th width="25%">单卡单笔支付限额</th>
+                                                        <th width="25%">日累积支付限额</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>借记卡</td>
+                                                        <td></td>
+                                                        <td>50元</td>
+                                                        <td>500元</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <!-- <div class="bankTip" id="banktip-nongshang">
+                                              <h3><i></i>关于充值额度的说明<span>上海农商银行电话：4006962999</span></h3>
+                                              <table width="100%">
+                                                <tr>
+                                                  <th width="15%">支付卡种</th>
+                                                  <th width="35%">支付方式</th>
+                                                  <th width="25%">单卡单笔支付限额</th>
+                                                  <th width="25%">日累积支付限额</th>
+                                                </tr>
+                                                <tr>
+                                                  <td rowspan="2">借记卡</td>
+                                                  <td>个人网银短信专业版</td>
+                                                  <td>1000元</td>
+                                                  <td>5000元</td>
+                                                </tr>
+                                                <tr>
+                                                  <td>个人网银证书专业版</td>
+                                                  <td>10000元</td>
+                                                  <td>500万元</td>
+                                                </tr>
+                                              </table>
+                                            </div> -->
+
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="chosePayway">
+                                    <dt>第三方支付 :</dt>
+                                    <dd class="chosePaybankWrap">
+                                        <ul class="chosePaybank thirdbankul">
+                                            <!-- oneLiFirst -->
+                                            <li class="oneLiFirst">
+                                                <input type="radio" name="thirdbankList" id="huifutianxia">
+                                                <label for="huifutianxia"><img src="__STATIC__/images/bank/bank36h/huifutianxia153x38.jpg"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="thirdbankList" id="lianlian">
+                                                <label for="lianlian"><img src="__STATIC__/images/bank/bank36h/lianlian153x38.jpg"></label>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+
+                                <div class="personalBtnWrap">
+                                    <button class="btnGlobal" type="submit"> 下一步 </button>
+                                </div>
+                            </div><!-- 个人卡网上充值 end -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- main end -->
+        </div>
+        <!-- mainBox end -->
+        <!--主体 end -->
+
+        <!--底部 -->
+        <div class="footer">
+            <div class="footerInner">
+                <h2 class="footTit">网站导航</h2>
+                <div class="footNav clear">
+                    <dl class="fore">
+                        <dt>交易管理</dt>
+                        <dd><a href="#">交易小助手</a></dd>
+                        <dd><a href="#">交易明细</a></dd>
+                        <dd><a href="#">发布报盘</a></dd>
+                        <dd><a href="#">我的报盘</a></dd>
+                    </dl>
+                    <dl class="fore">
+                        <dt>订单管理</dt>
+                        <dd><a href="#">销售订单</a></dd>
+                        <dd><a href="#">采购订单</a></dd>
+                    </dl>
+                    <dl class="fore">
+                        <dt>资金管理</dt>
+                        <dd><a href="#">我要充值</a></dd>
+                        <dd><a href="#">我要提款</a></dd>
+                        <dd><a href="#">资金明细</a></dd>
+                        <dd><a href="#">添加银行卡</a></dd>
+                    </dl>
+                    <dl class="fore">
+                        <dt>互动平台</dt>
+                        <dd><a href="#">企业商号</a></dd>
+                        <dd><a href="#">我的商号</a></dd>
+                    </dl>
+                    <dl class="contact">
+                        <dt>联系我们</dt>
+                        <dd>客服热线：4000-315-100</dd>
+                        <dd>联系电话：+86-10-84588410</dd>
+                        <dd>传真：+86-10-84588460</dd>
+                        <dd>联系邮箱：315ex@315.com.cn</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!--底部end -->
+    </body>
+</html>

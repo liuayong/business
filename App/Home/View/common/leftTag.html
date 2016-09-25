@@ -1,0 +1,15 @@
+<!----- 标签云集 ----->
+<div id="panelSearch" class="panel">
+    <h5>标签云集 [ <a href="{:U('Tag/index')}">更多</a> ]</h5>
+    <div class="panel-content">
+        <ul>
+            <li>
+            <foreach name="_left_tags" item="v">
+                <a title="{$v.data_count}条内容" href="{:U('Tag/post', ['name' => urlencode($v['tag_name'])])}">
+                    <span style="font-size:{$v['data_count']|getTitleSize};color:{:rand_color()}">{$v['tag_name']}</span>
+                </a>&nbsp;&nbsp;&nbsp;
+            </foreach>
+            </li>
+        </ul>
+    </div>
+</div>

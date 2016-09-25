@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>后台管理 - 修改新闻表</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/css/blue.css" />
+    <script>window.jQuery || document.write('<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.1.7.2.min.js"><\/script>');</script>
+    <script src="__PUBLIC__/Admin/js/jquery.validate.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/Admin/js/jquery.form.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //指定当前组模块URL地址
+        var URL     = '__URL__';
+        var App	    = '__APP__';
+        var PUBLIC  = '__PUBLIC__';
+
+        $(function() {
+           /*
+	    $('form').validate([]);
+	   */
+        });
+    </script>
+</head>
+<body>
+<div id="main" class="main" >
+    <div class="content">
+        <div class="title">编辑新闻表 [ <a href="__CONTROLLER__/index">返回列表</a> ]</div>
+        <form method='post' id="form" action="__CONTROLLER__/upd" >
+        <table cellpadding=3 cellspacing=3>
+            <tr>
+                <td class="tRight" >新闻标题：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="title_id"  value="<?php echo $data['title']; ?>"  name="title" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >标题唯一标识符：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="title_id_id"  value="<?php echo $data['title_id']; ?>"  name="title_id" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >来源：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="source_id"  value="<?php echo $data['source']; ?>"  name="source" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >来源地址：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="source_url_id"  value="<?php echo $data['source_url']; ?>"  name="source_url" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >所属栏目：</td>
+                <td class="tLeft" >
+                    <select class="bLeft" id="cate_id_id"  name="cate_id"></select>                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >封面图片：</td>
+                <td class="tLeft" >
+                    <input type="file"  id="show_img_id" class="medium bLeftRequire"  name="show_img" />&nbsp;&nbsp;&nbsp;<button type="button" class="delImg"> 删除图片 </button>                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >浏览次数：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="view_count_id"  value="<?php echo $data['view_count']; ?>"  name="view_count" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >新闻摘要：</td>
+                <td class="tLeft" >
+                    <textarea class="bLeft"  id="abstract_id"  name="abstract" rows="6" cols="65"><?php echo $data['abstract']; ?></textarea>                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >新闻内容：</td>
+                <td class="tLeft" >
+                    <textarea  id="content_id" name="content" style="width:750px;height:300px;"><?php echo $data['content']; ?></textarea>                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >模板：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="template_id"  value="<?php echo $data['template']; ?>"  name="template" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >是否显示：</td>
+                <td class="tLeft" >
+                    <select class="bLeft" id="is_show_id"  name="is_show"><option  value="1">显示</option><option  value="0">隐藏</option></select>                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >排序：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="sort_order_id"  value="<?php echo $data['sort_order']; ?>"  name="sort_order" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >内容标签：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="tag_id"  value="<?php echo $data['tag']; ?>"  name="tag" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >seo标题：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="seo_title_id"  value="<?php echo $data['seo_title']; ?>"  name="seo_title" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >seo关键字：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="seo_keywords_id"  value="<?php echo $data['seo_keywords']; ?>"  name="seo_keywords" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >seo描述：</td>
+                <td class="tLeft" >
+                    <input type="text" class="medium bLeftRequire" id="seo_description_id"  value="<?php echo $data['seo_description']; ?>"  name="seo_description" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >发布时间：</td>
+                <td class="tLeft" >
+                    <input type="input"  readonly="readonly" id="pub_time_id" onclick="WdatePicker()"  name="pub_time" value="<?php echo date("Y-m-d", $data['pub_time']); ?>" />                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >访问权限：</td>
+                <td class="tLeft" >
+                    <select class="bLeft" id="auth_id"  name="auth"><option  value="1">游客</option><option  value="2">普通会员</option><option  value="3">vip会员</option></select>                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tRight" >推荐：</td>
+                <td class="tLeft" >
+                    <select class="bLeft" id="recommend_id"  name="recommend"><option  value="'">不推荐</option><option  value="0">首页</option></select>                    
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="center">
+                    <input type="submit" value="更 新" class="small submit">
+                    <input type="reset" class="submit  small" value="重 置" >
+                    <input type="hidden" value="<?php echo $data['news_id']; ?>" name="news_id" />
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</div>
+
+<!-- 加载所需要的资源文件 -->
+<script src="__PUBLIC__/Admin/js/ajaxfileupload.js" type="text/javascript"></script>    
+<script src="__PUBLIC__/Admin/Plugins/editor/kindeditor.js" type="text/javascript"></script>    
+<script src="__PUBLIC__/Admin/Plugins/My97DatePicker/WdatePicker.js" type="text/javascript"></script>      
+<script type="text/javascript" >
+$(function(){
+    
+    $('form #cate_id_id').val('<?php echo $data['cate_id'] ; ?>');
+
+    
+    var $nowTr = $("form #show_img_id").closest('tr') ;    
+    //jQuery.getScript("__PUBLIC__/Admin/js/ajaxfileupload.js");
+    $("form #show_img_id").change(function() {
+        var _this = this ;
+        $nowTr = $(this).closest('tr');
+        loading();//动态加载小图标
+        $.ajaxFileUpload ({
+            url:'__URL__/upload', // 你处理上传文件的服务端
+            secureuri:false,
+            fileElementId: _this.id,	// 与页面处理代码中file相对应的ID值
+            dataType: 'json',		// 返回数据类型:text，xml，json，html,scritp,jsonp五种
+            success: function (data) {
+                if(!$nowTr.next().hasClass('preview')) {
+                    $trHtml = '<tr class="preview"><td align="right">预览效果：</td><td><img width="250" height="180"  src="'+ data.imgFullPath +'"  /><input type="hidden" name="'+ $(_this).attr('name') +'" value="'+ data.imgPath +'" /></td></tr>' ;
+                    $nowTr.after($trHtml);
+                } else {
+                    $nowTr.next('.preview').find('img').attr('src',data.imgFullPath );
+                    $nowTr.next('.preview').find('input[type=hidden]').val(data.imgPath);
+                    //$nowTr.next('.preview').find('input[type=hidden]').attr(name, _this.name );
+                }
+            },
+            error: function(data) {
+                console.log(data);
+                alert('上传失败: ' + data.msg);
+            }
+        });
+    });
+    
+    $("form #show_img_id").next('button.delImg').click(function() {
+        $nowTr.next('.preview').remove();
+        $("form #show_img_id").val('');
+    });
+    
+    var img1 = '<?php echo $data['show_img']; ?>';
+    if(img1) {
+	var previewImg = '__ROOT__/Uploads/' + img1 ;
+	// var hasFile =  ;
+	$trHtml = '<tr class="preview"><td align="right">预览效果：</td><td><img width="250" height="180"  src="'+ previewImg +'"  /><input type="hidden" name="show_img" value="'+ img1 +'" /></td></tr>' ;
+	$nowTr.after($trHtml);
+    }
+    function loading(){
+        $("#loading").ajaxStart(function(){
+            $(this).show();
+        }).ajaxComplete( function(){
+            $(this).hide();
+        });
+    }
+    
+
+    KE.show({
+	id : 'content_id' //TEXTAREA输入框的ID
+    });
+
+    $('form #is_show_id').val('<?php echo $data['is_show'] ; ?>');
+
+    // 日期控件
+    $('form #pub_time_id').click(function() {
+	WdatePicker();
+    });
+    $('form #auth_id').val('<?php echo $data['auth'] ; ?>');
+
+    $('form #recommend_id').val('<?php echo $data['recommend'] ; ?>');
+
+
+});
+</script>    
+</body>
+</html>

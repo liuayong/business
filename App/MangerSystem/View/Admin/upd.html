@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>编辑用户</title>
+        <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+        <link href="__PUBLIC__/css/site.css" rel="stylesheet">
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+        <script src="__PUBLIC__/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="__PUBLIC__/Plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css"  />
+        <script src="__PUBLIC__/Plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+        <script>
+            $(function () {
+                ckinfo();
+                //检查信息框
+                function ckinfo() {
+                    if ($(".alert span.msg").text() !== '') {
+                        fadeInfo();
+                    }
+                }
+                //消息消失动画
+                function fadeInfo() {
+                    setTimeout(function () {
+                        //alert('消息框即将消失！');
+                        $(".info").fadeOut(800);
+                    }, 1000)
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="main">
+                        <div class="info" style="display: none;">
+                            <div class="alert">
+                                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                                <strong>出错啦！</strong><span class="msg"></span>
+                            </div>
+                        </div>
+                        <h1>添加用户</h1>
+                        <form id="sendmsg" action="{:U('upd')}" method="post" role="form" callback="" >
+                            <div class="form-group field-msg-title required">
+                                <label class="control-label" for="msg-title">用户名：</label>
+                                <input type="text" id="msg-title" value="{$data.username}" class="form-control" name="Admin[username]">
+                                <button type="button" class="btn btn-primary check">检查用户名</button>
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                            <div class="form-group field-msg-title required">
+                                <label class="control-label" for="msg-title">昵称：</label>
+                                <input type="text" id="msg-title" value="{$data.nickname}" class="form-control" name="Admin[nickname]">
+                                <button type="button" class="btn btn-primary check" style="display: inline-block;">检查昵称</button>
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                            <div class="form-group field-msg-title "style="width:60%;">
+                                <label class="control-label" for="msg-title">密码：</label>
+                                <input type="text" id="msg-title" class="form-control" name="Admin[password]">
+                                <span class="tips" style="padding:5px;margin-top:5px;">留空, 表示密码保持不变</span>
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                            <div class="form-group field-msg-tid required">
+                                <label class="control-label" for="admin-status">状态：</label>
+                                <select id="admin-status" class="form-control" name="Admin[status]">
+                                    <option <eq name="data.status" value="1" >selected="selected"</eq> value="1">激活</option>
+                                    <option <eq name="data['status']" value="0" >selected="selected"</eq> value="0">禁用</option>
+                                </select>
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="dtp_input1">注册时间</label>
+                                <div data-link-field="dtp_input1"   class="input-group date form_datetime col-md-8">
+                                    <input type="text" readonly="" name="Admin[reg_time]" value="{$data.reg_time|date='Y-m-d H:i',###}" name="Admin[reg_time]" size="16" class="form-control">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">提交</button>
+                            <input type="hidden"  value="{$data.admin_id}" id="msg-title" class="form-control" name="Admin[admin_id]">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                // 需要防止表单重复提交
+                $("form").submit(function () {
+                    var that = this;
+                    var type = this.method.toUpperCase();
+                    var url = this.action;
+                    $.ajax({
+                        type: type,
+                        url: url,
+                        data: $(that).serialize(),
+                        dataType: 'json',
+                        success: function (retData) {
+                            console.log(retData);
+                            if (retData.code == 0) { // 成功
+                                $(".info").show();
+                                $(".alert").removeClass('alert-danger').addClass('alert-success');
+                                $(".alert span.msg").text(retData.msg);
+                                setTimeout("window.location.href='" + retData.return_url + "'", 100);
+                            } else {
+                                $(".info").show();
+                                $(".alert").removeClass('alert-success').addClass('alert-danger');
+                                $(".alert span.msg").text(retData.msg);
+                            }
+                        },
+                        error: function (response) {
+                            alert('失败了');
+                        }
+                    });
+                    return false;
+                });
+
+                $(".form_datetime").datetimepicker({
+                    format: 'yyyy-mm-dd hh:ii',
+                    pickerPosition: "top-left",
+                    autoclose: true,
+                    todayBtn: true,
+                    language: 'zh-CN'
+                });
+                $(".check").click(function () {
+                    var input = $(this).closest("div.form-group").find('input');
+
+                    var name = input.attr('name');
+                    var val = input.val();
+                    var data = {};
+                    var url = "{:U('checkUnique')}";
+
+                    data[name] = val;
+
+                    $.ajax({
+                        type: "post",
+                        url: url,
+                        data: data,
+                        dataType: 'json',
+                        success: function (retData) {
+                            if (retData.code == 0) { // 成功
+                                $(".info").show();
+                                $(".alert").removeClass('alert-danger').addClass('alert-success');
+                                $(".alert span.msg").text(retData.msg);
+                            } else {
+                                $(".info").show();
+                                $(".alert").removeClass('alert-success').addClass('alert-danger');
+                                $(".alert span.msg").text(retData.msg);
+                            }
+                        },
+                        error: function () {
+                            alert("出错了");
+                        }
+                    });
+
+                    console.log(data);
+
+                });
+            });
+        </script>
+    </body>
+</html>

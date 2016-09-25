@@ -1,0 +1,52 @@
+<tr>
+    <td class="tRight" >自定义属性：</td>
+    <td class="tLeft" >
+        <div id="attrArea" style="margin:10px 0;">
+            <?php foreach($data as $k=> $v) : ?>
+            <div class="item">
+                <div class="dLeft custom_title" ><?php echo $v['attr_name']; ?> </div>
+                <div class="dLeft custom_formitem">
+                    <input type="hidden" name="attr[<?php echo $k; ?>][attr_id]" value="<?php echo $v['attr_id']; ?>">
+                    <input type="hidden" name="attr[<?php echo $k; ?>][attr_name]" value="<?php echo $v['attr_name_alias']; ?>">
+                    <?php 
+                    if($v['attr_type'] == 'input') : 
+                    ?>
+                    <input class="medium" type="text" class="txt" name="attr[<?php echo $k; ?>][attr_val]">
+                    <?php 
+                    elseif($v['attr_type'] == 'select') : 
+                    $items = parseOptions($v['data_default']); 
+                    ?>
+                    <select class="medium" name="attr[<?php echo $k; ?>][attr_val]">
+                        <?php foreach($items as $kk => $vv) : ?>
+                        <option value="<?php echo $kk; ?>"> <?php echo $vv; ?> </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <?php 
+                    elseif($v['attr_type'] == 'checkbox') : 
+                    $items = parseOptions($v['data_default']); 
+                    ?>
+                    <?php foreach($items as $kk => $vv) : ?>
+                    <label><input class="medium" type="checkbox" name="attr[<?php echo $k; ?>][attr_val][]"> <?php echo $vv; ?></label>
+                    <?php endforeach; ?>
+                    <?php 
+                    elseif($v['attr_type'] == 'radio') : 
+                    $items = parseOptions($v['data_default']); 
+                    ?>
+                    <?php foreach($items as $kk => $vv) : ?>
+                    <label><input class="medium" type="radio" name="attr[<?php echo $k; ?>][attr_val]"> <?php echo $vv; ?></label>
+                    <?php endforeach; ?>
+                    <?php 
+                    elseif($v['attr_type'] == 'textarea') : 
+                    ?>
+                    <textarea   name="attr[<?php echo $k; ?>][attr_val]"></textarea>
+                    <?php endif; ?>
+                </div>
+                <div class="dLeft custom_tips">
+                    <em style="font-size:10px;">标识：<?php echo $v['attr_name_alias']; ?> 　说明:<?php echo $v['tips']; ?></em>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </td>
+</tr>

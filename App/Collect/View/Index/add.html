@@ -1,0 +1,218 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="javascript:void(0);">添加采集</a>
+    </div>
+    <p></p>
+    <div class="well">
+        <ul id="myTab" class="nav nav-pills span12">
+            <li class="active"><a href="#info" data-toggle="tab">基本信息</a></li>
+            <li><a href="#seo" data-toggle="tab">采集节点设置</a></li>
+            <!--
+            <li><a href="#contact" data-toggle="tab">相关商品</a></li>
+            <li><a href="#trd" data-toggle="tab">第三方平台</a></li> 
+            -->
+        </ul>
+        <p>&nbsp;</p>
+        <form class="form-horizontal tab-content" id="myTabContent" style="overflow: hidden;" action="{:U(Index/add)}" method="post">
+            <div class="tab-pane fade in active" id="info">
+                <div class="control-group">
+                    <label class="control-label" for="name">采集项目名称</label>
+                    <div class="controls">
+                        <input type="text" name="name" id="name" placeholder="请输入采集项目名称" />
+                        <span class="help-inline">采集项目名称，中文</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="charset">采集编码</label>
+                    <div class="controls">
+                        <select id="charset" name="charset">
+                            <option value="">自动</option>
+                            <option value="utf-8">UTF-8</option>
+                            <option value="gbk">GBK</option>
+                        </select>
+                        <span class="help-inline">抓取页面编码</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="web_site">站点地址</label>
+                    <div class="controls">
+                        <input type="text" name="web_site" id="web_site" placeholder="请输入站点地址" />
+                        <span class="help-inline">站点地址，以 http:// (https://) 开始</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="target">采集页面路径</label>
+                    <div class="controls">
+                        <!-- <textarea name="target" id="target" class="span4" placeholder="请输入采集页面路径"></textarea> -->
+                        <input type="text" name="target" id="target" class="span5" placeholder="请输入站点地址" />
+                        <span class="help-block">采集页首页地址, 其中页码使用<span style="color:red">{:C('COLLECT_PAGE')}</span></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">是否下载图片</label>
+                    <div class="controls">
+                        <label class="radio inline">
+                            <input type="radio" name="is_down" checked="checked" id="inlineCheckbox1" value="1"> 是
+                        </label>
+                        <label class="radio inline">
+                            <input type="radio" name="is_down" id="inlineCheckbox2" value="0"> 否
+                        </label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="page_type">页面类型</label>
+                    <div class="controls">
+                        <select id="page_type" name="page_type">
+                            <option value="detail">内容页</option>
+                            <option value="list" > 列表页</option>
+                        </select>
+                        <span class="help-inline">采集页面的类型</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="start_page">起始页</label>
+                    <div class="controls">
+                        <input type="number" name="start_page" value="1" id="start_page" placeholder="请输入采集首页页码" />
+                        <span class="help-inline">采集项目首页页码</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="end_page">结尾页</label>
+                    <div class="controls">
+                        <input type="number" name="end_page" id="end_page" placeholder="请输入采集尾页页码" />
+                        <span class="help-inline">采集项目结尾页码</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade in " id="seo">
+                <div class="control-group" >
+                    <pre class="pre-scrollable" style="background-color:#fff;">&lt;div class="test"&gt;<br/>   &lt;ul&gt;
+        &lt;li&gt;&lt;a href="http://www.test.com/1.html"&gt;节点1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.test.com/1.html"&gt;节点2&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/div&gt;</pre>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="scope">采集节点范围</label>
+                    <div class="controls">
+                        <input type="text" name="scope" id="scope" class="span4" />
+                        <span class="help-inline">采集列表节点范围标记(jquery 语法) 如：
+                            <code>.test li</code></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="url">链接地址</label>
+                    <div class="controls">
+                        <input type="text" name="url" id="url" class="span4" />
+                        <span class="help-inline">地址节点标记(jquery 语法) 如：<code>li a:eq(0) </code></span>
+                    </div>
+                </div>                
+
+                <div class="control-group">
+                    <label class="control-label" for="title">标题</label>
+                    <div class="controls">
+                        <input type="text" name="title" id="title" class="span4" />
+                        <span class="help-inline">标题节点标记(jquery 语法) 如：<code>li a:eq(0) </code></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="cate">所属分类</label>
+                    <div class="controls">
+                        <input type="text"  name="cate" id="cate" class="span4" />
+                        <span class="help-inline">分类节点标记(jquery 语法) 如：<code>li a:eq(1) </code></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="pubtime">时间</label>
+                    <div class="controls">
+                        <input type="text" name="pubtime" id="pubtime" class="span4" />
+                        <span class="help-inline">时间节点标记(jquery 语法) 如：<code>.date</code></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="author">作者</label>
+                    <div class="controls">
+                        <input type="text" name="author" id="author" class="span4" />
+                        <span class="help-inline">作者节点标记(jquery 语法) 如：<code>.author</code></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="view_cnts">访问量</label>
+                    <div class="controls">
+                        <input type="text" name="view_cnts" id="view_cnts" class="span4" />
+                        <span class="help-inline">访问量节点标记(jquery 语法) 如：<code>.view_cnts</code></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="favorite_cnts">收藏数</label>
+                    <div class="controls">
+                        <input type="text" name="favorite_cnts" id="favorite_cnts" class="span4" />
+                        <span class="help-inline">收藏数节点标记(jquery 语法) 如：<code>.favorite_cnts</code></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="attention_cnts">关注数</label>
+                    <div class="controls">
+                        <input type="text" name="attention_cnts" id="attention_cnts" class="span4" />
+                        <span class="help-inline">关注数节点标记(jquery 语法) 如：<code>.attention_cnts</code></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="reply_cnts">回复数</label>
+                    <div class="controls">
+                        <input type="text" name="reply_cnts" id="reply_cnts" class="span4" />
+                        <span class="help-inline">回复数节点标记(jquery 语法) 如：<code>.reply_cnts</code></span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="intro">内容简介</label>
+                    <div class="controls">
+                        <input type="text" name="intro" id="intro" class="span4" />
+                        <span class="help-inline">内容简介节点标记(jquery 语法) 如：<code>.intro</code></span>
+                    </div>
+                </div>    
+                <div class="control-group">
+                    <label class="control-label" for="content">页面内容</label>
+                    <div class="controls">
+                        <input type="text" name="content" id="content" class="span4" />
+                        <span class="help-inline">页面内容节点标记(jquery 语法) 如：<code>.content</code></span>
+                    </div>
+                </div>                
+
+                <div class="control-group">
+                    <label class="control-label" for="tags">标签</label>
+                    <div class="controls">
+                        <input type="text" name="tags" id="tags" class="span4" />
+                        <span class="help-inline">标签节点标记(jquery 语法) 如：<code>.tags</code></span>
+                    </div>
+                </div>  
+
+            </div>
+
+            <!--
+            <div class="tab-pane fade in" id="contact">
+                <p>
+                    TODO:选择相关商品
+                </p>
+            </div>
+
+            <div class="tab-pane fade in" id="trd">
+                <p>
+                    TODO:第三方平台商品状态
+                </p>
+            </div>
+            -->
+            <input type="submit" value="提 交" class="btn btn-success" />
+            <input type="button" value="取 消" class="btn btn-info" />
+        </form>
+        <div class="clearfix"></div>
+    </div>
+</div>

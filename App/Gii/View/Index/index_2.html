@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+        div.form { margin: 15px 0; }
+    </style>
+        <link href="__PUBLIC__/plugins/autocomplete/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+        <script type='text/javascript' src='__PUBLIC__/plugins/jquery-1.8.1.min.js'></script>
+        <script type='text/javascript' src='__PUBLIC__/plugins/autocomplete/jquery.autocomplete.js'></script>
+	<script type="text/javascript">
+         var emails = [
+             { name: "Molly", to : "molly@yahoo.com" },
+             { name: "mckee", to : "mckee@phpddt.com" },
+         ];
+ 
+             $(function() {
+                 $('#keyword').autocomplete(emails, {
+                     max: 12,    //列表里的条目数
+                     minChars: 0,    //自动完成激活之前填入的最小字符
+                     width: 400,     //提示的宽度，溢出隐藏
+                     scrollHeight: 300,   //提示的高度，溢出显示滚动条
+                     matchContains: true,    //包含匹配，就是data参数里的数据，是否只要包含文本框里的数据就显示
+                     autoFill: false,    //自动填充
+                     formatItem: function(row, i, max) {
+                         return i + '/' + max + ':"' + row.name + '"[ ' + row.to + ' ]';
+                     },
+                     formatMatch: function(row, i, max) {
+                         return row.to;
+                     },
+                     formatResult: function(row) {
+                         return row.to;
+                     }
+                 }).result(function(event, row, formatted) {
+                     console.log($('#keyword').val());
+                     console.log(event);
+                     console.log(row);
+                     console.log(formatted);
+                     alert(row.to);
+                 });
+             });
+     </script>
+ </head>
+ <body>
+     <form id="form1" action="__SELF__" method="post" >
+     <div>
+         <input id="keyword" name="keyword" />
+         <input id="getValue" value="GetValue" type="submit" />
+     </div>
+     </form>
+ </body>
+ </html>

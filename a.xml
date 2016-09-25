@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<root> 
+  <contact> 
+     <name>张三</name> 
+     <age>22</age> 
+  </contact> 
+  <contact> 
+     <name>王五</name> 
+     <age>18</age> 
+  </contact> 
+</root> 

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加支付平台分类</title>
+    <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">-->
+    <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+    <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+    <script type="text/javascript">
+    $(function() {});
+    </script>
+</head>
+<body>
+    <div id="append_parent"></div>
+    <div class="container" id="cpcontainer">
+        <div id="contentHeader">
+            <h3>支付平台管理</h3>
+            <div class="searchArea">
+                <ul class="action left">
+                    <li><a href="{:U('index')}" class="actionBtn"><span>返回</span></a></li>
+                    <li class="current"><a href="javascript:;" class="disabled actionBtn"><span>录入</span></a></li>
+                </ul>
+                <div class="search right"> </div>
+            </div>
+        </div>
+        <?php if ( true):?>
+        <table id="tips">
+          <tr>
+            <td><div class="erro_div"><span class="error_message"> <?php echo '这里是错误的提示' ;?> </span></div></td>
+          </tr>
+        </table>
+        <?php endif?>
+        <form name="xform" enctype="multipart/form-data" id="xform" action="" method="post">
+            <table class="form_table">
+                <tbody>
+                    <tr>
+                        <td class="tb_title">支付平台名称：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="40" maxlength="128" value="" class="validate[required]" name="PayType[pay_name]" id="PayType_pay_name" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">唯一标识(英文字母或数字组合)：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="40" maxlength="128" value="" name="PayType[pay_code]" class="validate[required]" id="PayType_pay_code" type="text"  />
+                            <button class="btn btn-primary check" type="button">验证唯一</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">logo图片：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input name="pay_logo" type="file" id="pay_logo" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">支付平台简单介绍：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea rows="5" cols="60" name="PayType[content]" id="PayType_content"></textarea>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="tb_title">状态选择：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="PayType[status_is]" id="PayType_status_is">
+                                <option value="Y" selected="selected">显示</option>
+                                <option value="N">隐藏</option>
+                            </select>
+                            <span class="field"> 排序: </span>
+                            <input size="6" maxlength="128"  value="0" name="PayType[sort_order]" id="PayType_sort_order" type="text" />
+                        </td>
+                    </tr>
+                    <tr class="submit">
+                        <td>
+                            <input type="submit" name="editsubmit" value="提交" class="button" tabindex="3">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

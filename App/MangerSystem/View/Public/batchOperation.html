@@ -1,0 +1,19 @@
+<tr class="submit">
+    <td colspan="10">
+        <div class="cuspages right">
+            [page]
+        </div>
+        <div class="fixsel">
+            <input type="checkbox" name="chkall" id="chkall" onclick="checkAll(this, '[name]')" />
+            <label for="chkall">全选</label>
+            <select name="command">
+                <option value="">选择操作</option>
+                <option value="sortOrder">排序</option>
+                <option value="totrash">删除</option>
+                <option value="toshow">显示</option>
+                <option value="unshow">隐藏</option>
+            </select>
+            <input id="submit_maskall" onclick="return batchAction(this, '[name]');"  class="button confirmSubmit" type="submit" value="提交" name="maskall" />
+        </div>
+    </td>
+</tr>

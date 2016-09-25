@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>添加导航分类</title>
+        <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">-->
+        <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+        <script type="text/javascript">
+        $(function() {
+        });
+        </script>
+    </head>
+    <body>
+        <div id="append_parent"></div>
+        <div class="container" id="cpcontainer">
+            <div id="contentHeader">
+                <h3>导航分类管理</h3>
+                <div class="searchArea">
+                    <ul class="action left">
+                        <li><a href="{:U('showlist')}" class="actionBtn"><span>返回</span></a></li>
+                        <li class="current"><a href="javascript:;" class="actionBtn"><span>录入</span></a></li>
+                    </ul>
+                    <div class="search right"> </div>
+                </div>
+            </div>
+            <form name="xform" enctype="multipart/form-data" id="xform" action="" method="post">
+                <table class="form_table">
+                    <tbody>
+                        <tr>
+                            <td class="tb_title">导航分类名称：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input size="40" maxlength="128" class="validate[required]" name="Cate[cate_name]" id="Cate_cate_name" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">上级分类：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="Cate[parent_id]" id="Cate_parent_id">
+                                    <option value="0"> ==顶级分类== </option>
+                                    <foreach name="tree" item="v">
+                                    <option <eq name="my_id" value="$v['id']">selected="selected"</eq> value="{$v.id}">{$v.preHtml}{$v.cate_name}</option>
+                                    </foreach>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">导航分类介绍：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea rows="5" cols="80" name="Cate[content]" id="Cate_content"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">状态：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="Cate[status_is]" id="Cate_status_is">
+                                    <option value="Y" selected="selected">显示</option>
+                                    <option value="N">隐藏</option>
+                                </select>
+                                <span class="field"> 排序: </span>
+                                <input size="6" maxlength="128" name="Cate[sort_order]" id="Cate_sort_order" type="text" value="0">
+                            </td>
+                        </tr>
+                        <tr class="submit">
+                            <td>
+                                <input type="submit" name="editsubmit" value="提交" class="button" tabindex="3">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

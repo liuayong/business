@@ -1,0 +1,86 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{$comment}字段管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+    <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+</head>
+<body>
+    <div id="append_parent"></div>
+    <div class="container" id="cpcontainer">
+        <div id="contentHeader">
+            <h3>{$comment}字段管理</h3>
+            <div class="searchArea">
+                <ul class="action left">
+                    <li><a href="{:U('index')}"><span>返回</span></a></li>
+                </ul>
+                <div class="search right"> </div>
+              </div>
+        </div>
+        <table class="content_list">
+            <form method="post" action="{:U('batch')}" name="cpform">
+                <tr class="tb_header">
+                    <th width="5%"> 编号</th>
+                    <th width="10%"> 字段 </th>
+                    <th width="20%"> 字段类型</th>
+                    <th width="25%"> 字段说明 </th>
+                    <th width="20%">数据类型</th>
+                    <th>操作</th>
+                </tr>
+                <foreach name="data" item="v" >
+                    <tr class="tb_list">
+                        <td> {$key} </td>
+                        <td class="field"> {$v.field} </td>
+                        <td> {$v.type} </td>
+                        <td> <empty name="v.comment">{$v.field}<else/>{$v.comment}</empty> </td>
+                        <td> 
+                         <select name="formtype[]" id="formtype">
+                            <option value="">  请选择数据类型 </option>
+                            <foreach name="select" item="vv">
+                            <option value="{$key}">{$vv}</option>
+                            </foreach>
+                        </select>
+                        </td>
+                        <td>
+                            <a href="javascript:;"  class="edit" title="设置数据类型" alt="设置数据类型" >
+                                <img src="__PUBLIC__/images/config.png" align="absmiddle" />
+                            </a>
+                            <input type="hidden" name="field[]"  value="{$v.field}"/>
+                        </td>
+                    </tr>
+                </foreach>
+                <tr class="submit">
+                    <td colspan="10">
+                        <div class="cuspages right"> </div>
+                        <div class="fixsel">
+                            <input type="checkbox" name="chkall" id="chkall" onclick="checkAll(this.form, 'id')" />
+                            <label for="chkall">全选</label>
+                            <select name="command">
+                                <option>选择操作</option>
+                                <option value="sortOrder">排序</option>
+                                <option value="delete">删除</option>
+                                <option value="verify">显示</option>
+                                <option value="unVerify">隐藏</option>
+                            </select>
+                            <input type="hidden" value="{$tableName}" name="tablename" />
+                            <input type="hidden" value="" name="fieldname" />
+                            <input id="submit_maskall" class="button confirmSubmit" type="submit" value="提交" name="maskall" />
+                        </div>
+                    </td>
+                </tr>
+            </form>
+        </table>
+        <script type="text/javascript">
+        $(function() {
+            $("a.edit").click(function() {
+                var field = $(this).closest('tr.tb_list').find('.field').html().trim();
+                $("input[name=fieldname]").val(field);
+                $("form").attr('action', "{:U('setDataType')}");
+                $("form").submit();
+            });
+        });
+        </script>
+    </div>
+</body>
+</html>

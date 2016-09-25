@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>普通单文件上传</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+        <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+        <link rel="stylesheet" href="__PUBLIC__/plugins/zebra_dialog/css/zebra_dialog.css" type="text/css">
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/plugins/zebra_dialog/zebra_dialog.js"></script>
+        <script src="__PUBLIC__/js/ajaxfileupload.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/form.js"></script>
+        <script type="text/javascript">
+            var uploadify_show = "{:U('uploadify')}";
+            var uploadify_remove = "{:U('remove')}";
+            var upload = "{:U('ajaxUploadFile')}";
+            
+        </script>
+        
+        <style>
+            form .input input, form .input select {
+                width:auto;
+            }
+        </style>
+        <script type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="contentHeader">
+                <ul class="action left">
+                    <li class="current"><a class="actionBtn" href="{:U('index')}"><span>返回</span></a></li>
+                </ul>
+            </div>
+            <p style="clear:both"></p>
+        </div>
+        <div class="form" style=" width:50%;margin:100px auto;">
+            <form name="form" action="{:U('post')}" method="post" enctype="multipart/form-data" >
+                <div>
+                    <p>
+                        ajax添加单张图片
+                    </p>
+                    <table>
+                      <tr>
+                            <td class="tb_title">封面图片：</td>
+                        </tr>
+                        <tr class="preview" style="display: block;">
+                            <td>
+                                <input class="ajaxUpload" name="uploadImg" type="file" id="logo"  />
+                                &nbsp;&nbsp;&nbsp;
+                                <img id="loading" src="__PUBLIC__/images/loading.gif" style="display:none;" />
+                                <a href="{$Think.const.IMG_URL}{$data.img_original}" target="_blank">
+                                    <img height="500" align="absmiddle" src="{$Think.const.IMG_URL}{$data.img_original}"  />
+                                    <input type="hidden" value="{$data.img_original}" name="Post[img_original]" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr  class="preview2" style="display: none;">
+                            <td>
+                                <div> 预览效果：</div>
+                                <img width="250" height="180" src="">
+                                <input type="hidden" value="" name="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p>是否生成缩略图 <input type="checkbox" name="thumb" value="thumb" /></p>
+                <div class="row item" style="display:none;">
+                    <span>宽度</span> <input type="text" name="width[]" placeholder="宽度" value="" /> px 
+                    <span>高度</span> <input type="text" name="height[]" placeholder="高度" value="" /> px
+                    <a href="javascript:;" class="btn btn-primary btn-sm glyphicon glyphicon-plus add" title="添加" style="display:inline-block;"></a>
+                </div>
+                <div class="row">
+                    <label class="tr"></label>
+                    <div class="input">
+                        <button id="generate" type="submit">生 成</button>
+                        <button id="kill" type="reset">重 置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $("form").on('click', '.item .add', function () {
+                    var item = $(this).closest('.item').clone();
+                    item.find('.add').addClass('del glyphicon-minus').removeClass('add glyphicon-plus').attr("title", "删除");
+                    $(".item:first").after(item);
+                });
+
+                $("form").on('click', '.item .del', function () {
+                    $(this).closest('.item').remove();
+                });
+
+                $('[type=checkbox]').click(function () {
+                    if(this.checked) {
+                        $('div.item').show();
+                    } else {
+                        $('div.item').hide();
+                    }
+                });
+
+            });
+        </script>
+    </body>
+</html>
+

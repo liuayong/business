@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加银行分类</title>
+    <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">-->
+    <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+    <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+    <script src="__PUBLIC__/js/ajaxfileupload.js"></script>
+    <script type="text/javascript">
+    var upload = "{:U('ajaxUploadFile')}" ;
+    </script>
+</head>
+<body>
+    <div id="append_parent"></div>
+    <div class="container" id="cpcontainer">
+        <div id="contentHeader">
+            <h3>银行管理</h3>
+            <div class="searchArea">
+                <ul class="action left">
+                    <li><a href="{:U('index')}" class="actionBtn"><span>返回</span></a></li>
+                    <li class="current"><a href="javascript:;" class="disabled actionBtn"><span>录入</span></a></li>
+                </ul>
+                <div class="search right"> </div>
+            </div>
+        </div>
+        <?php if ( true):?>
+        <table id="tips">
+          <tr>
+            <td><div class="erro_div"><span class="error_message"> <?php echo '这里是错误的提示' ;?> </span></div></td>
+          </tr>
+        </table>
+        <?php endif?>
+        <form name="xform" enctype="multipart/form-data" id="xform" action="" method="post">
+            <table class="form_table">
+                <tbody>
+                    <tr>
+                        <td class="tb_title">银行名称：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="40" maxlength="128" value="{$data['bank_name']}" class="validate[required]" name="Bank[bank_name]" id="Bank_bank_name" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">银行code：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="40" maxlength="128" value="{$data['bank_code']}" name="Bank[bank_code]" class="validate[required]" id="Bank_bank_code" type="text"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">唯一标识(英文字母或数字组合)：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="40" maxlength="128" value="{$data['name_alias']}" name="Bank[name_alias]" class="validate[required]" id="Bank_name_alias" type="text"  />
+                            <button class="btn btn-primary check" type="button">验证唯一</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">银行限额：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input size="40" maxlength="128" value="{$data['bank_amount']}" name="Bank[bank_amount]" class="validate[required]" id="Bank_bank_amount" type="text"  />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="tb_title">支付平台：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="Bank[pay_type]" id="Bank_pay_type">
+                                <foreach name="paylist" item="v" key="key">
+                                <option <eq name="data.pay_type" value="$key">selected="selected"</eq> value="{$key}">{$v}</option>
+                                </foreach>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">logo图片：</td>
+                    </tr>
+                    <tr class="preview" style="display: block;">
+                        <td>
+                            <input class="ajaxUpload" name="logo" type="file" id="bank_logo"  />
+                             &nbsp;&nbsp;&nbsp;
+                            <img id="loading" src="__PUBLIC__/images/loading.gif" style="display:none;" />
+                            <a href="{$Think.IMG_URL}{$data.bank_logo}">
+                                <img height="50" align="absmiddle" src="{$Think.IMG_URL}{$data.bank_logo}"  />
+                               <input type="hidden" value="{$data.bank_logo}" name="Bank[bank_logo]">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="preview2" style="display: none;">
+                        <td>
+                            <div> 预览效果：</div>
+                            <img width="250" height="180" src="">
+                            <input type="hidden" value="" name="img_url">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tb_title">银行简单介绍：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea rows="5" cols="60" name="Bank[content]" id="Bank_content">{$data['content']}</textarea>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="tb_title">状态选择：</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="Bank[status_is]" id="Bank_status_is">
+                                <option <eq name="data.status_is" value="Y" > selected="selected" </eq> value="Y" >显示</option>
+                                <option <eq name="data.status_is" value="N" > selected="selected" </eq> value="N">隐藏</option>
+                            </select>
+                            <span class="field"> 排序: </span>
+                            <input size="6" maxlength="128"  value="{$data['sort_order']}" name="Bank[sort_order]" id="Bank_sort_order" type="text" />
+                        </td>
+                    </tr>
+                    <tr class="submit">
+                        <td>
+                            <input type="submit" name="editsubmit" value="提交" class="button" tabindex="3">
+                            <input type="hidden" name="Bank[id]" value="{$data.id}" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <script src="__PUBLIC__/js/form.js"></script>
+    </div>
+</body>
+</html>

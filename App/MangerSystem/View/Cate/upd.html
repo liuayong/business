@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>修改栏目分类</title>
+        <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">-->
+        <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+        <script src="__PUBLIC__/js/jquery.2.1.4.js"></script>
+        <script type="text/javascript">
+        $(function() {
+        });
+        </script>
+    </head>
+    <body>
+        <div id="append_parent"></div>
+        <div class="container" id="cpcontainer">
+            <div id="contentHeader">
+                <h3>栏目管理</h3>
+                <div class="searchArea">
+                    <ul class="action left">
+                        <li><a href="{:U('index')}" class="actionBtn"><span>返回</span></a></li>
+                        <li class="current"><a href="{:U('add')}" class="actionBtn"><span>录入</span></a></li>
+                    </ul>
+                    <div class="search right"> </div>
+                </div>
+            </div>
+            <form name="xform" enctype="multipart/form-data" id="xform" action="" method="post">
+                <table class="form_table">
+                    <tbody>
+                        <tr>
+                            <td class="tb_title">栏目名称：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input size="40" maxlength="128" value="{$data.cate_name}" class="validate[required]" name="Cate[cate_name]" id="Cate_cate_name" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">名称别名：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input size="40" maxlength="128"  value="{$data.cate_name_second}" class="validate[required]" name="Cate[cate_name_second]" id="Cate_cate_name_second" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">唯一标识(英文字母或数字组合)：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input size="40" maxlength="128"  value="{$data.cate_name_alias}"  name="Cate[cate_name_alias]" id="Cate_cate_name_alias" type="text" />
+                                <button class="btn btn-primary check" type="button">验证唯一</button>
+                                <span class="tips" style="display: block;"> 如若: 不填写则会后台自动生成一个唯一标识  </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">所属分类：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="Cate[parent_id]" id="Cate_parent_id">
+                                    <option value="0"> ==顶级分类== </option>
+                                    <foreach name="tree" item="v">
+                                        <option <eq name="data.parent_id" value="$v['id']">selected="selected"</eq> value="{$v.id}">{$v.preHtml}{$v.cate_name}</option>
+                                    </foreach>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">显示方式：</td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">
+                                <select name="Cate[display_type]" id="Cate_display_type">
+                                    <option <eq name="data.display_type" value="list" > selected="selected" </eq> value="list" > 列表 </option>
+                                    <option <eq name="data.display_type" value="page" > selected="selected" </eq> value="page"> 单页 </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">每页显示数量(0或空表示默认20条)：</td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">
+                                <input size="5" maxlength="5"  value="{$data.page_size}" name="Cate[page_size]" id="Cate_page_size" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">列表模板：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input size="40" maxlength="128"  value="{$data.template_list}"  class="validate[required]" name="Cate[template_list]" id="Cate_template_list" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">单页模板：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input size="40" maxlength="128"  value="{$data.template_page}"  class="validate[required]" name="Cate[template_page]" id="Cate_template_page" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">内容页模板：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input size="40" maxlength="128" value="{$data.template_show}" class="validate[required]" name="Cate[template_show]" id="Cate_template_show" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">跳转地址：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input size="60" maxlength="128" value="{$data.redirect_url}" name="Cate[redirect_url]" id="Cate_redirect_url" type="text" />
+                                <span class="tips" style="display: block;"> 若填写此地址则直接跳转到链接地址</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">封面图片：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input name="img_original" type="file" id="img_original" value="{$data.img_thumb}">
+                                <!-- 显示的是缩略图 -->
+                                <if condition="$data['img_thumb']">
+                                    <a href="{$Think.const.IMG_URL}{$data.img_thumb}"> <img src="{$Think.const.IMG_URL}{$data.img_thumb}"  width="100" align="absmiddle"  /> </a>
+                                </if>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">栏目介绍：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <include file="Public/editor" form_name="Cate[content]" form_id="content" form_value="{$data.content}"  height="300"  width="1000"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">SEO标题：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input size="50" maxlength="128"  value="{$data.seo_title}"  name="Cate[seo_title]" id="Cate_seo_title" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">SEO关键字：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input size="50" maxlength="128" value="{$data.seo_keywords}"   name="Cate[seo_keywords]" id="Cate_seo_keywords" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">SEO描述：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea rows="5" cols="80" name="Cate[seo_description]" id="Cate_seo_description">{$data.seo_description}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tb_title">状态：</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="Cate[status_is]" id="Cate_status_is">
+                                    <option <eq name="data.status_is" value="Y" > selected="selected" </eq> value="Y" >显示</option>
+                                    <option <eq name="data.status_is" value="N" > selected="selected" </eq> value="N">隐藏</option>
+                                </select>
+                                <span class="field"> 排序: </span>
+                                <input size="6" maxlength="128" value="{$data.sort_order}"   name="Cate[sort_order]" id="Cate_sort_order" type="text" />
+                            </td>
+                        </tr>
+                        <tr class="submit">
+                            <td>
+                                <input type="submit" name="editsubmit" value="提交" class="button" tabindex="3">
+                                <input type="hidden" name="Cate[id]" value="{$data.id}" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
