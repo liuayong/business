@@ -196,7 +196,7 @@ function delComplete(data, status) {
                 <div id="comment">
                     <div class="result none" id="result"></div>
                     <form id="form1" method="post">
-                        <table width="485" cellspacing="3" cellpadding="3">
+                        <table width="500" cellspacing="3" cellpadding="3">
                             <tbody>
                                 <tr>
                                     <td class="tRight tTop"></td>

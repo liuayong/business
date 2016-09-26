@@ -7,7 +7,11 @@ use Think\Controller;
 class BaseController extends Controller {
 
     protected function _initialize() {
-        
+        #tag('action_init'); // 添加action_init 标签
+	
+	// \Think\Hook::listen('标签名');
+	// 或者
+	// tag('标签名'[,参数]);
     }
 
     /**
@@ -198,9 +202,11 @@ class BaseController extends Controller {
         $Page->setConfig("prev", C("page.prev"));
         $Page->setConfig("next", C("page.next"));
         $Page->setConfig("theme", C("page.theme"));
+	
+	$order = ['sort_order'=> 'DESC', 'post_id'=> 'ASC'];
 
         // field 必须在视图模型中中的viewFields, 否则查询所有
-        $blog_list = $PostView->where($where)->limit($Page->firstRow . ',' . $Page->listRows)->select();
+        $blog_list = $PostView->where($where)->order($order)->limit($Page->firstRow . ',' . $Page->listRows)->select();
         $pagelist = $Page->show();
 
         $this->assign('_cnt', $count);

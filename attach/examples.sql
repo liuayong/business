@@ -120,6 +120,9 @@ CREATE TABLE  tbl_desktop (
 
 -- 更新随机时间
 update tbl_post set  create_time =  floor(  rand() * (UNIX_TIMESTAMP() - UNIX_TIMESTAMP( DATE_SUB(now(), INTERVAL +490 DAY))) ) +   UNIX_TIMESTAMP( DATE_SUB(now(), INTERVAL +490 DAY))   ;
+select  floor(  rand() * (UNIX_TIMESTAMP() - UNIX_TIMESTAMP( DATE_SUB(now(), INTERVAL +490 DAY))) ) +   UNIX_TIMESTAMP( DATE_SUB(now(), INTERVAL +490 DAY))   
+
+
 
 
 DROP TABLE IF EXISTS `tbl_tags`;
