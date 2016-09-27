@@ -14,13 +14,17 @@
 var setting = {
     async: {
         enable: true,
-        url: "{:U('Post/ztree')}",
+        url: "{:U('Cate/ztree')}",
         autoParam: ["id=pid", "level=lv"],
         otherParam: {
             "otherParam": "zTreeAsyncTest"
         },
         dataFilter: filter
-    }
+    },
+	callback: {
+		// beforeClick: beforeClick,
+		onClick: onClick
+	}
 };
 
 function filter(treeId, parentNode, childNodes) {
@@ -48,6 +52,45 @@ jQuery(document).ready(function($) {
  });
  */
 //-->
+
+var lastTimeStamp = 0 ;
+var cateAjaxUrl = "{:U('Cate/index')}" ;
+
+function onClick(event, treeId, treeNode, clickFlag) { 
+    if(Math.abs(event.timeStamp - lastTimeStamp) <= 300 ) {
+        console.info(event.timeStamp - lastTimeStamp + '  , ' +event.timeStamp+ '  , '+ lastTimeStamp );
+        return ;
+    }
+    lastTimeStamp = event.timeStamp ;
+
+    console.info(treeNode.id);
+    ajaxReplaceContent(treeNode.id);
+}
+
+/**
+ * 通过ajax替换内容
+ * @param params ajax请求参数
+ * @param params ajax类型
+ * ajaxReplaceContent(params, type, dataType)
+ */
+function ajaxReplaceContent(id) {
+	//type = type == undefined ? "POST" : type;
+	if(window.jQuery) {
+            jQuery.ajax({
+                type : "GET",
+                url : cateAjaxUrl,
+                data : 'id='+id,
+                success : function (retData) {
+                    jQuery("#content").html(retData);
+                }
+            });
+	}
+
+}
+
+
+
+
 function addCategory() {
     ThinkAjax.send('/tpdemo/ThinkPHP_3.0/Examples/Blog/index.php/Category/insert', 'ajax=1&title=' + $F('categoryName'), addComplete);
 }
@@ -70,4 +113,6 @@ function delComplete(data, status) {
         $('category_' + data).style.display = 'none';
     }
 }
+
+
 </script>

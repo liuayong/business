@@ -60,7 +60,7 @@ jQuery(function($) {
 var setting = {
     async: {
         enable: true,
-        url: "<?php echo U('Post/ztree');?>",
+        url: "<?php echo U('Cate/ztree');?>",
         autoParam: ["id=pid", "level=lv"],
         otherParam: {
             "otherParam": "zTreeAsyncTest"

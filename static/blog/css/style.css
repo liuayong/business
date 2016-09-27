@@ -368,7 +368,7 @@ h1 {
 }
 .panel-content li.indent, .panel-content ul ul li{
     padding: 2px;
-    text-indent: 12px;
+    text-indent: 0px;
 }
 
 .textbox-relate ul{

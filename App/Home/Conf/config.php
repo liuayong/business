@@ -36,7 +36,7 @@ return array(
     'LAYOUT_NAME'=>'layout',
     
     
-    
+    /*
     // 全局静态缓存
     'HTML_CACHE_ON' => false, // 开启静态缓存
     'HTML_CACHE_TIME' => 600, // 全局静态缓存有效期（秒）
@@ -45,7 +45,9 @@ return array(
 	//'*' => array('{$_SERVER.REQUEST_URI|md5}'),
 	'*' =>array('{:controller}_{:action}_{id}_{p}_'.$_GET[C("VAR_TEMPLATE")], 60)
     ),
-    
+    */
+
+
     /*
     // 缓存的配置
     'close_cache' => true,   // 不使用缓存，开发阶段

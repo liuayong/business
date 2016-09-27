@@ -212,7 +212,7 @@ class BaseController extends Controller {
 
 	// 列表的几种显示方式： 纯标题列表(normal)  图文列表(pic)  简介列表(intro)
 	$mode = isset($_REQUEST['mode']) ? $_REQUEST['mode'] : 'normal';
-	$pageConfig = array('intro' => 12, 'pic' => 10, 'normal' => 20);
+	$pageConfig = array('intro' => 15, 'pic' => 10, 'normal' => 40);
 	$pageSize = isset($pageConfig[$mode]) ? $pageConfig[$mode] : 5;  // C('page_size');
 	// 博文分页
 	$Page = new \Think\Page($count, $pageSize);
@@ -263,6 +263,7 @@ class BaseController extends Controller {
      * 模板显示 调用内置的模板引擎显示方法，
      * @access protected
      * @param string $templateFile 指定要调用的模板文件
+     * @param string $layout  是否开启模板布局
      * 默认为空 由系统自动定位模板文件
      * @param string $charset 输出编码
      * @param string $contentType 输出类型
@@ -270,17 +271,18 @@ class BaseController extends Controller {
      * @param string $prefix 模板缓存前缀
      * @return void
      */
-    protected function display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') {
+    protected function display($templateFile = '', $layout = true,  $charset = '', $contentType = '', $content = '', $prefix = '') {
+        
 	if (array_key_exists('HTTP_X_PJAX', $_SERVER) && $_SERVER['HTTP_X_PJAX']) {
 	    $prefix = empty($prefix) ? 'pjax/' : rtrim($prefix, '/') . '/';
 	    parent::display($templateFile, $charset, $contentType, $content, $prefix); //浏览器支持Pjax功能，直接渲染输出页面
 	} else {
-	    
+	
 	    // 是否开启模板, 根据主题来进行判断
 	    if (defined('THEME_NAME') && THEME_NAME == 'very') {
-		layout(true); //开启模板
+		layout($layout); //开启模板
 	    } else {
-		#layout(false);
+		layout(false);
 	    }
 	    parent::display($templateFile, $charset, $contentType, $content, $prefix); // 浏览器不支持Pjax功能，使用默认的链接响应机制（加载模板）
 	}

@@ -1,1162 +1,986 @@
-[ 2016-09-27T17:13:49+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:54:30+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001158s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0353s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0006s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001369s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001547s ]
-
-[ 2016-09-27T17:26:46+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001209s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0147s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0003s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
-INFO: [ app_end ] --END-- [ RunTime:0.000815s ]
-
-[ 2016-09-27T17:30:44+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001237s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0097s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0014s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0007s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001727s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002020s ]
-
-[ 2016-09-27T17:30:53+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000742s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001510s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0078s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0005s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000867s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001028s ]
-
-[ 2016-09-27T17:34:53+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001050s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0412s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0003s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
-INFO: [ app_end ] --END-- [ RunTime:0.000710s ]
-
-[ 2016-09-27T17:35:27+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001097s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0205s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0017s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0007s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001768s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002064s ]
-
-[ 2016-09-27T17:35:29+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002086s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0274s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0005s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001057s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
-
-[ 2016-09-27T17:35:32+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0455s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 8 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 50 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 58 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 57 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 56 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 55 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 54 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 53 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 52 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 51 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 59 LIMIT 1   [ RunTime:0.0012s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002514s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002869s ]
-
-[ 2016-09-27T17:35:35+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001404s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0188s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 50 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0017s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 300 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 312 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 313 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 314 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 315 LIMIT 1   [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 316 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 317 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 318 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 319 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 320 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 311 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 310 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 301 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 302 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 303 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 304 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 305 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 306 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 307 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 308 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 309 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 321 LIMIT 1   [ RunTime:0.0008s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001596s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001809s ]
-
-[ 2016-09-27T17:35:39+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001045s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0208s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 58 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 383 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 398 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 397 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 396 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 395 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 394 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 393 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 392 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 391 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 390 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 389 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 388 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 387 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 386 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 385 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 384 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 399 LIMIT 1   [ RunTime:0.0007s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001510s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001711s ]
-
-[ 2016-09-27T17:35:43+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.000996s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0183s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 57 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 381 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 382 LIMIT 1   [ RunTime:0.0013s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002376s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002759s ]
-
-[ 2016-09-27T17:35:49+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001223s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0080s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 56 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 371 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 379 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 378 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 377 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 376 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 375 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 374 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 373 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 372 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 380 LIMIT 1   [ RunTime:0.0005s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001015s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001152s ]
-
-[ 2016-09-27T17:35:51+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001370s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002607s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0067s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 55 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 362 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 363 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 364 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 365 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 366 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 367 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 368 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 369 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 370 LIMIT 1   [ RunTime:0.0004s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000953s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001084s ]
-
-[ 2016-09-27T17:35:54+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001414s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0169s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 54 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 347 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 360 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 359 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 358 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 357 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 356 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 355 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 354 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 353 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 352 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 351 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 350 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 349 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 348 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 361 LIMIT 1   [ RunTime:0.0004s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000981s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001101s ]
-
-[ 2016-09-27T17:35:55+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001290s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002469s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0121s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 53 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 334 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 345 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 344 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 343 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 342 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 341 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 340 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 339 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 338 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 337 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 336 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 335 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 346 LIMIT 1   [ RunTime:0.0004s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001015s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001147s ]
-
-[ 2016-09-27T17:35:56+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001536s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002507s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0532s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 52 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 327 LIMIT 1   [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 328 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 329 LIMIT 1   [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 330 LIMIT 1   [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 331 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 332 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 333 LIMIT 1   [ RunTime:0.0005s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001423s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001622s ]
-
-[ 2016-09-27T17:36:03+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0101s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 14 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 83 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 84 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 85 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 86 LIMIT 1   [ RunTime:0.0007s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001606s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001806s ]
-
-[ 2016-09-27T17:36:04+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000696s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001368s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0059s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 13 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 78 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 79 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 80 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 81 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 82 LIMIT 1   [ RunTime:0.0004s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000915s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001023s ]
-
-[ 2016-09-27T17:36:05+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001071s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0063s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 11 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 67 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 68 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 69 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 70 LIMIT 1   [ RunTime:0.0003s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
-INFO: [ app_end ] --END-- [ RunTime:0.000866s ]
-
-[ 2016-09-27T17:36:06+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0221s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 12 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0017s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 71 LIMIT 1   [ RunTime:0.0014s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 72 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 73 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 74 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 75 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 76 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 77 LIMIT 1   [ RunTime:0.0006s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001427s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001599s ]
-
-[ 2016-09-27T17:36:07+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001088s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0483s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 9 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 60 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 61 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 62 LIMIT 1   [ RunTime:0.0012s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002418s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002767s ]
-
-[ 2016-09-27T17:36:08+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001287s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0436s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 10 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 63 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 64 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 65 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 66 LIMIT 1   [ RunTime:0.0005s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001312s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001469s ]
-
-[ 2016-09-27T17:36:13+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000942s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001708s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0244s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 84 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0018s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 554 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 555 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 556 LIMIT 1   [ RunTime:0.0016s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 557 LIMIT 1   [ RunTime:0.0013s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003315s ]
-INFO: [ app_end ] --END-- [ RunTime:0.003809s ]
-
-[ 2016-09-27T17:36:14+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001172s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0370s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 83 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 544 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 552 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 551 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 550 LIMIT 1   [ RunTime:0.0014s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 549 LIMIT 1   [ RunTime:0.0014s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 548 LIMIT 1   [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 547 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 546 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 545 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 553 LIMIT 1   [ RunTime:0.0006s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001268s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001448s ]
-
-[ 2016-09-27T17:36:15+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001421s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0127s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 82 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 541 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 542 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 543 LIMIT 1   [ RunTime:0.0005s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000966s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001094s ]
-
-[ 2016-09-27T17:36:16+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000770s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001409s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0532s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 81 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0016s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 536 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 537 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 538 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 539 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 540 LIMIT 1   [ RunTime:0.0017s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002542s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002896s ]
-
-[ 2016-09-27T17:36:17+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0061s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 80 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 529 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 530 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 531 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 532 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 533 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 534 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 535 LIMIT 1   [ RunTime:0.0004s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000949s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001096s ]
-
-[ 2016-09-27T17:36:18+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001404s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0311s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 79 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 524 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 525 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 526 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 527 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 528 LIMIT 1   [ RunTime:0.0007s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001423s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001625s ]
-
-[ 2016-09-27T17:36:19+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002058s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0169s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 78 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 516 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 517 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 518 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 519 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 520 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 521 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 522 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 523 LIMIT 1   [ RunTime:0.0008s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001538s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001752s ]
-
-[ 2016-09-27T17:36:21+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001686s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0167s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 77 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0016s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 513 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 514 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 515 LIMIT 1   [ RunTime:0.0012s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001552s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001770s ]
-
-[ 2016-09-27T17:36:23+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000758s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001467s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0109s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 76 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 510 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 511 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 512 LIMIT 1   [ RunTime:0.0007s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001528s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001740s ]
-
-[ 2016-09-27T17:36:24+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001545s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0101s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 75 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 508 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 509 LIMIT 1   [ RunTime:0.0007s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001527s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001747s ]
-
-[ 2016-09-27T17:36:25+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001420s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0484s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 74 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0014s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 501 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 502 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 503 LIMIT 1   [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 504 LIMIT 1   [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 505 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 506 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 507 LIMIT 1   [ RunTime:0.0012s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002298s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002666s ]
-
-[ 2016-09-27T17:36:26+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0187s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 73 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 489 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 499 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 498 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 497 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 496 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 495 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 494 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 493 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 492 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 491 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 490 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 500 LIMIT 1   [ RunTime:0.0006s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001617s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001843s ]
-
-[ 2016-09-27T17:36:27+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001436s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0181s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 72 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 486 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 487 LIMIT 1   [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 488 LIMIT 1   [ RunTime:0.0013s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002478s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002833s ]
-
-[ 2016-09-27T17:36:28+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0109s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 71 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 474 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 484 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 483 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 482 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 481 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 480 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 479 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 478 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 477 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 476 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 475 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 485 LIMIT 1   [ RunTime:0.0006s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001436s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001636s ]
-
-[ 2016-09-27T17:36:34+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0049s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0003s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
-INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
-
-[ 2016-09-27T17:36:38+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001555s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0245s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 13 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 78 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 79 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 80 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 81 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 82 LIMIT 1   [ RunTime:0.0003s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
-INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
-
-[ 2016-09-27T17:39:46+08:00 ] 127.0.0.1 /business/index.php/Post/view/id/4362.html
-ERR: _STORAGE_WRITE_ERROR_:./App/Html/Post_view_4362__$_GET[C("VAR_TEMPLATE")].html
-
-[ 2016-09-27T17:40:14+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0168s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0004s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000936s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001045s ]
-
-[ 2016-09-27T17:40:54+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0113s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0005s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001098s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001261s ]
-
-[ 2016-09-27T17:40:56+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001149s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0163s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0007s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001572s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001747s ]
-
-[ 2016-09-27T17:41:44+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0088s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0006s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001194s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001354s ]
-
-[ 2016-09-27T17:41:50+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0236s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0008s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001683s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001911s ]
-
-[ 2016-09-27T17:41:54+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001136s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0054s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0003s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001987s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002160s ]
-
-[ 2016-09-27T17:42:11+08:00 ] 127.0.0.1 /business/index.php/Post/comment.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001028s ]
-SQL: SHOW COLUMNS FROM `tbl_comment` [ RunTime:0.0125s ]
-
-[ 2016-09-27T17:42:21+08:00 ] 127.0.0.1 /business/index.php/Post/comment.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001476s ]
-SQL: SHOW COLUMNS FROM `tbl_comment` [ RunTime:0.0110s ]
-SQL: INSERT INTO `tbl_comment` (`nickname`,`email`,`post_id`,`content`,`create_time`,`client_ip`,`agent`) VALUES ('lyy','postmaster@yeah.net','4362','sdfsdfsdf','1474969341','127.0.0.1','Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0') [ RunTime:0.0010s ]
-SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0105s ]
-SQL: UPDATE `tbl_post` SET `reply_count`=reply_count+1 WHERE `post_id` = 4362 [ RunTime:0.0006s ]
-SQL: SHOW COLUMNS FROM `tbl_attr_val` [ RunTime:0.0057s ]
-SQL: DELETE FROM `tbl_attr_val` WHERE `post_id` = 4362 [ RunTime:0.0003s ]
-NOTIC: [2] unlink(./App/Runtime/Temp/3ac81a9cb250f8dd6b60695fd6cb4bfd.php): No such file or directory D:\Projects\business\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
-NOTIC: [8] Undefined variable: list D:\Projects\business\App\Home\Controller\PostController.class.php 第 227 行.
-
-[ 2016-09-27T17:42:25+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001109s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0100s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0007s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001438s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001649s ]
-
-[ 2016-09-27T18:00:11+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001373s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0122s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: cnt D:\html\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
 SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 791 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 573 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 576 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 577 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 578 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 579 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 580 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 581 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 582 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 583 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 575 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 574 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 572 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 571 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 783 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0010s ]
 SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001016s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001139s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
-[ 2016-09-27T18:00:36+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:54:41+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0473s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0005s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: cnt D:\html\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
+SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0030s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 791 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 573 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 576 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 577 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 578 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 579 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 580 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 581 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 582 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 583 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 575 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 574 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 572 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 571 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 783 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001138s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001289s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-09-27T18:00:45+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:02+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0186s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0022s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0005s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: cnt D:\html\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
+SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 791 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 573 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 576 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 577 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 578 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 579 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 580 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 581 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 582 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 583 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 575 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 574 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 572 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 571 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 783 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001176s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001341s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-09-27T18:00:47+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:06+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001109s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0188s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0007s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: cnt D:\html\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
+SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 791 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 573 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 576 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 577 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 578 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 579 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 580 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 581 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 582 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 583 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 575 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 574 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 572 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 571 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 6 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 783 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001397s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001585s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010000s ]
 
-[ 2016-09-27T18:00:49+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:10+08:00 ] 127.0.0.1 /business/index.php/Post/view/id/3363.html?_pjax=%23content
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001205s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0176s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0005s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0000s ]
+SQL: SELECT MAX(post_id) AS tp_max FROM `tbl_post` WHERE ( post_id < 3363 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `tbl_post` WHERE `post_id` = 3362 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MIN(post_id) AS tp_min FROM `tbl_post` WHERE ( post_id > 3363 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `tbl_post` WHERE `post_id` = 3364 LIMIT 1   [ RunTime:0.0010s ]
+SQL: select sum(reply_count) as reply_count , sum(view_count) view_count, count(post_id) post_count , min(create_time) begin_time from tbl_post WHERE `status_is` = 'Y' AND `is_deleted` = '0' [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `post_id`,`title`,`view_count`,`reply_count` FROM `tbl_post` WHERE `is_deleted` = 0 ORDER BY `create_time` DESC,`sort_order` DESC LIMIT 10   [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.060000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.050000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.060000s ]
+SQL: SHOW COLUMNS FROM `tbl_comment` [ RunTime:0.0000s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email` FROM `tbl_comment` ORDER BY `create_time` DESC LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.080000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.070000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.080000s ]
+SQL: SHOW COLUMNS FROM `tbl_tags` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`tag_name`,`data_count` FROM `tbl_tags` ORDER BY `data_count` DESC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.100000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.090000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.100000s ]
+SQL: SELECT MAX(create_time) AS tp_max FROM `tbl_post` WHERE `is_deleted` = 0 AND `status_is` = 'Y' LIMIT 1   [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.150000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.150000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.160000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`cate_name` FROM `tbl_cate`  [ RunTime:0.0000s ]
+SQL: SELECT `post_id`,`title`,`cate_id`,`create_time`,`tags`,`content`,`view_count`,`reply_count` FROM `tbl_post` WHERE `post_id` = 3363 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(comment_id) AS tp_count FROM `tbl_comment` WHERE `post_id` = 3363 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email`,`create_time` FROM `tbl_comment` WHERE `post_id` = 3363 ORDER BY `create_time` DESC LIMIT 0,8   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.190000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.180000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.210000s ]
+SQL: UPDATE `tbl_post` SET `view_count`=view_count+1 WHERE `post_id` = 3363 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tbl_attr_val` [ RunTime:0.0000s ]
+SQL: DELETE FROM `tbl_attr_val` WHERE `post_id` = 3363 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.230000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.220000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.240000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001416s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001581s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-09-27T18:00:54+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:13+08:00 ] 127.0.0.1 /business/index.php/Post/view/id/3364.html?_pjax=%23content
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001092s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0223s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0014s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0009s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0030s ]
+SQL: SELECT MAX(post_id) AS tp_max FROM `tbl_post` WHERE ( post_id < 3364 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `tbl_post` WHERE `post_id` = 3363 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MIN(post_id) AS tp_min FROM `tbl_post` WHERE ( post_id > 3364 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tbl_post` WHERE `post_id` = 3365 LIMIT 1   [ RunTime:0.0010s ]
+SQL: select sum(reply_count) as reply_count , sum(view_count) view_count, count(post_id) post_count , min(create_time) begin_time from tbl_post WHERE `status_is` = 'Y' AND `is_deleted` = '0' [ RunTime:0.0430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `post_id`,`title`,`view_count`,`reply_count` FROM `tbl_post` WHERE `is_deleted` = 0 ORDER BY `create_time` DESC,`sort_order` DESC LIMIT 10   [ RunTime:0.0440s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.059000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.048000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.055000s ]
+SQL: SHOW COLUMNS FROM `tbl_comment` [ RunTime:0.0100s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email` FROM `tbl_comment` ORDER BY `create_time` DESC LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.079000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.078000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.085000s ]
+SQL: SHOW COLUMNS FROM `tbl_tags` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`tag_name`,`data_count` FROM `tbl_tags` ORDER BY `data_count` DESC  [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.099000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.098000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.105000s ]
+SQL: SELECT MAX(create_time) AS tp_max FROM `tbl_post` WHERE `is_deleted` = 0 AND `status_is` = 'Y' LIMIT 1   [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.164000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.158000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.167000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`cate_name` FROM `tbl_cate`  [ RunTime:0.0000s ]
+SQL: SELECT `post_id`,`title`,`cate_id`,`create_time`,`tags`,`content`,`view_count`,`reply_count` FROM `tbl_post` WHERE `post_id` = 3364 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(comment_id) AS tp_count FROM `tbl_comment` WHERE `post_id` = 3364 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email`,`create_time` FROM `tbl_comment` WHERE `post_id` = 3364 ORDER BY `create_time` DESC LIMIT 0,8   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.191000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.190000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.197000s ]
+SQL: UPDATE `tbl_post` SET `view_count`=view_count+1 WHERE `post_id` = 3364 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tbl_attr_val` [ RunTime:0.0000s ]
+SQL: DELETE FROM `tbl_attr_val` WHERE `post_id` = 3364 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.211000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.210000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.217000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001864s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002116s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-09-27T18:00:56+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:20+08:00 ] 127.0.0.1 /business/index.php/Post/index/t/very/mode/normal.html?_pjax=%23content
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0251s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0016s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0006s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0030s ]
+SQL: select sum(reply_count) as reply_count , sum(view_count) view_count, count(post_id) post_count , min(create_time) begin_time from tbl_post WHERE `status_is` = 'Y' AND `is_deleted` = '0' [ RunTime:0.0470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbl_post` WHERE `is_deleted` = 0 AND `status_is` = 'Y' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0000s ]
+SQL: SELECT Post.post_id AS post_id,Post.title AS title,Post.create_time AS create_time,Post.cate_id AS cate_id,Post.content AS content,Post.view_count AS view_count,Post.tags AS tags,Post.reply_count AS reply_count,Post.is_deleted AS is_deleted,Post.status_is AS status_is,Post.sort_order AS sort_order,Cate.cate_name AS cate_name FROM tbl_post Post  JOIN tbl_cate Cate ON Post.cate_id=Cate.id WHERE Post.is_deleted = 0 AND Post.status_is = 'Y' ORDER BY `sort_order` DESC,`post_id` ASC LIMIT 0,20   [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.100000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.090000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.140000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0100s ]
+SQL: SELECT `post_id`,`title`,`view_count`,`reply_count` FROM `tbl_post` WHERE `is_deleted` = 0 ORDER BY `create_time` DESC,`sort_order` DESC LIMIT 10   [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.200000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.200000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.210000s ]
+SQL: SHOW COLUMNS FROM `tbl_comment` [ RunTime:0.0000s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email` FROM `tbl_comment` ORDER BY `create_time` DESC LIMIT 10   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.220000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.220000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.230000s ]
+SQL: SHOW COLUMNS FROM `tbl_tags` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`tag_name`,`data_count` FROM `tbl_tags` ORDER BY `data_count` DESC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.243000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.230000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.253000s ]
+SQL: SELECT MAX(create_time) AS tp_max FROM `tbl_post` WHERE `is_deleted` = 0 AND `status_is` = 'Y' LIMIT 1   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.292000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.292000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.302000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.302000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.302000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.312000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001209s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001370s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-09-27T18:00:58+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:23+08:00 ] 127.0.0.1 /business/index.php/Post/index/t/very/mode/intro/_pjax/%23content.html?_pjax=%23content
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001312s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.002482s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0085s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0003s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0006s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0000s ]
+SQL: select sum(reply_count) as reply_count , sum(view_count) view_count, count(post_id) post_count , min(create_time) begin_time from tbl_post WHERE `status_is` = 'Y' AND `is_deleted` = '0' [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbl_post` WHERE `is_deleted` = 0 AND `status_is` = 'Y' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0100s ]
+SQL: SELECT Post.post_id AS post_id,Post.title AS title,Post.create_time AS create_time,Post.cate_id AS cate_id,Post.content AS content,Post.view_count AS view_count,Post.tags AS tags,Post.reply_count AS reply_count,Post.is_deleted AS is_deleted,Post.status_is AS status_is,Post.sort_order AS sort_order,Cate.cate_name AS cate_name FROM tbl_post Post  JOIN tbl_cate Cate ON Post.cate_id=Cate.id WHERE Post.is_deleted = 0 AND Post.status_is = 'Y' ORDER BY `sort_order` DESC,`post_id` ASC LIMIT 0,12   [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.110000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.100000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.140000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0000s ]
+SQL: SELECT `post_id`,`title`,`view_count`,`reply_count` FROM `tbl_post` WHERE `is_deleted` = 0 ORDER BY `create_time` DESC,`sort_order` DESC LIMIT 10   [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.210000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.200000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.210000s ]
+SQL: SHOW COLUMNS FROM `tbl_comment` [ RunTime:0.0000s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email` FROM `tbl_comment` ORDER BY `create_time` DESC LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.230000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.220000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.230000s ]
+SQL: SHOW COLUMNS FROM `tbl_tags` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`tag_name`,`data_count` FROM `tbl_tags` ORDER BY `data_count` DESC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.250000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.240000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.260000s ]
+SQL: SELECT MAX(create_time) AS tp_max FROM `tbl_post` WHERE `is_deleted` = 0 AND `status_is` = 'Y' LIMIT 1   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.302000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.302000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.312000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.322000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.312000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.322000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000851s ]
-INFO: [ app_end ] --END-- [ RunTime:0.000964s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-09-27T18:07:09+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:27+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0552s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0016s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0016s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0014s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0013s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: cnt D:\html\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
+SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 791 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 573 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 576 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 577 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 578 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 579 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 580 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 581 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 582 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 583 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 575 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 574 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 572 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 571 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 783 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002533s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002893s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-09-27T18:07:11+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:30+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001322s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0365s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0009s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined variable: cnt D:\html\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
+SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 791 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 573 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 576 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 577 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 578 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 579 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 580 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 581 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 582 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 583 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 575 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 574 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 572 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 571 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 6 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 783 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0020s ]
 SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0010s ]
 SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
 SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0010s ]
 SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001952s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002232s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
-[ 2016-09-27T18:07:13+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:32+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001153s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0175s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0016s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0012s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0012s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: cnt D:\html\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
+SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 791 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 573 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 576 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 577 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 578 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 579 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 580 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 581 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 582 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 583 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 575 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 574 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 572 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 571 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 783 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002440s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002808s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
-[ 2016-09-27T18:07:16+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:35+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0187s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0013s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: cnt D:\html\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
+SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 791 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 573 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 576 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 577 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 578 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 579 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 580 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 581 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 582 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 583 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 575 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 574 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 572 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 571 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 6 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 783 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001265s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001441s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-09-27T18:07:43+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:42+08:00 ] 127.0.0.1 /business/index.php/Post/index/t/very/p/10.html?_pjax=%23content
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001109s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0094s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0005s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0005s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0000s ]
+SQL: select sum(reply_count) as reply_count , sum(view_count) view_count, count(post_id) post_count , min(create_time) begin_time from tbl_post WHERE `status_is` = 'Y' AND `is_deleted` = '0' [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tbl_post` WHERE `is_deleted` = 0 AND `status_is` = 'Y' LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0030s ]
+SQL: SELECT Post.post_id AS post_id,Post.title AS title,Post.create_time AS create_time,Post.cate_id AS cate_id,Post.content AS content,Post.view_count AS view_count,Post.tags AS tags,Post.reply_count AS reply_count,Post.is_deleted AS is_deleted,Post.status_is AS status_is,Post.sort_order AS sort_order,Cate.cate_name AS cate_name FROM tbl_post Post  JOIN tbl_cate Cate ON Post.cate_id=Cate.id WHERE Post.is_deleted = 0 AND Post.status_is = 'Y' ORDER BY `sort_order` DESC,`post_id` ASC LIMIT 180,20   [ RunTime:0.0490s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.112000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.102000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.158000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0030s ]
+SQL: SELECT `post_id`,`title`,`view_count`,`reply_count` FROM `tbl_post` WHERE `is_deleted` = 0 ORDER BY `create_time` DESC,`sort_order` DESC LIMIT 10   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.214000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.204000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.224000s ]
+SQL: SHOW COLUMNS FROM `tbl_comment` [ RunTime:0.0000s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email` FROM `tbl_comment` ORDER BY `create_time` DESC LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.234000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.224000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.244000s ]
+SQL: SHOW COLUMNS FROM `tbl_tags` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`tag_name`,`data_count` FROM `tbl_tags` ORDER BY `data_count` DESC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.254000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.244000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.264000s ]
+SQL: SELECT MAX(create_time) AS tp_max FROM `tbl_post` WHERE `is_deleted` = 0 AND `status_is` = 'Y' LIMIT 1   [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.311000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.306000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.320000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.323000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.321000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.326000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001075s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001228s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
-[ 2016-09-27T18:08:05+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:52+08:00 ] 127.0.0.1 /business/index.php/Post/view/id/3918.html?_pjax=%23content
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0137s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0004s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0004s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0000s ]
+SQL: SELECT MAX(post_id) AS tp_max FROM `tbl_post` WHERE ( post_id < 3918 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `tbl_post` WHERE `post_id` = 3917 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT MIN(post_id) AS tp_min FROM `tbl_post` WHERE ( post_id > 3918 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tbl_post` WHERE `post_id` = 3919 LIMIT 1   [ RunTime:0.0000s ]
+SQL: select sum(reply_count) as reply_count , sum(view_count) view_count, count(post_id) post_count , min(create_time) begin_time from tbl_post WHERE `status_is` = 'Y' AND `is_deleted` = '0' [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010000s ]
+SQL: SELECT `post_id`,`title`,`view_count`,`reply_count` FROM `tbl_post` WHERE `is_deleted` = 0 ORDER BY `create_time` DESC,`sort_order` DESC LIMIT 10   [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.060000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.060000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.060000s ]
+SQL: SHOW COLUMNS FROM `tbl_comment` [ RunTime:0.0100s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email` FROM `tbl_comment` ORDER BY `create_time` DESC LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.090000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.080000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.080000s ]
+SQL: SHOW COLUMNS FROM `tbl_tags` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`tag_name`,`data_count` FROM `tbl_tags` ORDER BY `data_count` DESC  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.100000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.100000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.108000s ]
+SQL: SELECT MAX(create_time) AS tp_max FROM `tbl_post` WHERE `is_deleted` = 0 AND `status_is` = 'Y' LIMIT 1   [ RunTime:0.0330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.162000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.152000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.162000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0000s ]
+SQL: SELECT `id`,`cate_name` FROM `tbl_cate`  [ RunTime:0.0100s ]
+SQL: SELECT `post_id`,`title`,`cate_id`,`create_time`,`tags`,`content`,`view_count`,`reply_count` FROM `tbl_post` WHERE `post_id` = 3918 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(comment_id) AS tp_count FROM `tbl_comment` WHERE `post_id` = 3918 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email`,`create_time` FROM `tbl_comment` WHERE `post_id` = 3918 ORDER BY `create_time` DESC LIMIT 0,8   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.192000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.182000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.182000s ]
+SQL: UPDATE `tbl_post` SET `view_count`=view_count+1 WHERE `post_id` = 3918 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `tbl_attr_val` [ RunTime:0.0100s ]
+SQL: DELETE FROM `tbl_attr_val` WHERE `post_id` = 3918 [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.202000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.202000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.202000s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000904s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001022s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
-[ 2016-09-27T18:09:48+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:56+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001136s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0204s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0015s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0008s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0008s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: cnt D:\html\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
+SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 2 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 791 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 573 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 576 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 577 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 578 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 579 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 580 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 581 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 582 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 583 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 575 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 574 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 572 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 571 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 783 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001537s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001778s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
-[ 2016-09-27T18:12:18+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+[ 2016-09-27T21:55:58+08:00 ] 127.0.0.1 /business/index.php/Post/view/id/3918.html?_pjax=%23content
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001120s ]
-SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0292s ]
-NOTIC: [8] Undefined variable: cnt D:\Projects\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
-SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0014s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 567 LIMIT 1   [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0009s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0006s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0007s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0011s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0009s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0030s ]
+SQL: SELECT MAX(post_id) AS tp_max FROM `tbl_post` WHERE ( post_id < 3918 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tbl_post` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `tbl_post` WHERE `post_id` = 3917 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT MIN(post_id) AS tp_min FROM `tbl_post` WHERE ( post_id > 3918 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `tbl_post` WHERE `post_id` = 3919 LIMIT 1   [ RunTime:0.0010s ]
+SQL: select sum(reply_count) as reply_count , sum(view_count) view_count, count(post_id) post_count , min(create_time) begin_time from tbl_post WHERE `status_is` = 'Y' AND `is_deleted` = '0' [ RunTime:0.0470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `post_id`,`title`,`view_count`,`reply_count` FROM `tbl_post` WHERE `is_deleted` = 0 ORDER BY `create_time` DESC,`sort_order` DESC LIMIT 10   [ RunTime:0.0480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.057000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.051000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.063000s ]
+SQL: SHOW COLUMNS FROM `tbl_comment` [ RunTime:0.0030s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email` FROM `tbl_comment` ORDER BY `create_time` DESC LIMIT 10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.086000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.079000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.092000s ]
+SQL: SHOW COLUMNS FROM `tbl_tags` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`tag_name`,`data_count` FROM `tbl_tags` ORDER BY `data_count` DESC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.105000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.099000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.113000s ]
+SQL: SELECT MAX(create_time) AS tp_max FROM `tbl_post` WHERE `is_deleted` = 0 AND `status_is` = 'Y' LIMIT 1   [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.160000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.154000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.166000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`cate_name` FROM `tbl_cate`  [ RunTime:0.0020s ]
+SQL: SELECT `post_id`,`title`,`cate_id`,`create_time`,`tags`,`content`,`view_count`,`reply_count` FROM `tbl_post` WHERE `post_id` = 3918 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(comment_id) AS tp_count FROM `tbl_comment` WHERE `post_id` = 3918 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `comment_id`,`post_id`,`nickname`,`content`,`email`,`create_time` FROM `tbl_comment` WHERE `post_id` = 3918 ORDER BY `create_time` DESC LIMIT 0,8   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.193000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.186000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.194000s ]
+SQL: UPDATE `tbl_post` SET `view_count`=view_count+1 WHERE `post_id` = 3918 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tbl_attr_val` [ RunTime:0.0010s ]
+SQL: DELETE FROM `tbl_attr_val` WHERE `post_id` = 3918 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.208000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.201000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.214000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-27T21:56:01+08:00 ] 127.0.0.1 /business/index.php/Post/ztree.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tbl_cate` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: cnt D:\html\business\App\MangerSystem\Model\CateModel.class.php 第 39 行.
+SQL: SELECT `id` AS `id`,`parent_id` AS `pid`,`cate_name` AS `name`,`cate_name_alias` AS `alias` FROM `tbl_cate` WHERE `parent_id` = 0 AND `is_deleted` = 0 ORDER BY `sort_order` DESC  [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 791 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 573 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 576 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 577 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 578 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 579 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 580 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 581 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 582 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 583 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 575 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 574 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 572 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 571 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 783 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 9 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 10 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 12 LIMIT 1   [ RunTime:0.0000s ]
 SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 13 LIMIT 1   [ RunTime:0.0010s ]
-SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 14 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_cate` WHERE `parent_id` = 8 LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001293s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001489s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-09-27T22:12:35+08:00 ] 127.0.0.1 /business/index.php/Post?_pjax=%23content
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.046800s ]
 
