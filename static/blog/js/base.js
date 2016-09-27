@@ -29,7 +29,7 @@
  +------------------------------------------------------------------------------
  */
 
-var ImportBasePath = location.protocol+'//'+location.hostname+'/Public/';
+var ImportBasePath = location.protocol + '//' + location.hostname + '/Public/';
 /**
  +----------------------------------------------------------
  * 判断对象类型
@@ -41,27 +41,27 @@ var ImportBasePath = location.protocol+'//'+location.hostname+'/Public/';
  +----------------------------------------------------------
  */
 function is_array(obj) {
-    return (obj.constructor.toString().indexOf("Array")!= -1);
+    return (obj.constructor.toString().indexOf("Array") != -1);
 }
 
 function is_function(obj) {
-    return (obj.constructor.toString().indexOf("Function")!= -1);
+    return (obj.constructor.toString().indexOf("Function") != -1);
 }
 
 function is_object(obj) {
-    return (obj.constructor.toString().indexOf("Object")!= -1);
+    return (obj.constructor.toString().indexOf("Object") != -1);
 }
 
 function is_string(obj) {
-    return (obj.constructor.toString().indexOf("String")!= -1);
+    return (obj.constructor.toString().indexOf("String") != -1);
 }
 
 function is_number(obj) {
-    return (obj.constructor.toString().indexOf("Number")!= -1);
+    return (obj.constructor.toString().indexOf("Number") != -1);
 }
 
 function is_boolean(obj) {
-    return (obj.constructor.toString().indexOf("Boolean")!= -1);
+    return (obj.constructor.toString().indexOf("Boolean") != -1);
 }
 
 /**
@@ -76,147 +76,147 @@ function is_boolean(obj) {
  +----------------------------------------------------------
  */
 
-function _import(jsFile,basePath) 
-{             
-	 var head = document.getElementsByTagName('HEAD').item(0); 
-	 var script = document.createElement('SCRIPT'); 
-	 if (basePath == undefined)
-	 {
-		 basePath = ImportBasePath;
-	 }
-	 
-	 jsFile = basePath + jsFile.replace(/\./g, '/') + '.js';
-	 //alert(jsFile);
-	 script.src = jsFile; 
-	 script.type = "text/javascript"; 
-	 head.appendChild(script); 
+function _import(jsFile, basePath)
+{
+    var head = document.getElementsByTagName('HEAD').item(0);
+    var script = document.createElement('SCRIPT');
+    if (basePath == undefined)
+    {
+        basePath = ImportBasePath;
+    }
+
+    jsFile = basePath + jsFile.replace(/\./g, '/') + '.js';
+    //alert(jsFile);
+    script.src = jsFile;
+    script.type = "text/javascript";
+    head.appendChild(script);
+}
+
+//---------------------------------------------------
+//	getElementById 替代方法
+//---------------------------------------------------
+/*
+ function $() {
+ var elements = new Array();
+ 
+ for (var i = 0; i < arguments.length; i++) {
+ var element = arguments[i];
+ if (typeof element == 'string')
+ element = document.getElementById(element);
+ 
+ if (arguments.length == 1)
+ return element;
+ 
+ elements.push(element);
  }
+ 
+ return elements;
+ }*/
 
-	//---------------------------------------------------
-	//	getElementById 替代方法
-	//---------------------------------------------------
-	/*
-	function $() {
-	  var elements = new Array();
+//---------------------------------------------------
+//	打开新窗口
+//---------------------------------------------------
+function PopWindow(pageUrl, WinWidth, WinHeight)
+{
+    var popwin = window.open(pageUrl, "_blank", "scrollbars=yes,toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=no,width=" + WinWidth + ",height=" + WinHeight);
+    return false;
+}
 
-	  for (var i = 0; i < arguments.length; i++) {
-		var element = arguments[i];
-		if (typeof element == 'string')
-		  element = document.getElementById(element);
+//---------------------------------------------------
+//	打开远程窗口
+//---------------------------------------------------
+function PopRemoteWindow(url)
+{
+    var remote = window.open(url, "RemoteWindow", "scrollbars=yes,toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,resizable=yes");
+    if (remote.opener == null)
+    {
+        remote.opener = window;
+    }
+}
 
-		if (arguments.length == 1)
-		  return element;
+//+---------------------------------------------------
+//|	打开模式窗口，返回新窗口的操作值
+//+---------------------------------------------------
+function PopModalWindow(url, width, height)
+{
+    var result = window.showModalDialog(url, "win", "dialogWidth:" + width + "px;dialogHeight:" + height + "px;center:yes;status:no;scroll:no;dialogHide:no;resizable:no;help:no;edge:sunken;");
+    return result;
+}
 
-		elements.push(element);
-	  }
+//+---------------------------------------------------
+//|	打开非模式窗口，返回打开窗口的句柄
+//+---------------------------------------------------
+function PopModelessWindow(url, width, height)
+{
+    var win = window.showModelessDialog(url, "win", "dialogWidth:" + width + "px;dialogHeight:" + height + "px;center:yes;status:no;scroll:no;dialogHide:no;resizable:no;help:no;edge:sunken;");
+    return win;
+}
 
-	  return elements;
-	}*/
+//+---------------------------------------------------
+//|	动态加载外部CSS和JS文件
+//+---------------------------------------------------
+function ImportCss(cssFile)
+{
+    document.createStyleSheet(cssFile);
+}
 
-	//---------------------------------------------------
-	//	打开新窗口
-	//---------------------------------------------------
-	function PopWindow(pageUrl,WinWidth,WinHeight) 
-	{ 
-	var popwin=window.open(pageUrl,"_blank","scrollbars=yes,toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=no,width="+WinWidth+",height="+WinHeight); 
-	return false; 
-	} 
+function ImportJS(jsFile)
+{
+    var head = document.getElementsByTagName('HEAD').item(0);
+    var script = document.createElement('SCRIPT');
+    script.src = jsFile;
+    script.type = "text/javascript";
+    head.appendChild(script);
+}
 
-	//---------------------------------------------------
-	//	打开远程窗口
-	//---------------------------------------------------
-	function PopRemoteWindow(url) 
-	{ 
-	var remote=window.open(url,"RemoteWindow","scrollbars=yes,toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,resizable=yes"); 
-	if(remote.opener==null) 
-	{ 
-	remote.opener=window; 
-	} 
-	} 
+//+---------------------------------------------------
+//|	创建网页元素
+//+---------------------------------------------------
+function CreateElement(type, owner)
+{
+    var element = document.createElement(type);
+    owner.appendChild(element);
+}
 
-	//+---------------------------------------------------
-	//|	打开模式窗口，返回新窗口的操作值
-	//+---------------------------------------------------
-	function PopModalWindow(url,width,height)
-	{
-		var result=window.showModalDialog(url,"win","dialogWidth:"+width+"px;dialogHeight:"+height+"px;center:yes;status:no;scroll:no;dialogHide:no;resizable:no;help:no;edge:sunken;");
-		return result;
-	}
+//+---------------------------------------------------
+//|	获取HTML页面参数 flag 为1 获取详细参数
+//+---------------------------------------------------
+function getHTMLParm(flag)
+{
+    var parastr = window.location.search;
+    if (flag)
+    {
+        var parm = Array();
+        var tempstr = "";
+        if (str.indexOf("&") > 0) {
+            para = parastr.split("&");
+            for (i = 0; i < para.length; i++)
+            {
+                tempstr1 = para[i];
 
-	//+---------------------------------------------------
-	//|	打开非模式窗口，返回打开窗口的句柄
-	//+---------------------------------------------------
-	function PopModelessWindow(url,width,height)
-	{
-		var win=window.showModelessDialog(url,"win","dialogWidth:"+width+"px;dialogHeight:"+height+"px;center:yes;status:no;scroll:no;dialogHide:no;resizable:no;help:no;edge:sunken;");
-		return win;
-	}
+                pos = tempstr1.indexOf("=");
+                parm[i] = [tempstr1.substring(0, pos), tempstr1.substring(pos + 1)];
+            }
+        }
+        return parm;
+    }
+    return parastr;
+}
 
-	//+---------------------------------------------------
-	//|	动态加载外部CSS和JS文件
-	//+---------------------------------------------------
-	function ImportCss(cssFile) 
-        {             
-             document.createStyleSheet(cssFile); 
-        } 
-      
-	function ImportJS(jsFile) 
-	{             
-		 var head = document.getElementsByTagName('HEAD').item(0); 
-		 var script = document.createElement('SCRIPT'); 
-		 script.src = jsFile; 
-		 script.type = "text/javascript"; 
-		 head.appendChild(script); 
-	 }
+function getPageScroll() {
 
-	//+---------------------------------------------------
-	//|	创建网页元素
-	//+---------------------------------------------------
-	 function CreateElement(type,owner)
-	 {
-		 var element = document.createElement(type); 
-		 owner.appendChild(element);
-	 }
-	 
-	//+---------------------------------------------------
-	//|	获取HTML页面参数 flag 为1 获取详细参数
-	//+---------------------------------------------------
-	function getHTMLParm(flag)
-	{
-		var parastr = window.location.search;
-		if (flag)
-		{
-			var parm= Array();
-			var tempstr="";
-			if (str.indexOf("&")>0){
-				 para = parastr.split("&");
-				 for(i=0;i<para.length;i++)
-				 {
-					 tempstr1 = para[i];
-					 
-					 pos = tempstr1.indexOf("=");
-					 parm[i] = [tempstr1.substring(0,pos),tempstr1.substring(pos+1)];
-				 }
-			 }
-			 return parm;
-		}
-		 return parastr;
-	}
+    var yScroll;
 
-	function getPageScroll(){
+    if (self.pageYOffset) {
+        yScroll = self.pageYOffset;
+    } else if (document.documentElement && document.documentElement.scrollTop) {	 // Explorer 6 Strict
+        yScroll = document.documentElement.scrollTop;
+    } else if (document.body) {// all other Explorers
+        yScroll = document.body.scrollTop;
+    }
 
-	var yScroll;
-
-	if (self.pageYOffset) {
-		yScroll = self.pageYOffset;
-	} else if (document.documentElement && document.documentElement.scrollTop){	 // Explorer 6 Strict
-		yScroll = document.documentElement.scrollTop;
-	} else if (document.body) {// all other Explorers
-		yScroll = document.body.scrollTop;
-	}
-
-	arrayPageScroll = new Array('',yScroll) 
-	return arrayPageScroll;
+    arrayPageScroll = new Array('', yScroll)
+    return arrayPageScroll;
 }
 
 
@@ -227,48 +227,71 @@ function _import(jsFile,basePath)
 // Core code from - quirksmode.org
 // Edit for Firefox by pHaez
 //
-function getPageSize(){
-	
-	var xScroll, yScroll;
-	
-	if (window.innerHeight && window.scrollMaxY) {	
-		xScroll = document.body.scrollWidth;
-		yScroll = window.innerHeight + window.scrollMaxY;
-	} else if (document.body.scrollHeight > document.body.offsetHeight){ // all but Explorer Mac
-		xScroll = document.body.scrollWidth;
-		yScroll = document.body.scrollHeight;
-	} else { // Explorer Mac...would also work in Explorer 6 Strict, Mozilla and Safari
-		xScroll = document.body.offsetWidth;
-		yScroll = document.body.offsetHeight;
-	}
-	
-	var windowWidth, windowHeight;
-	if (self.innerHeight) {	// all except Explorer
-		windowWidth = self.innerWidth;
-		windowHeight = self.innerHeight;
-	} else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
-		windowWidth = document.documentElement.clientWidth;
-		windowHeight = document.documentElement.clientHeight;
-	} else if (document.body) { // other Explorers
-		windowWidth = document.body.clientWidth;
-		windowHeight = document.body.clientHeight;
-	}	
-	
-	// for small pages with total height less then height of the viewport
-	if(yScroll < windowHeight){
-		pageHeight = windowHeight;
-	} else { 
-		pageHeight = yScroll;
-	}
+function getPageSize() {
 
-	// for small pages with total width less then width of the viewport
-	if(xScroll < windowWidth){	
-		pageWidth = windowWidth;
-	} else {
-		pageWidth = xScroll;
-	}
+    var xScroll, yScroll;
+
+    if (window.innerHeight && window.scrollMaxY) {
+        xScroll = document.body.scrollWidth;
+        yScroll = window.innerHeight + window.scrollMaxY;
+    } else if (document.body.scrollHeight > document.body.offsetHeight) { // all but Explorer Mac
+        xScroll = document.body.scrollWidth;
+        yScroll = document.body.scrollHeight;
+    } else { // Explorer Mac...would also work in Explorer 6 Strict, Mozilla and Safari
+        xScroll = document.body.offsetWidth;
+        yScroll = document.body.offsetHeight;
+    }
+
+    var windowWidth, windowHeight;
+    if (self.innerHeight) {	// all except Explorer
+        windowWidth = self.innerWidth;
+        windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+        windowWidth = document.documentElement.clientWidth;
+        windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+        windowWidth = document.body.clientWidth;
+        windowHeight = document.body.clientHeight;
+    }
+
+    // for small pages with total height less then height of the viewport
+    if (yScroll < windowHeight) {
+        pageHeight = windowHeight;
+    } else {
+        pageHeight = yScroll;
+    }
+
+    // for small pages with total width less then width of the viewport
+    if (xScroll < windowWidth) {
+        pageWidth = windowWidth;
+    } else {
+        pageWidth = xScroll;
+    }
 
 
-	arrayPageSize = new Array(pageWidth,pageHeight,windowWidth,windowHeight) 
-	return arrayPageSize;
+    arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+    return arrayPageSize;
+}
+
+/**
+ * 动态加载js
+ * @returns {undefined}
+ */
+function createScript(src) {
+   if (window.jQuery) {
+       //async为false的时候是同步的  
+       //dataType为script的时候已经帮你把返回结果用script类型的dom元素添加到文档中了，如果跨域，POST会转换为GET  
+       jQuery.ajax({
+           type: 'GET',
+           url: src,
+           async: false,
+           dataType :'script'
+       });
+   } else {
+       var oHead = document.getElementsByTagName('head').item(0);
+       var oScript = document.createElement("script");
+       oScript.type = "text/javascript";
+       oScript.src = src;
+       oHead.appendChild(oScript);
+   }
 }

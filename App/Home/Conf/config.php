@@ -23,4 +23,38 @@ return array(
     
     // 是否开启验证码
     'is_verify_code' => true,   
+    
+     // 主题
+    'DEFAULT_THEME' => 'very',
+    'TMPL_DETECT_THEME' => true,
+    'THEME_LIST' => 'default,very', // 支持的模板主题项
+    // 'VAR_TEMPLATE'          =>  't',    // 默认模板切换变量
+    
+    
+    // 全局配置模板布局
+    'LAYOUT_ON'=>true,
+    'LAYOUT_NAME'=>'layout',
+    
+    
+    
+    // 全局静态缓存
+    'HTML_CACHE_ON' => false, // 开启静态缓存
+    'HTML_CACHE_TIME' => 600, // 全局静态缓存有效期（秒）
+    'HTML_FILE_SUFFIX' => '.html', // 设置静态缓存文件后缀
+    'HTML_CACHE_RULES' => array(// 定义静态缓存规则
+	//'*' => array('{$_SERVER.REQUEST_URI|md5}'),
+	'*' =>array('{:controller}_{:action}_{id}_{p}_'.$_GET[C("VAR_TEMPLATE")], 60)
+    ),
+    
+    /*
+    // 缓存的配置
+    'close_cache' => true,   // 不使用缓存，开发阶段
+    'cate_key' => 'catelist',
+    'newPost_key' => 'newPost',
+    'newComment_key' => 'newComment',
+    'tagslist_key' => 'tagslist',
+    'tagslist_key' => 'tagslist',
+    'archivelist_key' => 'archivelist',
+    */
+    
 );

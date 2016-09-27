@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Blog By ThinkPHP 3.0-- default</title>
+    <link href="/business/static/blog/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/business/static/plugins/ztree/css/demo.css" type="text/css">
+    <link rel="stylesheet" href="/business/static/plugins/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <script type="text/javascript" src="/business/static/blog/js/prototype.js"></script>
+    <script type="text/javascript" src="/business/static/blog/js/mootools.js"></script>
+    <script type="text/javascript" src="/business/static/blog/js/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="/business/static/plugins/ztree/js/jquery.ztree.core.js"></script>
+    <!--- ThinkAjax 依赖于 js库 prototype -->
+    <script type="text/javascript" src="/business/static/blog/js/ThinkAjax.js"></script>
+    <script type="text/javascript" src="/business/static/blog/js/common.js"></script>
+    <script type="text/javascript" src="/business/static/blog/js/base.js"></script>
+    <script language="JavaScript">
+    //指定当前组模块URL地址
+    var URL = '/business/index.php/Home/Post';
+    var APP = '/business/index.php';
+    var PUBLIC = '/business/static';
+    var doComment = '/business/index.php/Post/comment.html'
+    ThinkAjax.updateTip = '<IMG SRC="/business/static/blog/images/loading2.gif" WIDTH="16" HEIGHT="16" BORDER="0" ALT="loading..." align="absmiddle"> 数据处理中...';
+    </script>
+</head>
+
+<body>
+    <div id="header">
+    <div id="innerHeader">
+        <div id="blogLogo"></div>
+        <div class="blog-header">
+            <div class="blog-desc">ThinkPHP [ Blog示例程序]</div>
+        </div>
+        <div id="menu">
+           <ul>
+                <li><a href="/business/index.php/Post">日志首页</a></li>
+                <li><a href="#" onclick="alert('请登录后台撰写'); window.location.href='/business/index.php/MangerSystem/Post.html'">撰写日志</a></li>
+                <li><a href="/business/index.php/Tag/index.html">标签云</a></li>
+                                <li><a data-pjax="no" href="/business/index.php/Post/view/id/615111/t/very.html">无刷新模式</a></li>
+                           </ul>
+        </div>
+    </div>
+</div>
+<!--
+<script type="text/javascript" src="/business/static/blog/js/jquery.pjax.js"></script>
+<script type="text/javascript">
+jQuery(function($) {
+    $('#content').pjax('div.pages div.pagination a, a',{timeout:5000});
+});    
+</script>
+-->
+    <!--中间部分-->
+    <div id="mainWrapper">
+        <div id="sidebar" class="sidebar">
+            <div id="innerSidebar">
+                <div id="panelSearch" class="panel">
+                    <div id="panelStats" class="panel">
+    <h5 style="color:red;"> 统计数据 </h5>
+    <div class="panel-content">
+        创建日期：<span style="color:#CC9933">2015-05-25</span>
+        <br /> 日志总数：
+        <span style="color:#CC9933">55580</span>
+        <br /> 阅读总数：
+        <span style="color:#6699FF">272</span>
+        <br /> 评论总数：
+        <span style="color:#FF9900">12</span>
+        <br />
+    </div>
+</div>                    <div class="panel-content">
+    <h5>日志分类 </h5>
+    <ul id="category" class="ztree">
+        <li>
+            <div class="fLeft">
+                <input TYPE="text" id="categoryName" class="text" NAME="name">
+            </div>
+            <input TYPE="button" value="增 加" class="submit hMargin small" onclick="addCategory()">
+            <br style="clear:both;float:auto" />
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+var setting = {
+    async: {
+        enable: true,
+        url: "/business/index.php/Post/ztree.html",
+        autoParam: ["id=pid", "level=lv"],
+        otherParam: {
+            "otherParam": "zTreeAsyncTest"
+        },
+        dataFilter: filter
+    }
+};
+
+function filter(treeId, parentNode, childNodes) {
+    if (!childNodes)
+        return null;
+    //for (var i=0, l=childNodes.length; i<l; i++) {
+    //childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
+    //}
+    return childNodes;
+}
+
+
+// 交还$控制权
+jQuery.noConflict();
+// Put all your code in your document ready area  
+jQuery(document).ready(function($) {
+    // 这样你可以在这个范围内随意使用$而不用担心冲突  
+    $.fn.zTree.init($("#category"), setting);
+});
+
+/*
+ // $ 符号 prototype 和 jquery 冲突
+ $(document).ready(function() {
+    $.fn.zTree.init($("#category"), setting);
+ });
+ */
+//-->
+function addCategory() {
+    ThinkAjax.send('/tpdemo/ThinkPHP_3.0/Examples/Blog/index.php/Category/insert', 'ajax=1&title=' + $F('categoryName'), addComplete);
+}
+
+function addComplete(data, status) {
+    if (status == 1) {
+        $('category').innerHTML += '<li id="category_' + data.id + '">' +
+            '<img src="/business/static/blog/images/folder.gif" width="18" height="18" border="0" alt="" align="absmiddle">' +
+            '<a href="/tpdemo/ThinkPHP_3.0/Examples/Blog/index.php/Category/' + data.id + '">' + data.title + '</a> <span >(0)</span>' +
+            +'<img src="/business/static/blog/images/del.gif" width="20" height="20" border="0" style="cursor:pointer" alt="" onclick="delCategory(' + data.id + ')" align="absmiddle" />';
+    }
+}
+
+function delCategory(id) {
+    ThinkAjax.send('/tpdemo/ThinkPHP_3.0/Examples/Blog/index.php/Category/delete/', 'ajax=1&id=' + id, delComplete);
+}
+
+function delComplete(data, status) {
+    if (status == 1) {
+        $('category_' + data).style.display = 'none';
+    }
+}
+</script>
+
+                </div>
+                <!----- 最新日志 ----->
+<div id="panelSearch" class="panel">
+    <h5>最新日志</h5>
+    <div class="panel-content">
+        <ul>
+            <li>
+                <img src="/business/static/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="/business/index.php/Post/view/id/718781.html" title="如何获取地址栏参数">如何获取地址栏参数</a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > 0 </span> | <span  title="浏览量" style="color:#FF6600"> 1 </span>]</sup>
+            </li><li>
+                <img src="/business/static/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="/business/index.php/Post/view/id/520297.html" title="新手学习,PHP从入门到精通第三版THINKPHP框架问题">新手学习,PHP从入门到精通第<span style="color:green;"> ...</span></a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > 0 </span> | <span  title="浏览量" style="color:#FF6600"> 3 </span>]</sup>
+            </li><li>
+                <img src="/business/static/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="/business/index.php/Post/view/id/615111.html" title="如何保存修改表单的时间">如何保存修改表单的时间</a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > 0 </span> | <span  title="浏览量" style="color:#FF6600"> 1 </span>]</sup>
+            </li><li>
+                <img src="/business/static/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="/business/index.php/Post/view/id/38116.html" title="thinkphp3.2路由配置，对seo友好的链接">thinkphp3.2路由配置<span style="color:green;"> ...</span></a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > 0 </span> | <span  title="浏览量" style="color:#FF6600"> 2 </span>]</sup>
+            </li><li>
+                <img src="/business/static/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="/business/index.php/Post/view/id/718858.html" title="3.21 Auth类的一个问题，不知道算不算BUG">3.21 Auth类的一个问题<span style="color:green;"> ...</span></a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > 1 </span> | <span  title="浏览量" style="color:#FF6600"> 16 </span>]</sup>
+            </li><li>
+                <img src="/business/static/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="/business/index.php/Post/view/id/716695.html" title="TPM如何播放声音，请教大神">TPM如何播放声音，请教大神</a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > 0 </span> | <span  title="浏览量" style="color:#FF6600"> 5 </span>]</sup>
+            </li><li>
+                <img src="/business/static/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="/business/index.php/Post/view/id/718940.html" title="能否定义公共目录的位置">能否定义公共目录的位置</a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > 1 </span> | <span  title="浏览量" style="color:#FF6600"> 3 </span>]</sup>
+            </li><li>
+                <img src="/business/static/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="/business/index.php/Post/view/id/517203.html" title="thinkphp播放flv视频">thinkphp播放flv视频</a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > 0 </span> | <span  title="浏览量" style="color:#FF6600"> 2 </span>]</sup>
+            </li><li>
+                <img src="/business/static/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="/business/index.php/Post/view/id/13829.html" title="关于静态？？？？？">关于静态？？？？？</a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > 0 </span> | <span  title="浏览量" style="color:#FF6600"> 0 </span>]</sup>
+            </li><li>
+                <img src="/business/static/blog/images/icon_ctb.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                <a href="/business/index.php/Post/view/id/20739.html" title="引用文件路径问题">引用文件路径问题</a>
+                <sup style="color:silver;font-size:12px">[<span style="color:#3366CC" title="回复数" > 0 </span> | <span  title="浏览量" style="color:#FF6600"> 2 </span>]</sup>
+            </li>        </ul>
+    </div>
+</div> 
+                <!----- 最新评论 ----->
+<div id="panelSearch" class="panel">
+    <h5>最新评论</h5>
+    <div class="panel-content">
+        <ul>
+            <li>
+                <img src="/business/static/blog/images/Comment.gif" width="9" height="9" border="0" alt="" align="absmiddle" />
+                <a href="mailto:postmaster@yeah.net"> <span style="color:#3366CC">lyy</span></a> ：<a href="/business/index.php/Post/view/id/4362.html#38" title="sdfsdfsdf">sdfsdfsdf</a>
+            </li><li>
+                <img src="/business/static/blog/images/Comment.gif" width="9" height="9" border="0" alt="" align="absmiddle" />
+                <a href="mailto:sdfsdf@qq.fg"> <span style="color:#3366CC">lyy</span></a> ：<a href="/business/index.php/Post/view/id/4367.html#37" title="sdfsdfsd">sdfsdfsd</a>
+            </li><li>
+                <img src="/business/static/blog/images/Comment.gif" width="9" height="9" border="0" alt="" align="absmiddle" />
+                <a href="mailto:sdfsdf@qq.fg"> <span style="color:#3366CC">lyy</span></a> ：<a href="/business/index.php/Post/view/id/4365.html#36" title="sdfsdfsdf">sdfsdfsdf</a>
+            </li><li>
+                <img src="/business/static/blog/images/Comment.gif" width="9" height="9" border="0" alt="" align="absmiddle" />
+                <a href="mailto:sdfsdf@qq.fg"> <span style="color:#3366CC">lyy</span></a> ：<a href="/business/index.php/Post/view/id/718858.html#35" title="sdfsdfsd">sdfsdfsd</a>
+            </li><li>
+                <img src="/business/static/blog/images/Comment.gif" width="9" height="9" border="0" alt="" align="absmiddle" />
+                <a href="mailto:postmaster@yeah.net"> <span style="color:#3366CC">lyy</span></a> ：<a href="/business/index.php/Post/view/id/718940.html#34" title="sdfsdfsdfsdf">sdfsdfsdfsdf</a>
+            </li><li>
+                <img src="/business/static/blog/images/Comment.gif" width="9" height="9" border="0" alt="" align="absmiddle" />
+                <a href="mailto:postmaster@yeah.net"> <span style="color:#3366CC">lyy</span></a> ：<a href="/business/index.php/Post/view/id/4439.html#33" title="水电费水电费水电费">水电费水电费水电费</a>
+            </li><li>
+                <img src="/business/static/blog/images/Comment.gif" width="9" height="9" border="0" alt="" align="absmiddle" />
+                <a href="mailto:sdfsdf@qq.fg"> <span style="color:#3366CC">lyy</span></a> ：<a href="/business/index.php/Post/view/id/4629.html#32" title="sdfsdf">sdfsdf</a>
+            </li><li>
+                <img src="/business/static/blog/images/Comment.gif" width="9" height="9" border="0" alt="" align="absmiddle" />
+                <a href="mailto:admin123@qq.com"> <span style="color:#3366CC">sdfsdf</span></a> ：<a href="/business/index.php/Post/view/id/37675.html#31" title="sdfsdfsdf">sdfsdfsdf</a>
+            </li><li>
+                <img src="/business/static/blog/images/Comment.gif" width="9" height="9" border="0" alt="" align="absmiddle" />
+                <a href="mailto:3sdf@qq.com"> <span style="color:#3366CC">sdfsd</span></a> ：<a href="/business/index.php/Post/view/id/4363.html#30" title="sdfslfjsldfsdfsf">sdfslfjsldfsdfsf</a>
+            </li><li>
+                <img src="/business/static/blog/images/Comment.gif" width="9" height="9" border="0" alt="" align="absmiddle" />
+                <a href="mailto:postmaster@yeah.net"> <span style="color:#3366CC">lyy</span></a> ：<a href="/business/index.php/Post/view/id/201.html#29" title="sdfsdfsdf">sdfsdfsdf</a>
+            </li>        </ul>
+    </div>
+</div> 
+                <!----- 标签云集 ----->
+<div id="panelSearch" class="panel">
+    <h5>标签云集 [ <a href="/business/index.php/Tag/index.html">更多</a> ]</h5>
+    <div class="panel-content">
+        <ul>
+            <li>
+            <a title="2条内容" href="/business/index.php/Tag/post/name/%25E5%25BE%25AE%25E8%25BD%25AF.html">
+                    <span style="font-size:12px;color:#5DFBD5">微软</span>
+                </a>&nbsp;&nbsp;&nbsp;<a title="2条内容" href="/business/index.php/Tag/post/name/%25E4%25B8%25AD%25E5%259B%25BD%25E5%25A4%25A7.html">
+                    <span style="font-size:12px;color:#F50779">中国大</span>
+                </a>&nbsp;&nbsp;&nbsp;<a title="2条内容" href="/business/index.php/Tag/post/name/ok.html">
+                    <span style="font-size:12px;color:#134E86">ok</span>
+                </a>&nbsp;&nbsp;&nbsp;<a title="2条内容" href="/business/index.php/Tag/post/name/helloword.html">
+                    <span style="font-size:12px;color:#7E8480">helloword</span>
+                </a>&nbsp;&nbsp;&nbsp;<a title="1条内容" href="/business/index.php/Tag/post/name/%25E4%25BD%25A0%25E5%25A5%25BD%25E5%25BC%25A0%25E5%25B8%2588%25E5%2582%2585.html">
+                    <span style="font-size:12px;color:#E4C0AC">你好张师傅</span>
+                </a>&nbsp;&nbsp;&nbsp;<a title="1条内容" href="/business/index.php/Tag/post/name/%25E5%2585%25B1.html">
+                    <span style="font-size:12px;color:#8F8247">共</span>
+                </a>&nbsp;&nbsp;&nbsp;<a title="1条内容" href="/business/index.php/Tag/post/name/Windows.html">
+                    <span style="font-size:12px;color:#98FAF7">Windows</span>
+                </a>&nbsp;&nbsp;&nbsp;<a title="1条内容" href="/business/index.php/Tag/post/name/%25E4%25B8%2580%25E4%25B8%25AA%25E4%25BA%25BA.html">
+                    <span style="font-size:12px;color:#B85B87">一个人</span>
+                </a>&nbsp;&nbsp;&nbsp;<a title="1条内容" href="/business/index.php/Tag/post/name/%25E6%2589%2593%25E4%25B9%25A6.html">
+                    <span style="font-size:12px;color:#11A455">打书</span>
+                </a>&nbsp;&nbsp;&nbsp;<a title="1条内容" href="/business/index.php/Tag/post/name/gooods.html">
+                    <span style="font-size:12px;color:#6C929A">gooods</span>
+                </a>&nbsp;&nbsp;&nbsp;            </li>
+        </ul>
+    </div>
+</div> 
+                <!----- 日志归档 ----->
+<div id="panelSearch" class="panel">
+    <h5>日志归档</h5>
+    <div class="panel-content">
+        <ul>
+            <li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2016/month/9.html">2016年09月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2016/month/8.html">2016年08月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2016/month/7.html">2016年07月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2016/month/6.html">2016年06月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2016/month/5.html">2016年05月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2016/month/4.html">2016年04月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2016/month/3.html">2016年03月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2016/month/2.html">2016年02月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2016/month/1.html">2016年01月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2015/month/12.html">2015年12月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2015/month/11.html">2015年11月</a>
+                </li><li>
+                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
+                    <a href="/business/index.php/Post/archive/year/2015/month/10.html">2015年10月</a>
+                </li>        </ul>
+    </div>
+</div>            </div>
+        </div>
+        <div id="content" class="content">
+            <div id="innerContent">
+                <div class="article-top">
+                    <div class="prev-article" title="上一篇" ><a href="/business/index.php/Post/view/id/615110.html"> 如何使从数据库查询到的数据按时间逆序显示 </a></div>
+                    <div class="next-article" title="下一篇" ><a href="/business/index.php/Post/view/id/615112.html"> ThinkPHP3.1.3完整版多语言切换 </a></div>
+                </div>
+                <div class="textbox-title">
+                    <h4>
+                            <img width="11" height="11" border="0" align="absmiddle" src="/business/static/blog/images/icon_point2.gif">  如何保存修改表单的时间 
+                        </h4>
+                    <div class="textbox-label">
+                        <span style="color:gray;font-weight:normal">
+                                [ <img width="17" height="16" border="0" align="absmiddle" src="/business/static/blog/images/write.gif" />  2016-09-26 14:42:17                                发表在 <a href="/business/index.php/Cate/index/id/148.html"></a>  ]
+                            </span>
+                    </div>
+                </div>
+                <div class="textbox-content">
+                    <div class="detailed">
+  <h2>重大资产重组管理办法发布 上市公司炒壳要降温？</h2>
+  <h3>来源：<span>京华时报</span><span style="margin-left:30px">2016-09-12</span></h3>
+  <div class="Core_line"></div>
+  <h1 style="margin:0px 0px 15px;padding:0px;font-size:26px;font-weight:normal;font-family:微软雅黑, Helvetica, sans-serif;"><p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">给<a class="a-tips-Article-QQ" href="http://finance.qq.com/l/stock/shsgs/index.htm" target="_blank" style="text-decoration:none;outline:0px;color:#000000;border-bottom-width:1px;border-bottom-style:dotted;border-bottom-color:#536da6;">上市公司</a>"炒壳"行为降温正式落到实处。经过近三个月的征求意见，上市公司重大资产重组管理办法千呼万唤始出来。证监会新闻发言人邓舸在昨天下午召开的例行发布会上宣布，《关于修改〈上市公司重大资产重组管理办法〉的决定》于9月9日正式发布，自发布之日起施行。新规旨在扎紧制度与标准的"篱笆"，给"炒壳"降温，促进市场估值体系的理性修复。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;"><strong>□政策发布</strong></p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;"><strong>新重组办法有三大亮点</strong></p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">为贯彻落实"依法监管、从严监管、全面监管"理念，进一步规范重组上市行为，《关于修改〈上市公司重大资产重组管理办法〉的决定》（简称《重组办法》）于9月9日正式发布。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">据了解，此次重组办法的主要修改内容有三大亮点。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">首先，完善重组上市认定标准。参照成熟市场经验，细化关于上市公司"控制权变更"的认定标准，完善关于购买资产规模的判断指标，明确累计首次原则的期限为60个月。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">需说明的是，60个月期限不适用于<a class="a-tips-Article-QQ" href="http://finance.qq.com/stock/cyb/" target="_blank" style="text-decoration:none;outline:0px;color:#000000;border-bottom-width:1px;border-bottom-style:dotted;border-bottom-color:#536da6;">创业板上市</a>公司重组，也不适用于购买的资产属于<a class="a-tips-Article-QQ" href="http://finance.qq.com/l/financenews/jinrongshichang/jinrong.htm" target="_blank" style="text-decoration:none;outline:0px;color:#000000;border-bottom-width:1px;border-bottom-style:dotted;border-bottom-color:#536da6;">金融</a>、创业投资等特定行业的情况，这两类情况仍须按原口径累计。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">其次，完善配套监管措施，抑制投机"炒壳"。取消重组上市的配套融资，提高对重组方的实力要求，延长相关股东的股份锁定期，遏制短期投机和概念炒作。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">第三，按照全面监管的原则，强化上市公司和中介机构责任，加大问责力度。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;"><strong>■关注焦点</strong></p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;"><strong>征求意见现三大争议</strong></p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">据了解，《重组办法》自6月17日起公开征求意见，征求意见期间，市场各方争议主要集中在"净利润"认定指标、重组上市认定的兜底条款、相关方锁定期等三个方面。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">1.关于"净利润"认定指标</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">有意见提出，对于亏损、微利的上市公司过于严格，建议取消。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">而证监会考虑到取消"净利润"指标，将不能有效抑制亏损、微利上市公司"保壳"、"养壳"现象，会加剧僵尸企业"僵而不死"，削弱退市制度"刚性"，《重组办法》中保留了现有认定指标。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">2.关于兜底条款</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">有意见提出，此类条款缺少细化、量化标准，建议删除。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">而事实上，考虑到此类条款有助于应对监管实践的复杂性，类似条款在其他证券监管规章中也有使用，并且，可以通过提交并购重组委审议等相关安排，确保执行中的程序公正，因此，《重组办法》保留了认定重组上市的兜底条款并做了进一步完善。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">3.关于股份锁定期</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">有意见提出，要求新进大股东锁定36个月，时限偏短；也有意见提出，对新进小股东锁定24个月，期限过长。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">经研究，鉴于延长相关股东锁定期是本次加强重组上市监管、遏制短期炒作的重要手段，征求意见前已从平衡各方利益的角度多次论证，因此，《重组办法》没有改动。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">另有意见提出，征求意见稿对上市公司原控股股东、原实际控制人及其关联人在交易过程中向其他特定对象转让股份的锁定期未作明确，易导致监管漏洞。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">经证监会研究，为防止上述主体通过向其他特定对象转让股份规避限售义务，《重组办法》进一步明确："在交易过程中从该等主体直接或间接受让该上市公司股份的特定对象"，也应当公开承诺36个月内不转让。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;"><strong>■权威解读</strong></p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;"><strong>扎紧制度的"篱笆"</strong></p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">对于此次重组办法的发布意义，证监会新闻发言人邓舸表示，本次修改，旨在扎紧制度与标准的"篱笆"，给"炒壳"降温，促进市场估值体系的理性修复，继续支持通过并购重组提升上市公司质量，引导更多资金投向实体经济。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">邓舸强调，相关信息披露内容与格式准则也在配套修订，将陆续公布实施。各项新规施行后，证监会将继续完善全流程监管机制，进一步规范重组上市行为，遏制虚假重组、"忽悠式"重组，促进资本市场并购重组更好地提升上市公司质量、服务实体经济发展。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;"><strong>□其他发布</strong></p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;"><strong>宏信证券财富证券 新三板开户遭叫停</strong></p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">证监会昨天还通报了对宏信证券、财富证券采取行政监管措施的处罚通知。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">据了解，2016年3月至5月，证监会开展了主办券商执行投资者适当性管理情况的专项核查，涉及全部从事全国股转系统开户业务的90家主办券商、近4年的全部开户信息、12万个合格投资者账户。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">经查发现，部分主办券商存在执行全国股转系统投资者适当性管理不到位的情况。其中，宏信证券、财富证券存在未能严格执行规定，为大量不符合标准的投资者开通了全国股转系统交易权限，投资者风险评估管理存在漏洞。不仅如此，且未在证监会开展检查时如实报告相关问题。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">依据《<a class="a-tips-Article-QQ" href="http://gu.qq.com/sz399975" target="_blank" style="text-decoration:none;outline:0px;color:#000000;border-bottom-width:1px;border-bottom-style:dotted;border-bottom-color:#536da6;">证券公司</a>监督管理条例》等有关规定，证监会昨天对宏信证券、财富证券采取责令限期改正并暂停在全国股转系统新开客户交易权限业务6个月的行政监管措施。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">证监会新闻发言人邓舸表示，投资者适当性管理制度是全国股转系统重要基础性制度，各主办券商务必加强事前审查和后续评估工作，不得为不符合规定的投资者开户。证监会将继续认真落实《国务院关于全国中小企业股份转让系统有关问题的决定》，严格监管，对投资者适当性管理执行不到位、内部控制和合规管理不完善的主办券商，依法从严查处，促进全国股转系统健康稳定发展。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">湘财证券客户经理 违法买卖股票遭罚没4288万</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">近日，证券从业人员违法买卖股票再次被证监会抓了典型。而此次，证监会下狠手，不仅下发了逾4000万的罚单，还作出了5年市场禁入的处罚。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">据了解，2009年10月10日至2014年10月25日期间，管祖庆担任湘财证券股份有限公司北京首体南路营业部客户经理。在从业期间，利用职务之便，管祖庆用他人证券账户交易股票，卖出股票盈利约1070万元，另有部分股票尚未卖出。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">证监会表示，管祖庆的上述行为违反了《证券法》第43条规定，依据《证券法》第199条规定，证监会决定，对管祖庆没收违法所得约1070万元，并处以约3218万元罚款。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">这还不算最狠，除了以上逾4000万的罚没金额之外，证监会还责令管祖庆依法处理非法持有的剩余股票，没收违法所得，并处以违法所得3倍的罚款；如无违法所得，按其买入该部分股票的实际成本，处以等额罚款。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">同时，依据《证券法》第233条和《证券市场禁入规定》相关规定，对管祖庆采取5年证券市场禁入措施。</p>
+<p style="margin-top:0px;margin-bottom:28px;padding:0px;word-break:break-word;font-size:16px;line-height:28px;text-indent:2em;">证监会强调，上述行为违反了证券法律法规，破坏了市场秩序，必须坚决予以打击。证监会将持续保持监管执法高压态势，对中介机构、证券从业人员等各类资本市场违法违规行为予以严厉惩处，切实保护广大投资者的合法权益。</p>
+</h1></div>                </div>
+                <!-- 附件
+                    <fieldset style="width:75%;margin:8px;color:gray">
+                        <legend>附件列表</legend>
+                        <div>
+                            还没有上传任何附件 
+                        </div>
+                    </fieldset>
+                    -->
+                <div class="left">  关键词:  </div>
+                <div class="textbox-bottom">
+                    <sup style="color:silver;font-size:12px">[<span title="回复数" style="color:#3366CC">回复数: 0 </span> | <span style="color:#FF6600" title="浏览量">浏览量: 1 </span>]</sup>
+                    <img width="12" height="12" border="0" align="" src="/business/static/blog/images/cm_t_ArtRank2.gif" />
+                    <a href="/business/index.php/Post/view/id/615111.html#reply">我有话要说</a>
+                </div>
+                <div align="right" class="textbox-urls"></div>
+                <!--
+                    <div class="no-comment-box"> 
+                        [ 管理：<a target="_blank" href="/business/index.php/Post/edit/id/615111.html">编辑日志</a> 
+                        <a href="javascript:delBlog(615111)">删除日志</a> ]
+                    </div>
+                    -->
+                <script type="text/javascript">
+                function delComplete(data, status) {
+                    if (status == 1) {
+                        $('comment_' + data).style.display = 'none';
+                    }
+                }
+
+                function delComment(id) {
+                    ThinkAjax.send('/business/index.php/Home/Post/delComment', 'ajax=1&id=' + id, delComplete);
+                }
+
+                function doComplete(data, status) {
+                    if (status == 1) {
+                        $('comments').innerHTML += '<div id="comment_' + data.id + '" class="commentbox" style="border:1px solid #56CD2E;"><div class="commentbox-content"> ' + data.content + ' </div></div>';
+                        $('form1').reset();
+                        fleshVerify();
+                    }
+                }
+                </script>
+                <!-- 评论部分 -->
+                <div id="comments">
+                    <div class="no-comment-box">这篇日志还没有评论</div>
+                    </div>
+                <a name="reply"></a>
+                <div id="comment">
+                    <div class="result none" id="result"></div>
+                    <form id="form1" method="post">
+                        <table width="500" cellspacing="3" cellpadding="3">
+                            <tbody>
+                                <tr>
+                                    <td class="tRight tTop"></td>
+                                    <td class="tLeft">
+                                        用户名：
+                                        <input type="text" class="text" name="nickname" /> 邮箱:
+                                        <input type="text" class="text" name="email" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tRight tTop"></td>
+                                    <td class="tLeft">
+                                        <textarea name="content" style="width:472px; height:120px;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="center">
+                                        <input type="hidden" value="1" name="ajax">
+                                        <input type="hidden" value="Blog" name="module">
+                                        <input type="hidden" value="615111" name="post_id">
+                                        <div class="fLeft hMargin1">输入验证码 [ <a href="javascript:fleshVerify()">看不清？</a> ] <img height="30" align="absmiddle" src="/business/index.php/Post/verify.html" id="verifyImg">
+                                            <input type="text" class="small text" name="verify">
+                                        </div>
+                                        <div class="fLeft hMargin">
+                                            <input type="reset" value="重 置"  class="submit small">
+                                        </div>
+                                        <div class="fLeft hMargin">
+                                            <input type="button" class="submit small" onclick="ThinkAjax.sendForm('form1', doComment, doComplete, 'result');" value="发表评论" id="submit">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 版权信息区域 -->
+<div id="footer" class="footer">
+    <div id="innerFooter">
+        Powered by ThinkPHP 3.0 | Template designed by <a target="_blank" href="http://www.topthink.com.cn">TopThink</a>
+    </div>
+</div>
+</body>
+
+</html>

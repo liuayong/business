@@ -10,7 +10,8 @@ namespace Home\Controller;
 class CateController extends BaseController {
 
     protected function _initialize() {
-	
+	parent::_initialize();
+	#layout(FALSE);
     }
      /**
      * 获取当前栏目下的文章

@@ -1,0 +1,12 @@
+<div id="innerContent">
+    <div class="announce">
+        <div class="announce-content" style="height:45px">
+            <h3>标签云集</h3>
+            <foreach name="tags" item="v">
+                <a title="{$v.tag_name}共有{$v.data_count}条内容" href="{:U('Tag/post', array('name'=> urlencode($v['tag_name'])) )}">
+                    <span style="font-size:{$v['data_count']|getTitleSize};color:{:rand_color()}">{$v.tag_name}</span>
+                </a> &nbsp;&nbsp;&nbsp;
+            </foreach>
+        </div>
+    </div>
+</div>

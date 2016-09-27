@@ -173,16 +173,18 @@ class PostModel extends CommonModel {
 	// 先删除, 再添加
 	M('attrVal')->where(['post_id'=>$post_id])->delete();
 	
-	// 组装datalist
-	foreach ($vals as $k => $v) {
-	    // checkbox可能是数组
-	    if (isset($v['attr_val']) && is_array($v['attr_val'])) {
-		$vals[$k]['attr_val'] = implode(',', $v['attr_val']);
-	    }
-	    $vals[$k]['post_id'] = $post_id;
+	if($vals) {
+		// 组装datalist
+		foreach ($vals as $k => $v) {
+		    // checkbox可能是数组
+		    if (isset($v['attr_val']) && is_array($v['attr_val'])) {
+			$vals[$k]['attr_val'] = implode(',', $v['attr_val']);
+		    }
+		    $vals[$k]['post_id'] = $post_id;
+		}
+		M('attrVal')->addAll($vals);
 	}
 	
-	M('attrVal')->addAll($vals);
 	return true ;
     }
     

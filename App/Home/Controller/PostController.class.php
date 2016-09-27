@@ -6,7 +6,6 @@ class PostController extends BaseController {
 
     protected function _initialize() {
         parent::_initialize();
-        
     }
 
     /**
@@ -26,6 +25,7 @@ class PostController extends BaseController {
         // 归档日志
         $left_archive_html = $this->leftArchive();
 
+	
         
         $this->assign('blog_list_html', $blog_list_html);
         $this->assign('statistics_html', $statistics_html);
@@ -33,27 +33,47 @@ class PostController extends BaseController {
         $this->assign('new_comment_html', $new_comment_html);
         $this->assign('left_tags_html', $left_tags_html);
         $this->assign('left_archive_html', $left_archive_html);
-
-        $this->display();
+	
+	/**
+        #parent::theme('add')->display();
+        #$this->display();
+        # **********************************************************#
+	* 
+        $template = '';
+        if (isset($_SERVER['HTTP_X_PJAX']) && $_SERVER['HTTP_X_PJAX']) {//判断pjax请求
+            layout(false);
+            #$template = 'ajax_list';
+        }
+	layout(true);	// 开启模板布局
+	
+        $this->display($template);
+	*/
+	$this->display();
     }
+    
 
     /**
      * ztree树状结构
      * @param type $pid
      */
     public function ztree($pid = 0) {
+	$pid = I('pid', 0, 'intval');
+	#C('show_page_trace', fasle);
+	
+	// 使用缓存
+	$key = 'catelist-'.$pid ;
+	// 开发阶段不使用缓存
+	if (APP_DEBUG || !$data = S($key)) {
+	   
+	    $CateModel = D('MangerSystem/Cate');
 
-        C('SHOW_PAGE_TRACE', false);
-        $pid = I('pid', 0, 'intval');
-
-        $CateModel = D('MangerSystem/Cate');
-
-        $parentKey = $CateModel->parent_id;
-        $field = [$CateModel->getPk() => 'id', $parentKey => 'pid', 'cate_name' => 'name', 'cate_name_alias' => 'alias'];
-        $data = $CateModel->field($field)->where([$parentKey => $pid])->getAll();
-        $data = self::addColumn($data);
-        echo json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-
+	    $parentKey = $CateModel->parent_id;
+	    $field = [$CateModel->getPk() => 'id', $parentKey => 'pid', 'cate_name' => 'name', 'cate_name_alias' => 'alias'];
+	    $data = $CateModel->field($field)->where([$parentKey => $pid])->getAll();
+	    $data = self::addColumn($data);
+	    APP_DEBUG || S($key, $data);
+	}
+       echo json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     }
 
     // 给二维数组添加数据
@@ -99,6 +119,7 @@ class PostController extends BaseController {
      * 显示一篇博文的具体内容
      */
     public function view($id) {
+	
         $id = I('id', 0, 'intval');
 	$Post = D("MangerSystem/Post");
 
@@ -137,7 +158,6 @@ class PostController extends BaseController {
 	// 根据文章id修改阅读数
 	$Post -> addViews($id);
 	
-
 		
         $this->assign('prevData', $prevData);
         $this->assign('nextData', $nextData);
@@ -197,6 +217,11 @@ class PostController extends BaseController {
                 if ($ret) {
                     // 更新评论数
                     D("MangerSystem/Post")->addComments($comment['post_id']);
+		    
+		    // 首页最新评论的缓存默认是10条
+		    $key = 'newcomment-10';
+		    S($key, null);  // 删除缓存
+		    
                     // 返回客户端数据
                     $comment["content"] = trim($comment["content"]);
                     $comment["id"] = $list;

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Blog By ThinkPHP 3.0 -- {$Think.const.THEME_NAME}</title>
+        <link href="__PUBLIC__/blog/css/style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="__PUBLIC__/plugins/ztree/css/demo.css" type="text/css">
+        <link rel="stylesheet" href="__PUBLIC__/plugins/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+        <!-- prototype 与jquery冲突， 需要放在jquery前面 -->
+        <script type="text/javascript" src="__PUBLIC__/blog/js/prototype.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/blog/js/jquery-2.2.4.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/blog/js/base.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/plugins/ztree/js/jquery.ztree.core.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/blog/js/mootools.js"></script>
+        <!-- # ThinkAjax 依赖于 js库 prototype  -->
+        <script type="text/javascript" src="__PUBLIC__/blog/js/ThinkAjax.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/blog/js/common.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/blog/js/base.js"></script>
+        <script language="JavaScript">
+            //指定当前组模块URL地址
+            var URL = '__URL__';
+            var APP = '__APP__';
+            var PUBLIC = '__PUBLIC__';
+            var doComment = '{:U("Post/comment")}'
+            ThinkAjax.updateTip = '<IMG SRC="__PUBLIC__/blog/images/loading2.gif" WIDTH="16" HEIGHT="16" BORDER="0" ALT="loading..." align="absmiddle"> 数据处理中...';
+        </script>
+    </head>
+    <body>
+    <include file="very/common/header" />
+    <!--中间部分-->
+    <div id="mainWrapper">
+        <div id="sidebar" class="sidebar">
+            <div id="innerSidebar">
+                <div id="panelSearch" class="panel">
+                    {$statistics_html}
+                    <include file="common/leftcate" />
+                </div>
+                {$new_post_html}
+                {$new_comment_html}
+                {$left_tags_html}
+                {$left_archive_html}
+            </div>
+        </div>
+        <div id="content" class="content">
+            {__CONTENT__}
+        </div>
+    </div>
+    <include file="common/footer" />
+</body>
+</html>

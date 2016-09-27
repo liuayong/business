@@ -8,7 +8,7 @@ namespace Home\Controller;
 class TagController extends BaseController {
 
     protected function _initialize() {
-	
+	parent::_initialize();
     }
 
     /**

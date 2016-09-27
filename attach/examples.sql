@@ -418,14 +418,31 @@ ALTER TABLE tbl_user DROP INDEX username ;
 DROP INDEX username ON tbl_user
 
 
+创建删除索引 http://blog.csdn.net/yuanzhuohang/article/details/6497021
+mysql添加索引命令
+1. PRIMARY  KEY（主键索引）
+    ALTER  TABLE  `table_name`  ADD  PRIMARY  KEY (  `column`  ) 
+2.UNIQUE(唯一索引)
+    ALTER  TABLE  `table_name`  ADD  UNIQUE (`column` ) 
+3. INDEX(普通索引)
+    ALTER  TABLE  `table_name`  ADD  INDEX index_name (  `column`  )
+4.FULLTEXT(全文索引)
+    ALTER  TABLE  `table_name`  ADD  FULLTEXT ( `column` )
+5.多列索引
+    ALTER  TABLE  `table_name`  ADD  INDEX index_name (  `column1`,  `column2`,  `column3`  )
+
+ 删除索引
+可利用ALTER TABLE或DROP INDEX语句来删除索引。类似于CREATE INDEX语句，DROP INDEX可以在ALTER TABLE内部作为一条语句处理，语法如下。
+ 
+DROP INDEX index_name ON talbe_name
+ALTER TABLE table_name DROP INDEX index_name
+ALTER TABLE table_name DROP PRIMARY KEY
 
 
 
 
-
-
-
-
+ALTER  TABLE  `tbl_post`  ADD  INDEX is_deleted (  `is_deleted`  );
+DROP Index is_deleted on tbl_post
 
 
 

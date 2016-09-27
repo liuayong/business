@@ -1,12 +1,27 @@
-<?php if (!defined('THINK_PATH')) exit(); if(!$_comments_list): ?><div class="no-comment-box">这篇日志还没有评论</div>
-    <?php else: ?>
-    <div class="comment-pages"><?php echo ($pagelist); ?></div>
-    <?php if(is_array($_comments_list)): foreach($_comments_list as $key=>$comment): ?><div id="comment_<?php echo ($comment["comment_id"]); ?>" class="commentbox">
-            <a name="<?php echo ($comment["comment_id"]); ?>"></a> 
-            <div class="commentbox-title" > 
-                <a href="mailto:<?php echo ($comment["email"]); ?>"><?php echo ($comment["nickname"]); ?></a> 发表的评论 <span style="color:gray">[ <?php echo (friendlyShowTime($comment["create_time"])); ?> ]</span>
-                <!--<a href="javascript:delComment(<?php echo ($comment["comment_id"]); ?>)">删除评论</a>-->
-            </div>
-            <div class="commentbox-content"><?php echo (nl2br($comment["content"])); ?></div>
-        </div><?php endforeach; endif; ?>
-    <div class="comment-pages"><?php echo ($pagelist); ?></div><?php endif; ?>
+
+/**
+ * ztree树状结构
+ * @param type $pid
+ */
+public function ztree($pid = 0) {
+$pid = I('pid', 0, 'intval');
+#C('show_page_trace', fasle);
+
+// 使用缓存
+$key = 'catelist-'.$pid ;
+// 开发阶段不使用缓存
+if (APP_DEBUG || !$data = S($key)) {
+   
+	$CateModel = D('MangerSystem/Cate');
+
+	$parentKey = $CateModel->parent_id;
+	$field = [$CateModel->getPk() => 'id', $parentKey => 'pid', 'cate_name' => 'name', 'cate_name_alias' => 'alias'];
+	$data = $CateModel->field($field)->where([$parentKey => $pid])->getAll();
+	$data = self::addColumn($data);
+	APP_DEBUG || S($key, $data);
+}
+
+   echo json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+<include file="default/common/header" />

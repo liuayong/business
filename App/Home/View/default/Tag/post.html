@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Blog By ThinkPHP 3.0-- {$Think.const.THEME_NAME}</title>
+        <link href="__PUBLIC__/blog/css/style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="__PUBLIC__/plugins/ztree/css/demo.css" type="text/css">
+        <link rel="stylesheet" href="__PUBLIC__/plugins/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+        <script type="text/javascript" src="__PUBLIC__/blog/js/jquery-2.2.4.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/plugins/ztree/js/jquery.ztree.core.js"></script>
+    </head>
+    <body>
+        <include file="default/common/header" />
+        <!--中间部分-->
+        <div id="mainWrapper">
+            <div id="sidebar" class="sidebar">
+                <div id="innerSidebar">
+                    <div id="panelSearch" class="panel">
+                        {$statistics_html}
+                        <include file="common/leftcate" />
+                    </div>
+                    {$new_post_html}
+                    {$new_comment_html}
+                    {$left_tags_html}
+                    {$left_archive_html}
+                </div>
+            </div>
+            <div id="content" class="content">
+                <div id="innerContent">
+                    <div class="announce-content" style="height:45px">
+                        <h4>和[ <span style="color:#63B4CD"> {$tagName} </span> ] 相关的日志<span style="font-weight:normal"> [ {$_cnt} ] </span></h4>
+                    </div>
+                    {$blog_list_html}
+                </div>
+            </div>
+        </div>
+    <include file="common/footer" />
+</body>
+</html>

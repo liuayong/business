@@ -6,7 +6,7 @@ namespace Home\Controller;
  * 前台用户控制器
  */
 class UserController extends BaseController {
-
+    
     // 一个映射关系
     protected $map = array(
         'tel' => 'user_tel',
@@ -15,7 +15,7 @@ class UserController extends BaseController {
     );
 
     protected function _initialize() {
-        
+	parent::_initialize();
     }
 
     /**

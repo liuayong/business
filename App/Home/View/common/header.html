@@ -7,9 +7,18 @@
         <div id="menu">
             <ul>
                 <li><a href="__APP__/Post">日志首页</a></li>
-                <li><a href="#">撰写日志</a></li>
+                <li><a href="#" onclick="alert('请登录后台撰写');">撰写日志</a></li>
                 <li><a href="{:U('Tag/index')}">标签云</a></li>
+                <li><a href="{:U(CONTROLLER_NAME.'/'.ACTION_NAME , array_merge($_GET, array('mode'=>'normal')))}">普通模式</a></li>
+                <li><a href="{:U(CONTROLLER_NAME.'/'.ACTION_NAME , array_merge($_GET, array('mode'=>'normal')))}">无刷新模式</a></li>
             </ul>
         </div>
     </div>
 </div>
+<script type="text/javascript" src="__PUBLIC__/blog/js/jquery.pjax.js"></script>
+<script type="text/javascript">
+jQuery(function($) {
+    $('#content').pjax('div.pages div.pagination a, a',{timeout:5000});
+});    
+</script>
+

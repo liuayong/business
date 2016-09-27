@@ -17,7 +17,7 @@ header("Content-Type: text/html; charset=utf-8");
 if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
-define('APP_DEBUG', true);
+define('APP_DEBUG', false);
 define('APP_NAME','App');
 
 // 定义应用目录
@@ -44,5 +44,3 @@ require './ThinkPHP/ThinkPHP.php';
 // 考虑自定义标签可以加载多个编辑器
 // TagLib
 // var_dump(C('TAGLIB_BUILD_IN'));
-
-

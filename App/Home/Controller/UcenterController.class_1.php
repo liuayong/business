@@ -5,6 +5,10 @@ namespace Home\Controller;
 use Think\Controller;
 
 class UcenterController extends CommonController {
+    
+     protected function _initialize() {
+	parent::_initialize();
+    }
 
     public function index() {
 	

@@ -7,7 +7,7 @@ use Think\Controller;
 class PjaxController extends Controller {
 
     protected function _initialize() {
-        
+	parent::_initialize();
     }
 
     public function index() {
