@@ -15,7 +15,9 @@ class BaseController extends Controller {
 
 	layout(false); // 临时关闭当前模板的布局功能
     }
-
+    
+    
+    
     /**
      * 测试函数
      */

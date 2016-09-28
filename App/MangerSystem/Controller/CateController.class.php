@@ -29,7 +29,6 @@ class CateController extends \Think\Controller {
 	$field = [$CateModel->getPk() => 'id', $parentKey => 'pid', 'cate_name' => 'name', 'cate_name_alias' => 'alias'];
 	$data = $CateModel->field($field)->where([$parentKey => $pid])->getAll();
 	$data = self::addColumn($data);
-	file_put_contents('d:\m.php', var_export($data, true) . "\r\n\r\n", FILE_APPEND);
 	echo json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
     }
 

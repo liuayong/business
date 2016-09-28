@@ -6,6 +6,10 @@ use Common\Components\QueryList;
 use Think\Controller;
 
 class IndexController extends Controller {
+    
+    protected function _initialize() {
+    }
+	
 
     /**
      * 采集项目(网站)列表

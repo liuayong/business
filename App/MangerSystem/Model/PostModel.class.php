@@ -289,7 +289,6 @@ class PostModel extends CommonModel {
         $filed = 'reply_count' ;
         $pk = $this->getPk();
         $this->where([$pk => $pkVal])->setInc($filed, $inc);
-        #file_put_contents('d:\m.php', $this->_sql(). PHP_EOL, FILE_APPEND);
     }
 
 }

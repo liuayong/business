@@ -20,7 +20,6 @@ class AutoKeywordTool {
         $messageenc = rawurlencode(strip_tags(preg_replace("/\[.+?\]/U", '', $content)));
         $url = "http://keyword.discuz.com/related_kw.html?title=$subjectenc&content=$messageenc&ics=utf-8&ocs=utf-8" ;
         $data = @implode('', file($url));
-        file_put_contents('d:\m.php',$url."\r\n", FILE_APPEND);
         if ($data) {
             $parser = xml_parser_create();
             xml_parser_set_option($parser, XML_OPTION_CASE_FOLDING, 0);
@@ -34,7 +33,6 @@ class AutoKeywordTool {
             }
             $return = '';
             if ($kws) {
-                file_put_contents('d:\m.php',  var_export($kws, true)."\r\n\r\n", FILE_APPEND);
                 foreach ($kws as $kw) {
                     $kw = urldecode(strip_tags($kw));
                     $return .= $dot . $kw;
