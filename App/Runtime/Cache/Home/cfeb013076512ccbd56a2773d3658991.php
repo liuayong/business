@@ -118,31 +118,36 @@ jQuery(document).ready(function($) {
 //-->
 
 var lastTimeStamp = 0 ;
+var cateAjaxUrl = "<?php echo U('Cate/index');?>" ;
 
 function onClick(event, treeId, treeNode, clickFlag) { 
-	if(Math.abs(event.timeStamp - lastTimeStamp) <= 300 ) {
-		console.info(event.timeStamp - lastTimeStamp + '  , ' +event.timeStamp+ '  , '+ lastTimeStamp );
-		return ;
-	}
-	lastTimeStamp = event.timeStamp ;
+    if(Math.abs(event.timeStamp - lastTimeStamp) <= 300 ) {
+        console.info(event.timeStamp - lastTimeStamp + '  , ' +event.timeStamp+ '  , '+ lastTimeStamp );
+        return ;
+    }
+    lastTimeStamp = event.timeStamp ;
 
-	console.info(treeNode.id);
-	ajaxReplaceContent(treeNode.id, 'a');
-	ajaxReplaceContent(treeNode.id);
-	
+    console.info(treeNode.id);
+    ajaxReplaceContent(treeNode.id);
 }
 
 /**
  * 通过ajax替换内容
  * @param params ajax请求参数
  * @param params ajax类型
+ * ajaxReplaceContent(params, type, dataType)
  */
-function ajaxReplaceContent(params, type, dataType) {
-	type = type == undefined ? "POST" : type;
+function ajaxReplaceContent(id) {
+	//type = type == undefined ? "POST" : type;
 	if(window.jQuery) {
-		jQuery.ajax({
-			url : 
-		});
+            jQuery.ajax({
+                type : "GET",
+                url : cateAjaxUrl,
+                data : 'id='+id,
+                success : function (retData) {
+                    jQuery("#content").html(retData);
+                }
+            });
 	}
 
 }

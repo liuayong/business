@@ -177,8 +177,15 @@ class CommonModel extends Model {
         $data['field'] = isset($options['field']) ? $options['field'] : array();
         $data['where'] = isset($options['where']) ? $options['where'] : array();
         $data['order'] = isset($options['order']) ? $options['order'] : array();
-        $data['limit'] = isset($options['limit']) ? $options['limit'] : C('pagesize'); // 默认条数
-
+        $data['limit'] = isset($options['limit']) ? $options['limit'] : 0; // 0表示不限制条数 没有limit语句
+        
+        /*
+         if(isset($options['limit'])) {
+            #$data['limit'] = isset($options['limit']) ? $options['limit'] : C('pagesize'); // 默认条数
+            $data['limit'] = $options['limit'] ; 
+        }
+        */
+        
         $this->options = array();
         return $data;
     }

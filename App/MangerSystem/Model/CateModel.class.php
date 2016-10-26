@@ -36,8 +36,7 @@ class CateModel extends CommonModel {
     public function getAll(array $params = array()) {
 
         extract($this->handleOptions());
-        $limit = $cnt;
-
+      
         // todo 逻辑上的考虑 移交给公共的方法
         // 逻辑上的考虑1：考虑软删除的情况
         $deleteField = C('softDelField') ? : 'is_deleted';   // 软删除字段
@@ -173,7 +172,7 @@ class CateModel extends CommonModel {
             $this->options['field'] = $fields;
         }
 
-        return $list = parent::getAll();
+        return $list = self::getAll();
     }
 
     /**

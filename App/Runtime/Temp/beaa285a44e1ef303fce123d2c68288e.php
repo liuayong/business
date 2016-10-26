@@ -1,5 +1,5 @@
 <?php
-//000000086400s:3417:"<!----- 日志归档 ----->
+//000000086400s:3147:"<!----- 日志归档 ----->
 <div id="panelSearch" class="panel">
     <h5>日志归档</h5>
     <div class="panel-content">
@@ -37,9 +37,6 @@
                 </li><li>
                     <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
                     <a href="/business/index.php/Post/archive/year/2015/month/11.html">2015年11月</a>
-                </li><li>
-                    <img src="/business/static/blog/images/icon_quote.gif" width="11" height="11" border="0" alt="" align="absmiddle" />
-                    <a href="/business/index.php/Post/archive/year/2015/month/10.html">2015年10月</a>
                 </li>        </ul>
     </div>
 </div>";
